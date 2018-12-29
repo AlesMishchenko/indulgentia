@@ -330,7 +330,7 @@ function illustrate(div) {
 	args.duration = "neAutoGartanne";
 	for(var i=0; i<allNazvyRus.length ; i++) {
 	args.malunki[i][1]=allNazvyRus[i];
-	args.malunki[i][0]="./allims/"+(i+ValuesByTemy.length)+".JPG";
+	args.malunki[i][0]="./allims/"+(i+ValuesByTemy.length)+".jpg"; //JPG
 	}
 	slideGallery.illustrate(args);	
 }
