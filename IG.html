@@ -1,0 +1,378 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!-- (С) Алесь Мищенко -->
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Алесь Мищенко. "Индульгенция людей" (нелинейная интерактивная книга, издание 2018 года).</title> 
+<script type='text/javascript' src='illustrate.js'></script>
+<script type='text/javascript' src='initiate.js'></script>
+<style>
+body {background-color: #6cb5a9;
+background-image: url('./backW/03zMichael_Cramer.jpg');
+background-blend-mode: multiply;
+mix-blend-mode: exclusion;
+         <!-- -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -->
+         <!-- -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -->
+         <!-- -webkit-filter: grayscale(100%); -->
+         <!-- filter: gray; -->
+         <!-- filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -->
+<!--@media screen and (max-device-width: 3000px) {html{font-size:30px;}}-->
+<!--@media screen and (max-device-width: 2000px) {html{font-size:25px;}}--> 
+<!--@media screen and (max-device-width: 1500px) {html{font-size:21px;}}-->
+<!--@media screen and (max-device-width: 1000px) {html{font-size:15px;}}-->	 
+<!--@media screen and (max-device-width: 800px) {html{font-size:11px;}}-->
+<!--@media screen and (max-device-width: 700px) {html{font-size:10px;}}-->
+<!--@media screen and (max-device-width: 625px) {html{font-size:8px;}}-->
+<!--@media screen and (max-device-width: 575px) {html{font-size:7px;}}-->
+<!--HOTEL RAZNOE DLA <... class="f1" <... class="f2"  NE RABOTAET, NE ISPOLZUETSA, mozno udalit class="f1",   RABOTAET larger -->
+@media screen and (max-device-width: 3000px) {.f1{font-size:7px;};.f2{font-size:7px;};.f3{font-size:7px;};.f4{font-size:7px;};html{font-size:7px;};body{font-size:7px;}}
+@media screen and (max-device-width: 2000px) {.f1{font-size:8px;};.f2{font-size:8px;};.f3{font-size:8px;};.f4{font-size:8px;};html{font-size:8px;};body{font-size:8px;}}
+@media screen and (max-device-width: 1500px) {.f1{font-size:10px;};.f2{font-size:10px;};.f3{font-size:10px;};.f4{font-size:10px;};html{font-size:10px;};body{font-size:10px;}}
+@media screen and (max-device-width: 1000px) {.f1{font-size:11px;};.f2{font-size:11px;};.f3{font-size:11px;};.f4{font-size:11px;};html{font-size:11px;};body{font-size:11px;}}
+@media screen and (max-device-width: 800px) {.f1{font-size:15px;};.f2{font-size:15px;};.f3{font-size:15px;};.f4{font-size:15px;};html{font-size:15px;};body{font-size:15px;}}
+@media screen and (max-device-width: 700px) {.f1{font-size:21px;};.f2{font-size:21px;};.f3{font-size:21px;};.f4{font-size:21px;};html{font-size:21px;};body{font-size:21px;}}
+@media screen and (max-device-width: 625px) {.f1{font-size:25px;};.f2{font-size:25px;};.f3{font-size:25px;};.f4{font-size:25px;};html{font-size:25px;};body{font-size:25px;}}
+@media screen and (max-device-width: 575px) {.f1{font-size:30px;};.f2{font-size:30px;};.f3{font-size:30px;};.f4{font-size:30px;};html{font-size:30px;};body{font-size:30px;}}
+<!-- OR @media (min-width: 858px) {    html {        font-size: 12px;    }} -->
+}
+<!-- .btn {font-size:66%;width:70px;height:20px;cursor:pointer;margin:2px;background:silver} -->
+.btn {width:70px;height:20px;cursor:pointer;margin:2px;background:silver}
+.btn:disabled {cursor: not-allowed;}
+.rightAlignForFormOnly {text-align:right}
+<!-- canvas {border: 1px solid #111;padding:3px} -->
+canvas {border: none;padding:3px}
+td {font: normal 75% Arial,padding:50px 0px}
+th, caption {font: bold 83% Arial;text-align: center;padding:5px;vertical-align:top}
+h3 {text-align:center}
+<!-- #divGallery_table {border:1px inset} -->
+#divGallery_table {border:none}
+#divGallery_table tr:nth-child(1) {font-size: 166%;color:black}
+#divGallery_table tr:nth-child(2) {background-color:silver}
+#divGallery_table td {padding:0px 5px;}
+#divGallery_table td:hover {color:silver}
+<!--
+#share-buttons img {
+width: 35px;
+padding: 5px;
+border: 0;
+box-shadow: 0;
+display: inline;
+-->
+h3 { font-size: 120%;}
+</style>
+<meta property="og:image" content="http://indulgentia.github.io/logo.png" />
+</head>
+<!-- ======================================== END STYLE & HEAD ======================================== -->
+<body onload = " zrabicAllRadkiForTZmestIDfrom0();  zrabicTZmest(); illustrate(document.getElementById('divStarajaGall'))
+if(document.getElementById('jaceika1uverhuID')) if(document.getElementById('jaceika1uverhuID').style.opacity != 0.5981)
+{
+document.getElementById('jaceika1uverhuID').style.backgroundColor = 'white';
+document.getElementById('jaceika1uverhuID').style.opacity = 0.5981;
+};
+if(document.getElementById('jaceikaZlevaID')) if(document.getElementById('jaceikaZlevaID').style.opacity != 0.5981)
+{
+document.getElementById('jaceikaZlevaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZlevaID').style.opacity = 0.5981;
+};
+if(document.getElementById('jaceikaZpravaID')) if(document.getElementById('jaceikaZpravaID').style.opacity != 0.5981)
+{
+document.getElementById('jaceikaZpravaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZpravaID').style.opacity = 0.5981;
+};
+if(document.getElementById('idDivAllDown')) if(document.getElementById('idDivAllDown').style.opacity != 0.5981)
+{
+document.getElementById('idDivAllDown').style.backgroundColor = 'white';
+document.getElementById('idDivAllDown').style.opacity = 0.5981;
+};
+if(document.getElementById('idDivOglavANDsortOglav')) if(document.getElementById('idDivOglavANDsortOglav').style.opacity != 0.5981)
+{
+document.getElementById('idDivOglavANDsortOglav').style.backgroundColor = 'white';
+document.getElementById('idDivOglavANDsortOglav').style.opacity = 0.5981;
+};
+document.getElementById('idh2zagolov').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idh2zagolov1').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idh2zagolov2').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idh2zagolov3').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGartNazva').style.color = document.body.style.backgroundColor;
+document.getElementById('idForm').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idFormh3').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idLegendForm').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idEmailh3').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style.backgroundColor);
+">
+<!-- ======================================== START BODY ======================================== -->
+<!-- <div onmousedown =  "nazatCtobCvet();" onmouseup =  "otzatCtobChernobeloe();"> -->
+<h2 id="idh2zagolov"><a class="f1" id="idh2zagolov1" font-size="100%" href='http://www.ales.co.nf' target=_blank >Алесь Мищенко.</a> &nbsp; 
+<img src="./logo.png" width="40px" height="25px" alt="Автор	Fr. Jeronimus Munghofer, OSB, Источник http://www.gabrieleweis.de/3-geschichtsbits/histo-surfing/4-neuzeit1/4-2-renaissance/synopsenbilder/ablassbiref.jpg , общественное достояние,pd-old,PD-US"/><a href="./index.html">
+<a class="f2" id="idh2zagolov2" font-size="100%" href='http://www.ales.co.nf' target=_blank > Нелинейная интерактивная книга </a> &nbsp;
+<a class="f3" id="idh2zagolov3" font-size="100%" href='http://www.ales.co.nf' target=_blank >"ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ"</a></h2> 
+
+
+<div style='float:left;padding-right:10px;'> 
+<div id="idDivUSEkartynkaStaronkaTableJacejkiGart" style="border:none">
+<div id="idDivUSEkartynkaStaronkaTableJacejkiGartNazva" style="border:none" onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;">
+</div> 
+</div> 
+</div> 
+<div id="idDivOglavANDsortOglav" style='width:632px;float:left;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;"> 
+<fieldset id="idTemyKontur" title="Здесь можно выбрать из оглавления тексты по тем же темам / другим темам (нажатие на кнопку ТЕМЫ оставляет в оглавлении только тексты с выбранной темой / убирает тему из оглавления)">
+<legend id='idLegendTemy'>Фильтры оглавления и Темы текста </legend> 
+  <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="Непрочитанные" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
+  <input type="button" id="idGuzikCreateTable" title="Показать ВСЕ тексты в оглавлении" value="Восстановить всё" onclick="zrabicTZmest();KaliarovyaRadkiPeradBelymi(false); document.getElementById('idLegendZmest').innerHTML='Оглавление и связи с текущим текстом:   ';" /><br/><br/>
+<input type="checkbox" id="idGalkaAdsejac"  title="Инвертировать фильтры">
+<label for="idGalkaAdsejac" title="Инвертировать фильтры">Наоборот. &nbsp;&nbsp;&nbsp;&nbsp; выбор ТЕМЫ:</label>
+</fieldset>
+
+<fieldset> 
+<legend id="idLegendZmest" title="Тексты, фильтрованные по темам и прочитанности">Оглавление и связи с текущим текстом:   </legend> 
+<div id="idDivTZmest" style="border:1px solid black;overflow:scroll;height:181px;width:100%;overflow:auto" ></div>
+<div id="idDivFilterZmest" style="border:none;height:auto;width:100%" ></div>
+</fieldset>
+
+<fieldset> 
+<legend>Сортировка оглавления</legend> 
+ <div id="idDivSortZmest" title="Повторное нажатие кнопок увеличивает порядок по их критериям" style="border:none;height:auto;width:100%" > 
+<input id="idGuzikSortZmestSvjaz" type="button" title="Сортировать оглавление по связанности с читаемым текстом" value="Связанность / Несвязанность" OnClick = "KaliarovyaRadkiPeradBelymi();" />
+<input id="idGuzikSortZmestAlfavit" type="button" title="Сортировать оглавление по алфавиту" value="Алфавит" OnClick = "bujnyaIndsPeradTZmest(1);" />
+<input id="idGuzikSortZmestRazmer" type="button" title="Сортировать оглавление по размеру текстов" value="Размер" OnClick = "bujnyaIndsPeradTZmest(2);" />
+<input id="idGuzikSortZmestOcenka" type="button" title="Сортировать оглавление по читательской оценке" value="Оценка" OnClick = "bujnyaIndsPeradTZmest(3);" />
+<input id="idGuzikSortZmestSpor" type="button" title="Сортировать оглавление по спорности текстов" value="Спорность" OnClick = "bujnyaIndsPeradTZmest(4);" />
+<input id="idGuzikSortZmestPoezia" type="button" title="Сортировать оглавление по поэтичности текстов" value="Поэтичность / Публицистичность" OnClick = "bujnyaIndsPeradTZmest(5);" />
+<input id="idGalkaParadak" type="checkbox" title="Инвертировать порядок сортировки">
+<label for="idGalkaParadak">Обратный порядок</label>
+</div>
+</fieldset>
+</div> 
+
+
+
+
+
+
+
+
+
+
+<script> 
+//onclick="fabravacCIubracRadkiPaID(
+function nazatCtobCvet() {
+var strOrig1 = './backOrig/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
+var strurlW_1="url('"+strOrig1+"')";
+document.body.style.backgroundImage = strurlW_1;   document.body.style.backgroundAttachment = "fixed";
+document.body.style.mixBlendMode = "exclusion";
+console.log(document.body.style.backgroundImage+'=backgroundImage');
+console.log(document.body.style.backgroundColor+'=backgroundColor');
+}
+function otzatCtobChernobeloe() {
+var strBack1 = './backW/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
+var strurlW_1="url('"+strBack1+"')";
+document.body.style.backgroundImage = strurlW_1;   document.body.style.backgroundAttachment = "fixed";
+document.body.style.mixBlendMode = "exclusion";
+console.log(document.body.style.backgroundImage+'=backgroundImage');
+console.log(document.body.style.backgroundColor+'=backgroundColor');
+}
+
+
+
+document.getElementById("idGalkaAdsejac").onclick = function() {
+for(var itemy of temyKazhdogoEss[raspovLicnik]) {
+if(document.getElementById(idGuzikiPaTemam[itemy])!=null) { titleAndValueByElementAdseu(document.getElementById(idGuzikiPaTemam[itemy]));}
+}
+titleAndValueByElementAdseu(document.getElementById("idGuzikUbracseentexts"));
+//titleAndValueByElementAdseu(document.getElementById("idGuzikCreateTable")); //NE ZALEZIT
+}
+document.getElementById("idGalkaParadak").onclick = function() {
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestSvjaz"));
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestAlfavit"));
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestRazmer"));
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestOcenka"));
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestSpor"));
+titleAndValueByElementParadak(document.getElementById("idGuzikSortZmestPoezia"));
+}
+document.getElementById("idTemyKontur").onmouseover = function() {
+//esli cikl to zapominaet znacenie always itemy i vo vremja vyzova ispolzuet ego, zanovo cikl ne zapuskaet!!!!
+//for(var itemy of temyKazhdogoEss[raspovLicnik]) {document.getElementById(idGuzikiPaTemam[itemy]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[itemy],[],'znishchyc','');};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(0)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[0]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[0]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[0],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[0]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(1)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[1]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[1]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[1],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[1]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(2)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[2]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[2]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[2],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[2]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(3)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[3]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[3]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[3],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[3]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(4)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[4]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[4]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[4],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[4]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(5)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[5]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[5]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[5],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[5]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(6)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[6]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[6]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[6],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[6]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(7)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[7]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[7]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[7],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[7]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(8)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[8]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[8]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[8],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[8]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(9)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[9]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[9]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[9],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[9]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(10)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[10]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[10]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[10],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[10]).value;};};
+if(temyKazhdogoEss[raspovLicnik].indexOf(11)>=0) {curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById(idGuzikiPaTemam[11]).style.fontSize = "larger";};document.getElementById(idGuzikiPaTemam[11]).onclick = function() {fabravacCIubracRadkiPaID(essBezEtojTemy[11],[],'znishchyc','');document.getElementById("idLegendZmest").innerHTML+=' & '+document.getElementById(idGuzikiPaTemam[11]).value;};};
+}
+</script>
+
+
+
+
+
+
+
+<fieldset id="idLegendShareKontur" style="height:69px;width:300px;overflow:auto" onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.5983;">
+<legend id="idLegendShare" title="Поделиться ссылкой на книгу">Высказать мнение,Обсудить,Поделиться:   </legend> 
+<!--<div id="share-buttons">-->
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//yastatic.net/share2/share.js" async="async"></script>
+<div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook,gplus,moimir,whatsapp,skype" data-counter="" data-image="http://indulgencia.github.io/logo.png" data-image:facebook="http://indulgencia.github.io/logo.png" data-url:facebook="http://indulgencia.github.io"  data-description="Алесь Мищенко. Нелинейная интерактивная книга 'Индульгенция людей'."></div> 
+<!--</div>-->
+</fieldset>
+
+
+<div> 
+<!--<div id="idForm" style='float:left;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.1985;">-->
+<div id="idForm" style='float:left;padding-right:10px;'> 
+<fieldset id='idfieldsetForm' title="Здесь можно отправить сообщение автору">
+<legend id='idLegendForm'>ОЦЕНИТЬ текст или СВЯЗАТЬСЯ с автором </legend> 
+<form name="formspreeForm" action="https://formspree.io/alesmichtchenko@mail.ru" method="POST">
+<h3  id="idFormh3" >Тема сообщения:</h3>
+<select  id="idPismoIliOcenka" style="font-size: 100%" name="subject" onchange="autotextFunction()"   onclick="autotextFunction()"> <!--onchange="autotextFunction()"   onclick="autotextFunction() -->
+  <option value="p">письмо автору</option>
+  <option value="o">оценка текущего текста</option>
+  <option value="z">заказать персональный экземпляр книги</option>
+<script type="text/javascript">
+//document.getElementById('idFormh3').style.color = dopolnitCol(document.body.style.backgroundColor);
+function autotextFunction() {
+var autotext=document.getElementById('idFormTextArea');
+var autoLegend=document.getElementById('idLegendTemy').innerHTML;
+if(document.getElementById('idPismoIliOcenka').getElementsByTagName('option')[0].selected == true){
+autotext.value=' Добрый день, Алесь! \r\n \r\n С Уважением,            ';
+};
+if(document.getElementById('idPismoIliOcenka').getElementsByTagName('option')[1].selected == true){
+autotext.value=' Оценка'+autoLegend.substring(autoLegend.indexOf('"'),autoLegend.lastIndexOf('"')+1)+'(от 1 до 5):  . \r\n Пояснение(необязательно):';
+};
+if(document.getElementById('idPismoIliOcenka').getElementsByTagName('option')[2].selected == true){
+autotext.value=' Ваше имя: \r\n Ваша фамилия:';
+};
+}
+</script>
+
+  
+  
+</select><br>
+<h3  id="idEmailh3" >Ваш email:</h3> 
+<input   id="idEmail" style="font-size: 160%" type="text" name="email" size="40"  onchange="proverkaEmail()"><br> <legend id='idLegendEmail'> </legend> 
+<h3  id="idMsgh3" >Ваше сообщение:</h3> <!-- (максимум 400 символов)-->
+<textarea id="idFormTextArea" style="font-size: 160%" rows="5" name="message"  rows="10" cols="50" ></textarea><br>
+<input style="font-size: 160%" type="submit" name="submit" value="Отправить сообщение">
+<script type="text/javascript">
+function proverkaEmail() {
+    var email=document.getElementById('idEmail').value;
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	if(re.test(String(email).toLowerCase())==true) {document.getElementById('idLegendEmail').innerHTML="";};
+	var iSob=email.indexOf("@");var imja=email.substring(0,iSob); var domen=email.substring(iSob,email.length);
+	if(iSob<3) {document.getElementById('idLegendEmail').innerHTML="КОРОТКОВАТОЕ ИМЯ... ";};
+	if(email.lastIndexOf(".")<=email.length-6) {document.getElementById('idLegendEmail').innerHTML="СТРАННЫЙ ДОМЕН... ";}; 
+	if(imja.split(".").length>3) {document.getElementById('idLegendEmail').innerHTML="ДЛИННОВАТОЕ ИМЯ... ";};
+	if(domen.split(".").length>3) {document.getElementById('idLegendEmail').innerHTML="ДЛИННОВАТЫЙ ДОМЕН... ";};	    
+	if(re.test(String(email).toLowerCase())==false) {document.getElementById('idLegendEmail').innerHTML="НЕВЕРНЫЙ EMAIL ";};
+}
+</script>
+</form>
+<br>С автором можно также связаться по email: &nbsp; alesmichtchenko@mail.ru , на &nbsp; <a href='http://www.ales.co.nf' target=_blank >его сайте</a> или использовать вышу почтовую программу: 
+<a href="mailto:alesmichtchenko@mail.ru?Subject=контакт с автором или оценка текста&amp;Body=Добрый день! Пишу Вам по поводу текста...."><img src="./email.png" alt="Email" /> </a>
+</fieldset>
+</div> 
+</div>
+
+
+
+<!--onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.3984;"-->
+<div id="idDivKeywords" font="5px" "style='float:left;padding-right:10px' > 
+<fieldset title="Нажмите на ключевое слово чтобы получить соответствующий текст"> 
+<legend>Ключевые слова и цитаты книги (выбор следующего текста по ключевому слову)</legend> <!-- ot 0 do 32 stroki !!!!!! -->
+<div onclick =  "gartacPachatak(20,'down')" id="idMotsCles20" style="border:none;height:auto;width:100%"> "-=-О мечтах-=-: Образы счастья на телеэкране уже настолько профессиональны и привлекательны, что заменили собственые мечты.","Внутренний мир людей прошлого похож на твою несбывшуюся судьбу: кажется такие миры всё ещё где-то существуют, и можно оказаться там, одним усилием воображения.","Неудовлетворённость и несбывшееся пробуждает душу и зовёт её в иные миры — и только так, в стремлении к чему-то «не от мира сего» она рождается и растёт вместе с человеком.","Зрачок женщины — чёрная дыра в пространстве, ведущая в другой мир, в несбывшееся счастье, которое будет безвозвратно упущено уже в следующий миг.","Мечты — это ощущение альтернативного мира, существующего, согласно квантовой теории Эверетта, в другой, несбывшейся с нами, вселенной.","Страна детства граничит со страной несбывшегося.","Все считают кого-то другого счастливее себя — словно вселенский аист случайно перетасовал все души.","Наша небесная Родина зовёт нас — и это голос несбывшегося.","Наши неосуществлённые судьбы остаются с нами и, словно в параллельном мире, сопровождают нас всю оставшуюся жизнь.","Где-то в глубине души мы уверены, что ушедшее и несбывшееся где-то живёт и сейчас. Поэтому и трудно смириться что мы здесь а не там. Всю жизнь оно видится нам во снах, в случайных фильмах и кадрах далёких стран.","Мир грёз переселился из снов в телевизор, именно оттуда современный человек берёт образы счастья.","Далёкие горизонты зовут нас нашими несбывшимися судьбами путешественников и первооткрывателей.","В фрагментах чужой жизни, мелькнувших из окна поезда или на экране телевизора — можно разглядеть собственную несбывшуюся судьбу.","Люди перестали мечтать собственными образами. Начали брать приготовленные для них шаблоны - из фильмов, из рекламы. Воображение заменилось на «хочу как там»... там, в чужом варианте счастья.","По теории множественных вселенных, где-то есть миры, в которых у нас другая, более счастливая но несбывшаяся здесь судьба.","Предчувствия, как и ощущения несбывшегося, приходят из того закулисного мира где складываются мозайки судеб.",
+</div>
+ <div onclick =  "gartacPachatak(22,'down')" id="idMotsCles22" style="border:none;height:auto;width:100%"> "-=-О природе человека и его предков-=-:  Понятно почему справедливости нет в обществе — ей просто неоткуда было взяться, её никогда небыло в природе. Наоборот, непонятно откуда она появилась как идея в некоторых головах.","То ожидание отношений, которое существует где-то в глубине души, никогда не осуществляется - ни в конкурентном и иерархичном обществе ни в жестокой природе.","Природа человека — война и насилие, и только хрупкая культура удерживает этот хаос от революционных взрывов.","Социальная иерархия, ещё с обезьянних времён, строится на унижении и насилии. Меняются только методы.","Большинство смотрят на жизнь просто и природно. Иногда кажется мы — стая обезьян, выживающая в построенном кем-то для нас технологичном мире.","Несправедливость — не досадная случайность и издёвка судьбы, а закон природы и  символ её безразличия к своим детям.","Общество учит человека — как стая обезьянку. Учит одному и тому же уже миллионы лет: как приспособиться и защитить себя от окружающих.","Учёные понимают схемы поведения животных, но не чувствовуют тех переживаний которые заставляют их так поступать. Да и друг друга люди чувствуют редко.","Учёные объясняют поведение обезьян из целесообразности природы. Можно также объяснять и людей, со всей их социологией и особенно политикой.","Попасть в туссовку было сложно ещё в обезьяньи времена. В иерархии надо  уметь унижать и унижаться.","Пока есть сострадание - принять мир невозможно: слишком много несправедливости и страданий в равнодушной логике природы и общества.",
+</div>
+
+
+
+ <div onclick =  "gartacPachatak(2,'down')" id="idMotsCles2" style="border:none;height:auto;width:100%"> "-=-О ушедшем времени-=-: Культуры уходят, оставляя лишь сухие факты, по которым не понять тех людей, не проследить ту логику в которой они мыслили, не ощутить тех чувств.","Во взгляде людей на старых фотографиях видна душа эпохи. Их зрачки — микроскопические чёрные дыры, ведущие в тот мир.","Не понять внутренний мир людей прошлого. События остаются в истории, а души — нет.","Во взгляде человека, как на старых фотографиях, проглядывает чужой, неизвестный, но затягивающий своей тайной, мир.","Не понять внутренний мир людей прошлого, оставшихся теперь только на экране. События остаются в истории, внешность запечатляется на плёнке, а души исчезают бесследно.","Всё труднее вспомнить настроение и дух  советской цивилизации: она постепенно превращается в сказку, в былинный образ, не имеющий почти ничего общего с ушедшей реальностью.","Умирают последние свидетели и уже не почувствовать образ мыслей людей в то чёрно-белое, сталинское время. Останутся лишь весёлые образы старых фильмов и спорная статистика ГУЛАГа.","Советский мир на старых фотографиях уходит всё дальше от нашего понимания, превращаясь в сказку — для кого-то о богатырях, для кого-то о глупых королях.","То о чём думали, что чувствовали люди прошлого — это душа эпохи. Душа, безвозвратно потерянная. И поэтому, особенно хочется проникнуть туда, в мысли людей на старых фотографиях.","На фотографиях сталинского времени незримо позирует страх. И какая-то деревянная целеустремлённость, и ещё много малознакомых нам эмоций, делающих непонятным внутренний мир тех людей.","Мечты, чувства, мысли — все внутренние миры ушедших цивилизаций — оказываются безвозвратно утеряны. И уже странным нездешним взглядом смотрят люди со старых фотографий.","Внешность эпохи остаётся в истории, но её душа теряется, оставаясь лишь в детских воспоминаниях брежневского времени и во взгляде на старых фотографиях сталинской эпохи.",
+</div>
+ <div onclick =  "gartacPachatak(3,'down')" id="idMotsCles3" style="border:none;height:auto;width:100%"> "-=-О преступности-=-: Человек - тонкая кожа над  хаосом своего подсознания. И все звериные инстинкты прорываются наружу преступлениями.","Закон наказывает не ради справедливости, а для того чтобы сдержать природу, которая прорывается преступлениями сквозь тонкую занавеску культуры.","Человек неузнаваемо меняется не только взрослея(готовясь к жизни), но и старея(готовясь к смерти).","Общество, с животных времён, построено на страхе, унижении и насилии. И природные импульсы всегда предлагают нам преступные решения проблем.","Многое может неузнаваемо изменить человека — взросление, страдания, религия, или даже просто ожидание смерти.",
+</div>
+ <div onclick =  "gartacPachatak(4,'down')" id="idMotsCles4" style="border:none;height:auto;width:100%"> "-=-О сумасшествии-=-: Сны похожи на фантазии гения, ведь также непонятно: то ли это шестое чувство то ли просто бред и сумасшествие.","Чувство смерти, как любое шестое чувство или сумасшествие, замыкает человека в себе и делает его чужим для окружающих.","Чутьё на «своих» и «чужих» - это первобытная, инстинктивная психиатрия: все кто мыслят непохоже, кажутся ненормальными.","Способность играть излечивается как детская болезнь — взрослением.","Сюжеты и образы подсознания извергаются на поверхность в снах и фантазиях. Автору это кажется вдохновением, а окружающим — сумасшествием.","Внутренний мир человека никому не нужен кроме него самого. Для других его уникальность и непохожесть на них — это скорее ненормальность.","Есть ли смысл у сострадания(особенно к дальним, неважным для тебя существам)? Или это ошибка природы, знак психического нездоровья?.","Других нельзя понять до конца, они — как эльфы в сказках: общаешься, живёшь рядом, но в глубне души считаешь их не совсем нормальными.","Ничем не опровергнуть мысль что все вокруг — сумасшедшие, искуссно, как в фильмах, притворяющиеся нормальными людьми.","Всё необъяснимое логикой — и сильные чувства, и фатальные предчувствия — для окружающих лишь проблемы психики, которые они берутся вылечить.","Врач может залезть в мозг но не во внутренний мир пациента.",
+</div>
+ <div onclick =  "gartacPachatak(5,'down')" id="idMotsCles5" style="border:none;height:auto;width:100%"> "-=-О образах любви-=-: Образ любви летуч, он складывается не в реальности, а в голове, из фантазийного тумана, и не угадать чей облик явится в этом сне.","Важен ли кастинг людей — как на исторические роли, так и на роли в твоей судьбе? Или всё записано в сценарии?","Любовь - коллективный сон человечества. С таким же нелогичным как во сне распределением ролей.","Тщательно забытое несбывшееся проглядывает в ярких снах и тревожит бессонными ночами — как неосуществившаяся любовь.","Я узнаю любовь - как актёра во всех его ролях, как ангела сна, взмахи крыльев которого нам видятся разными удивительными снами.",
+</div>
+ <div onclick =  "gartacPachatak(6,'down')" id="idMotsCles6" style="border:none;height:auto;width:100%"> "-=-О смерти-=-: Ожидание смерти делает из человека камикадзе, отрешённо идущего по корридору смерти — неважно по тюремному или в доме престарелых.","В ожидании смерти — и перед казнью, и просто в старости — появляется безучастность, заканчивающаяся добровольным принятием судьбы.","Дети идут спать как на смерть, они не знают что проснутся.","У каждого из ведомых на казнь - свой договор со смертью. Именно он и отделяет героев от предателей.","Разговоры о страшном, таком как смерть — табу в современном обществе притворного успеха.","Жизненный путь - путь на казнь, в юности мятежный, в старости — добровольный. Мы все получаем положенную для приговорённых рюмку коньяка, минуту внимания для последнего слова и надежду что свет в конце тюремного корридора — это ещё не конец.","Предчувствие смерти меняет человека — и в ожидании казни, и в старости — как меняет человека война. Проигранная война с самым страшным врагом.","Смерть, как и сон, может быть добровольной — и у человека, и у цивилизации, и у человечества.",
+</div>
+ <div onclick =  "gartacPachatak(7,'down')" id="idMotsCles7" style="border:none;height:auto;width:100%"> "-=-О людях как частицах-=-: Если бы люди, как актёры своих судеб, как взаимозаменяемые микрочастицы истории, поменялись бы на миг местами — всем открылся бы замысел пьесы.","Как микрочастице подходит любой атом, так и человеку — любой смысл жизни, чтобы ни предложило ему общество.","Душа человека подходит любой судьбе в любой истории — как микрочастица подходит любому атому в любом веществе. Нас всех, как квантовые частицы, можно поменять местами.","Под воздействием животных импульсов, человек меняет состояния — как меняет под воздействием физических импульсов своё состояние квантовая микрочастица.","Внутри мы неразличимы как квантовые частицы, и наше состояние также полностью зависит от нашей истории и окружения.","Люди, как квантовые частицы, сществуют одновременно во всех возможных состояниях своей души.","Как плазма солнца, складывается из миллиардов частиц с неопределённым состоянием, так и поток истории складывается из миллионов так и  неопределившихся людей.","Человек, как микрочастица, меняет состояние, и с каждой сменой тоже теряет изначальную информацию о себе.","Всех людей, как квантовые микрочастицы, как актёров, можно поменять местами — и все также искренне будут играть противоположные роли.","Люди, как микрочастицы, амбивалентны, они одновременно и добро и зло, и находятся, как микрочастицы, в смешанных состояниях.","Ничто так не способствует полёту фантазии как лекция на которой ты потерял нить рассуждений.","Состояния людей, как частиц в физике, не известны заранее — они смешанные.",
+</div>
+ <div onclick =  "gartacPachatak(8,'down')" id="idMotsCles8" style="border:none;height:auto;width:100%"> "-=-О детстве-=-: Мы все были изгнаны из рая. И это было детство.","Взрослые — это дети, вооружившиеся против неприветливого мира.","В программах природы есть свои ошибки, которые становятся нашим характером, нашими желаниями и страхами.","Мир в детстве кажется больше и удивительней. Все интересы и увлечения взрослых — это попытка вернуть тот изначальный интерес к миру, который даётся природой только раз.","Детство определяет нашу судьбу, ведь именно тогда мы примеряем маски, которые будем носить всю последующую жизнь.","Детская вера принимает любую идеологию. И потом, взрослея, человек вынужден одеваться в броню для защиты того что стало его душой, но оказалось уязвимым перед новыми, враждебными и бездушными фактами.","Взрослея, человек теряет детские мечты, взамен приобретая маски для успешной игры в окружающем обществе.","Животные и дети живут в одном и том же первобытном мире и поэтому лучше понимают друг друга.","Мы попадаем из детства во взрослый мир - как невинный дикарь попадает в цивилизацию.","Взрослый — это ребёнок, научившийся носить правильные маски. Заглянешь под маску — а там эгоистичный капризный монстр — именно так выглядит ребёнок размером со взрослого, порвавший со своими родителями.","Дети хотят повзрослеть, потому что считают что взрослым никто ничего не запрещает. И только потом понимают грустную истину, что запрещать приходится им самим.","Дети — наше окно в мир природы - немой и инстинктивный мир, в котором всё необьяснимо и удивительно.","Дети близки к природе и на 90% они состоят из жестоких обезьян. Воспитание поможет только тем чтобы не потерять те 10% что даны им свыше.","Детские сказки и стремление к счастью так и остаются, нереализованными, внутри. Всё взросление — это попытка забыть и заменить их.","Ребёнок, как волшебник, способен оживлять кукол и игрушки. Все предметы в его руках приобретают характеры и чувства.",
+</div>
+ <div onclick =  "gartacPachatak(9,'down')" id="idMotsCles9" style="border:none;height:auto;width:100%"> "-=-О науке и природе-=-: Учёные объясняют природу, а она, включая и выключая их цели и стремления, смеётся над этими объяснениями.","Природа раздаёт желания слепо, чтобы сработало в среднем. А мы потом ищем в своих чувствах и стремлениях отсутствующий смысл.","Природа грубо устроила желания и стремления — лишь бы сработало. Человек сам придаёт им глубокие смыслы и тонкие чувства.","Учёные обьясняют природу, находя смысл во всех её проявлениях, а она, ветренная и непостоянная, лишь смеётся над их обьяснениями.","В природе (а значит и в поведении человека) нет логики. Всё состоит из странных но работающих, проверенных миллионами лет схем.","Природа заботится не о человеке а о человечестве в среднем, оставив учёным объяснять смысл случаных отклонений от статистики.","Природа одурманивает нас для достижения своих целей, играючи назначает и счастье и страдания. А потом учёные придумывают глубокий смысл для всех её легкомысленных издевательств.","Наука никогда не найдёт смысл в том каким тебя сделала природа. Для того чтобы придумать смысл нужна лженаука.","Природа запрограммировала наши желания ещё в первобытные времена, и совсем для других целей. И мы до сих пор функционируем по её устаревшим программам.",
+</div>
+ <div onclick =  "gartacPachatak(10,'down')" id="idMotsCles10" style="border:none;height:auto;width:100%"> "-=-О актёрстве и ролях-=-: За каждой ролью, которую мы играем в жизни, стоит, как сценарист, та любовь или нелюбовь которую мы получили в детстве.","Всех актрис и актёров распределяет на роли их детство, определяющее их характер и типаж.","Ещё в детстве нам одевают маску, которую, как роль, мы играем всю жизнь.","Жизнь - попытка выполнить забытое задание родителей. Или наоборот, попытка восстать и выкинуть из головы то, преследующее нас всю жизнь, «домашнее задание».","Актрисы и в жизни продолжают играть роль - самих себя, потому что им уже сложно откопать в себе ту, забытую ещё в начале карьеры, личность.","Артистические тусовки неприветливы не по своей воле. Там каждый играет свою роль, часто определённую ещё в детстве.","Все сыгранные актрисами роли — это одна роль, которую они начали играть ещё в детстве."
+</div>
+ <div onclick =  "gartacPachatak(11,'down')" id="idMotsCles11" style="border:none;height:auto;width:100%"> "-=-О эротике-=-: Сердцу не прикажешь — потому что у него свой командир. Ему приказывает равнодушная природа.","Воображение нам дано для того чтобы раскрашивать простые программы природы, превращая их яркие эмоции и глубокие чувства.","В сексуальных фантазиях и снах нет места стыду. Потому что, в момент представления, они ярче и важнее далёкой реальности.","В любви фантазии занимают место реальности: каждый крутит в голове свою собственную мелодраму и свой собственный эротический сериал.","В любви, как в сексе — снаружи всё просто, рутинно и до непристойности функционально, а внутри — восхитительно, чувственно и неповторимо.","Знала бы природа во что превращаются её простые программы, какими драмами и комедиями оборачиваются её инструкции размножения.","Отборный мир сексуальных фантазий никогда не воплощается в реальности - только в рекламе и порнофильмах. Реальность может только использовать его, вспоминая в нужный момент.","На основе сомнительных прелестей и неуклюжих сопящих движений в голове рождаются все головокружительные страсти и эротические фантазии.","Весь мир - театр и люди в нём актёры. Весь секс - театр и люди в нём — фантазии.",
+</div>
+ <div onclick =  "gartacPachatak(12,'down')" id="idMotsCles12" style="border:none;height:auto;width:100%"> "-=-О выборе судьбы-=-: Самый свободный выбор — это жанр своей судьбы(комедия, трагедия, фарс,...), ведь всё остальное зависит не только от нас.","Человек, как и страна, сам выбирает своё прошлое — на мемуарах, как и на учебниках истории, можно написать лишь «основано на реальных событиях».","В голове всё согласуется со всем. Так воспоминания и ощущение успеха в жизни взаимно подстраиваются, изменяя друг друга, выстраивая, из хаоса жизни, логичную биографию.","Человеку трудно сказать счастлив ли он. Была ли жизнь счастливой или нет выясняется только в самом конце, перед смертью, когда всё остаётся в прошлом.","С кем ассоциирует себя человек, такая у него выстраивается и судьба, даже если ассоциировать постфактум, в самом конце жизни.","Личная история(точно также как и история страны) пишется не ради истины, а чтобы угодить себе настоящему.","Сложно изменить свою судьбу, но очень просто — её жанр. Так тренируются актёры: играют трагедию или комедию по одному и тому же сценарию.","В финале старого фильма о Буратино, за куском холста оказывалась... страна СССР. Мне в детстве нравилась такая фантастика — что Буратино может появиться прямо здесь... Только повзрослев я понял что снимали не фантастику а пропаганду. Так зритель сам создаёт жанр.","У каждой жизни, как у фильма, есть свой жанр — от него зависит её трагический конец или хэппиэнд.",
+</div>
+ <div onclick =  "gartacPachatak(13,'down')" id="idMotsCles13" style="border:none;height:auto;width:100%"> "-=-О истории-=-: Победители строят на руинах. Внизу остаётся не только культурный слой из разбитых черепков, но и ад из погребённых душ и забытых культур.","Музеи - могилы миров, погребенных нами.","Цивилизации забываются бесследно, подменяются нашими стереотипными представлениями. История - это и есть смерть и подмена цивилизаций.","В меняющимся мире каждый — тайный агент: или нового или разрушенного старого.","История пишется по заказу победителей. Она похожа на новостную пропагандную телепередачу: так же ясно кто хороший, кто плохой. Только вместо новостей — старости.","Цивилизации всегда строились на обломках друг друга. Недавно люди перестали надругиваться над памятниками побеждённых предшественников, но продолжают — над их побеждёнными мировоззрениями.","На чужбине, мы чувствуем себя непонятыми переселёнными душами, живущими несвою жизнь — как шпионы.","Империи понимают, что народы, вырвавшиеся из-под их влияния, уже никогда не захотят обратно. Они оказываются перед выбором: либо распад, либо уничтожение многообразия своих культур.",
+</div>
+ <div onclick =  "gartacPachatak(14,'down')" id="idMotsCles14" style="border:none;height:auto;width:100%"> "-=-О мифе о продаже души-=-: Продажа души дьяволу - не миф, это происходит вокруг, просто незаметно.","Души (как и целые культуры) исчезают, крадутся и продаются — но такие новости доходят к нам из того мира только в виде мифов.","Каждый миф имеет своё отражение в реальности, он хранится в тёмных глубинах подсознательного, и неосознанно реализуется нами в жизни, формируя нашу судьбу.","То что выглядит снаружи как успешная карьера, внутри часто оказывается неудачей построить счастье для себя. За каждой удачей скрывается что-то напоминающее договор о продаже души.","За каждым мифом, за каждым архетипическим сюжетом, прячется свой, вытесненный из коллективного сознания, кошмар.","Деньги правят всем. И, поэтому, у них есть мистическая сторона. Но они гораздо мрачнее тех популярных и безобидных  «правил привлечения денег в свою жизнь».","Что-то портиться при конвертации таланта в профессию. Душа  уходит оттуда куда приходят деньги.","«Знание - сила» - это ошибочно переводённое на русский высказывание Френсиса Бэкона «Знание — это власть». В новом информационном обществе власть переходит от денег к информации, и именно туда  переселяется дьявол.",
+</div>
+ <div onclick =  "gartacPachatak(15,'down')" id="idMotsCles15" style="border:none;height:auto;width:100%"> "-=-О любви-=-: Будущую эру милосердия можно почувствовать уже сейчас — в глазах людей или животных к которым проявляешь сострадание.","В приюте для старых собак можно увидеть то же ожидание смерти и примерение с судьбой что и доме престарелых.","Сострадание и любовь — душа природы, которую можно разглядеть в глазах всех живых существ.","Ту высоту на которую мы все поднимемся после завершения жизненного пути, можно разглядеть везде — и в сверкающих горных вершинах, и в грустных глазах старой собаки.","И зло человека, и агрессия собак — это лишь защитные реакции, способы приспособления к несовершенному миру.","Несбывшееся всегда реализуется, хотя и не в материальном мире. Но его зов не обманывает — ни человека, ни собаку, ни играющие тысячи ролей облака.","Внутренний мир собак беднее нашего, но зато он состоит из самого важного. Собака сразу знает то что останется от нашего с ней общего внутреннего мира.","Притягательность пути в том, что, несмотря на билет, где-то в глубине души не знаешь куда едешь. И только в конце открывается куда ехали - и поезд, и... жизнь.","Мы все — и люди и животные, чувствуем — и что спасёт мир, и что останется после нас. Но это — не совсем «красота», как  пообещал Достоевский.","Нигде не найти информацию о том кто ты. Но можно найти понимание: то что останется, то что не умрёт — это и есть ты.","Собаки живут в нашем мире как сталкеры в зоне описанной в «Пикнике на обочине»: не понимают его устройства, но чувствуют что надо делать. Так будем жить и мы в мире будущего искусственного интеллекта."
+</div>
+ <div onclick =  "gartacPachatak(16,'down')" id="idMotsCles16" style="border:none;height:auto;width:100%"> "-=-О Тарзанах и Маугли-=-: Футурология может показать будущее, но мы поймём в показанном нам мире не больше попавших в цивилизацию дикарей.","Дети - дикари древнего племени, попавшие в цивилизацию.","Есть навязчивые, повторяющиеся сюжеты — именно так рождались мифы в подсознании наших предков. Один из таких пред-мифических сюжетов — дикарь, попавший в цивилизацию.","На чужбине, мы чувствуем себя ребёнком или искренним дикарём — который один видит неествественость местных правил и условностей.","Сюжеты о дикарях, оказавшихся в цивилизации и постоянно попадающих в конфузные ситуации - это отзвуки реальных историй, происходящих с нами.","Тарзан, попавший к людям, мог бы вести себя глупо с нашей техникой, но он не увидел бы ничего нового в человеческом обществе.","Никто нас не воспринимает такими как мы есть глубоко внутри — одинокими, непонятыми обществом, первобытными детьми.",
+</div>
+ <div onclick =  "gartacPachatak(17,'down')" id="idMotsCles17" style="border:none;height:auto;width:100%"> "-=-О мелодрамах и сериалах-=-: Интеграция в ячейки общества постепенно заменяет человеку его собственные, менее конкректные, мечты.","Фильмы и телевидение заменяют зрителю и подвиги и любвь. Вместо того чтобы искать их в своей жизни, человек ищет себя в готовых телесюжетах и киногероях.","Телезритель, как квантовая частица, находится в смешанном состоянии -  одновременно и перед и за экраном.","Выйдя из пещер, люди  прячутся от мира в норах квартир и в телеэкранах.","Счастье самореализации тоже может быть суррогатным. Так, потенциальные хорошие жены и страстные любовницы смотрят сериалы, реализуясь не в жизни, а в фантазиях.","Создавая прекрасные образы, искусство стремиться украсить жизнь. Но жизнь тусклей и будничней — и исккусственные образы заменяют её в головах зрителей.","Все женщины ищут счастье в любви и семье. И, если не находят в жизни, находят его в женских романах и сериалах.","Души теряются в каменных джунглях, в бесконечных, как амазонская сельва, спальных районах — и нет такого компаса который бы вывел душу из этой чащи к свету.","Женщины ищут женское счастье и, не найдя его в реальности, погружаются в сериалы и женские романы, заменяющие бедную чувствами жизнь.","Киносюжеты красивой любви доносят до нас то что мы не можем выделить, раскопать в собственной жизни. Наш замыленный, отягощённый корыстью и мелочностью взгляд уже неспособен на это.","Несбывшееся в реальности женское счастье реализуется в просмотре сериалов и фильмов о красивой любви.","Женщины хотят пробиться в свою молодость, в невстреченную настоящую любовь, и, в конце концов, заменяют это фантазиями и сериалами.","Счастье спокойной одинокой жизни и счастье страстной любви — неизвестно что чего  подменяет, что живёт в глубине души а что навязано обществом или судьбой.","Тысячи окон спальных районов на фоне ночной черноты - это самый футуристичный пейзаж нашего времени, матрица заключённых душ и вселенная квадратных звёзд.","Женщинам проще увидеть принца в негодяе, чем ждать того кто грезился в юности. А если не получится его полюбить — на помощь приходят мечты, женские романы и сериалы.","Люди в ячейках многоэтажек, просматривающие красочные сны сериалов, - это и есть прототип будущей «Матрицы».",
+</div>
+ <div onclick =  "gartacPachatak(18,'down')" id="idMotsCles18" style="border:none;height:auto;width:100%"> "-=-О различиях культур-=-: Ценности всех цивилизаций одинаковы, просто названы разными словами. Цивилизации разделяются только потому что не понимают друг друга.","На чужбине внезапно ощущается что у тебя внутри есть что-то чего нет у окружающих. И внезапно оказывается что это тяжело — не находить своё отражение в людях, как не находят его мающиеся вечностью вампиры.","Детство - это отсутствие ответственности. Отсюда и тоска по ушедшему: и у человека и у народа.","Все общества постороены похоже, по первобытным животным схемам. И только культуры, созданные много позднее, делают народы непохожими.","Позднесоветские годы — детство современной России и, как любые детские образы, часто вспоминаются с ностальгией.","Попав в чужую страну, все чувствуют себя нецивилизованными дикарями. Потому что цивилизация — другая.",
+</div>
+ <div onclick =  "gartacPachatak(19,'down')" id="idMotsCles19" style="border:none;height:auto;width:100%"> "-=-О культуре-=-: Вся культура — это попытки вспомнить и рассказать сон о любви, спустившийся из другого мира.","Культура - попытка описать мир эмоций, дикий мир в котором живут дети.","Культура придумывает смыслы всем животным переживаниям и проявлениям инстинктов.","Культура рисует свои картины из тех причудливых электрических узоров мозга, которые нам видятся как эмоциональный мир.","Истории отношений неисчерпаемы как море. И вся культура — лишь попытка осознать и запечатлеть это многообразие.","Культура — это попытка понять что-то настоящее и вечное в неуловимом и изменчивом мире эмоций. И возможно, именно это общее и вечное — это то что было до нас и останется после.","Культура — воссоздание эфемерного эмоционального мира, вызывающая (магическими словами, музыкой или изображениями) те мимолётные импульсы в голове, которые мы называем чувствами.","Характеры и истории народов начинаются с историй обезьянних стай: большинство культур исчезли до появления письменности.","99% снов, разговоров, долгих зим тянулись тысячелетиями в пещерах и землянках, окружённых первобытным непонятным миром. А  значит 99% философских идей и религиозных озарений пропали до письменности.","Миллиарды внутренних миров и есть душа человечества. Эта душа забывается, исчезает с каждым поколением. Вся культура — это попытка её запечатлеть.","Понимать зверей - не значит чувствовать их. А между тем, всё их поведение можно обьяснить также как мы объясняем себя — чувствами.",
+</div>
+ 
+ 
+ 
+ 
+<div onclick =  "gartacPachatak(0,'down');" id="idMotsCles0" style="border:none;height:auto;width:100%"  > "-=-О водоворотах судьбы-=-: Каждый попадает в свой водоворот судьбы — и преступники и жертвы. И началась эта распутица ещё во времёна райского первобытного детства.","Водовороты жизни несут нас в разные стороны. И всё началось ещё в нашем далёком африканском детстве.","Мы все упали в водоворот жизни с райского, поросшего пальмами, берега детства.","Добро и зло - берега жизни на которые нас выносит её водоворотистое течение.","Мы все попали в свои судьбы, как в водовороты. Нас несёт и мы приспосабливаемся к течению - ещё с простых первобытных времён.","И львы, и их жертвы, и охотники — все попадают в свои шкуры не по своей воле и не по своей воле расстаются с ними.","Подмена детей — популярный сюжет, потому что, ещё с детских мультфильмов, все чувствуют себя немного не на своём месте.","В сюжетах о природе (от мультфильмов до романов) наверх пробивается достойнейший. Но природа не различает добро и зло — просто все, с детства, вынуждены приспосабливаться. И всё.","Только ребёнку сразу ясно — кто хороший, кто плохой. Такая ясность бывает только в детстве и в первобытном африканском рае.","Каждый попадает в свою судьбу - как в водоворот. Криминальный талант может попасть в судьбу Шерлока Холмса, и наоборот.","Люди увлекаются пропагандой как водоворотистой рекой, и течение несёт нас так, что уже не выплыть на тот райский берег где ещё не было, как в Библии, ни добра ни зла.",
+</div>
+ <div onclick =  "gartacPachatak(1,'down')" id="idMotsCles1" style="border:none;height:auto;width:100%" > "-=-О пирамидах-=-: Египетские фрески — это древние фотографии. Там, в глазах, так же как и на современных фотошедеврах, виден странный внутренний мир строителей пирамид.","Если государство не обеспечивает сохранность жизни, то оно начинает придумывать смыслы, за которые можно умереть.","Уже не понять ни красных ни белых, исчез их образ мыслей, желания и вера, ведущая в бои гражданской войны.","Со времён пирамид, государство придумывает для народа смыслы и причины служить. Эти смыслы заменяют истину, которую можно найти только самому.","Все империи скрепляются смыслами. Это им заменяет историческую правду.","При тоталитаризме люди счастливее и свободнее чем при демократии. «Меньше знаешь, лучше спишь» и, пока лично тебя не разбудил ночной воронок НКВД, ты живёшь в свободной и счастливой стране.","Авторитарные правительства заменяют народу родителей: дают ему правила, цели и смыслы.","Политика - это экономика, в которой, вместо вместо материальных ценностей, продаются идеи.","Государственные системы стремятся контролировать симпатии, антипатии и смыслы в головах граждан. Это началось со строительства пирамид и закончится построением «Матрицы».",
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div onclick =  "gartacPachatak(21,'down')" id="idMotsCles21" style="border:none;height:auto;width:100%"> "-=-О расставании-=-: После расставания, как после сна, тает совместный мир, сквозь который, постепенно, проступает неприветливая и несказочная реальность.","Не только в конце, но и в течении жизни, внешнее умирает, а внутренее остаётся — как остаётся внутри общий мир после расставания.","Внутренние миры тоже рождаются и умирают – как умирает общий мир после расставания.","Расставание — это когда рушится целый совместный мир. И тот, у кого этот мир остаётся внутри, страдает.","Всё утерянное найдётся и все разделённые когда-то внутренние миры соединяться снова. По закону сохранения ничто не должно потеряться бесследно.","Ушедшая любовь  оставляет каждому целый мир, который постепенно умирает и именно поэтому страдает человек. Но этот мир умирает не весь — и то, что остаётся и есть вечность.","Внутренний эмоциональный мир бывает и общим — это то что остаётся после любви.","Из незаметных сперва моментов общей жизни — как пережидали грохочущий мимо поезд, как ехали смеясь на одном велосипеде — незаметно сложилось воспоминание ушедшего счастья. Это общее и остаётся в вечности.","При расставании погибает общий мир — все те  субьективные состояния и эмоционально окрашенные воспоминания, которые, как понимаешь потом, и были счастьем.","Из совместных прогулок и рассветов складывается общий мир, который погибает при расставании.",
+</div>
+
+
+
+
+
+
+ <div onclick =  "gartacPachatak(23,'down')" id="idMotsCles23" style="border:none;height:auto;width:100%"> "-=-О метафоре поезда-=-: Культуры мимолётны как пейзаж за окном поезда. И не понять, не дотянуться до  людей прошлого — как до тех провожающих что остались навсегда на перроне.","Смотришь вслед поезду - и чувствуешь внутри это древнее счастье первопроходцев: уехать отсюда туда — куда бы это ни было.","Если пытаться сравнивать судьбы, то окажется что никто по-настоящему не счастлив, все мечтали о другом и будет видно лишь как жизнь поездом проходит мимо.","Освещённые уютными  лампами рестораны и светомузыкальные бары — кажутся поездом чужой, проходящей мимо жизни.","Люди похожи на уезжающих и провожающих поезд: они всматриваются в чужую судьбу и представляют себя на месте друг друга.","Мы выезжаем из прошлой жизни как утренний поезд — просто однажды просыпаемся в другом мире.","Мы смотрим друг на друга с непониманием и интересом - как пассажиры поезда и провожающие его взглядом жители деревень.","Все культуры одинаковы: все они построены на разделении мира на ОНИ и МЫ, и поэтому все считают себя очень непохожими.",
+</div>
+ <div onclick =  "gartacPachatak(24,'down')" id="idMotsCles24" style="border:none;height:auto;width:100%"> "-=-О скрытых смыслах-=-: Инопланетяне, наблюдая за нами, видят то же что мы видим в зоопарке.","Все видят разный смысл — в фильмах, книгах, и даже в простом разговоре собеседники говорят о разном.","У каждых слов, есть как осознанные так и скрытые подсознательные цели и смыслы. Инопланетный переводчик будет слышать именно вторые, как более важные для нас, смыслы. Например не «Добро пожаловать на Землю!» а «Как бы выведать у них побольше?».","Сюжеты, разговоры, и вообще слова — это всегда лишь приличная одежда для того что мы хотим сказать подсознательно.","Мы не знаем смысл сигналов которые подаём. И скрытые смыслы в наших словах часто видны ярче чем их формальные значения.","С точки зрения природы, не только наше поведение, но и все произносимые нами слова, имеют другой, простой и инстинктивный смысл.","Крики и «разговоры» всех обезьян похожи. И, если присмотреться к человеческой молодёжи, похожи и на них. Так я научился языку животных.","Вечерний гогот гопников во дворе так похож на гиканье обезьяньих компаний что возвращает в те времена когда они оба, вместе с щебетанием птиц и далёкими трубами слонов, составляли природные звуки вечерней саванны.","Инопланетные зоологи нашли бы совсем другие, скрытые для нас, смыслы в наших разговорах, новостных передачах и речах политиков. И, возможно, они были бы правы.","Теперь и не вспомнить что же было веселого в юности, что было смешного в разговорах на вечеринках... и вообще какой в них был смысл.","Мы не можем представить скрытых смыслов своих слов. Их знала природа, придумавшая слова для своих целей и их будет знать искусственный интеллект, уже стоящий себя из всей информации интернета.",
+</div>
+ <div onclick =  "gartacPachatak(25,'down')" id="idMotsCles25" style="border:none;height:auto;width:100%"> "-=-О рекламе-=-: Вся жизнь — театр, всё счастье — реклама.","Пропаганда - это реклама, только не товаров, а смыслов. Но тоже для выгоды.","В старых советских фильмах всё так здорово что даже неправдоподобно - так сейчас бывает только в рекламе. Это и была реклама: реклама той страны.","Женский взгляд так привлекателен потому что это реклама. Обманчивая реклама будущего счастья.","Фантазии также отличаются от реальности как реклама от реального товара: они идеальны.","Реклама, как и пропаганда, заменяет своими яркими образами что-то внутри. А значит, крадёт частичку души.","В искусстве всё ярче — работа, любовь, путешествия. Всё лучше чем на самом деле, как бывает только в рекламе. Искусство — это реклама жизни.","В ярких фильмах, в морском закате, да и просто во взгляде женщины есть нечто зовущее, потому что это - реклама альтернативной судьбы.","Счастье — всегда далеко, потому что оно — не реальность, а реклама, призыв попробовать.","Пока реклама  и пропаганда транслируется посредством телепередач, а не напрямую с помощью воздействующих на мозг волн. И только природа, уже миллионы лет, транслирует нам свою рекламу напрямую в мозг. Мы называем это счастьем.",
+</div>
+ <div onclick =  "gartacPachatak(26,'down')" id="idMotsCles26" style="border:none;height:auto;width:100%"> "-=-О марионетках-=-: Мы — не плохие и не хорошие, мы — куклы, чьи оскалы и улыбки нарисованы кукольником-судьбой.","Мы — марионетки в руках природы.","Весь мир — кукольный театр, и мы в нём марионетки.","Природа управляет человеком как марионеткой, которой кажется что она всё решает сама.","Режиссёры и кукольники лишь обозначают красоту — кто театральным взглядом, кто размером кукольных глаз. Всё остальное дорисовывается и доигрывается в голове зрителя.","В детстве было ясно по лицу: добрый или злой персонаж. Характер, красота, ум — всё было нарисовано на кукольных лицах. А теперь неясно — что прячется за приветливой улыбкой человека.","Чтобы достичь своих прагматичных целей, природа дёргает нас, как марионетку за нити, за наши острейшие желания и невыносимые страдания.","Природа — режиссёр нашего счастья, управляющая нами, как марионетками, за созданные ею нити желаний.","Мы - театр марионеток, запущенный ещё в детстве и ведомый по сцене жестоким колесом причин и следствий.","Государственная система усложняется до уровня  природы, двигающей фигурки марионеток по сцене реальности.",
+</div>
+ <div onclick =  "gartacPachatak(27,'down')" id="idMotsCles27" style="border:none;height:auto;width:100%"> "-=-О пьянстве-=-: Добившиеся успеха утверждают что их судьба — результат веры в себя. Но скорее наоборот: успешная судьба питает веру... Судьба и характер; отсутствие перспектив и пьянство — что чья причина?.","Счастливы писатели у которых нет глубоких мыслей: они могут писать о том за что платят деньги и не спиваться из-за  отсутствия творческой реализации.","Воспоминания - последнее богатство пьяниц.","Человек сразу чувствует какая судьба может его ждать в лучшем случае. И, только повзослев - какое будущее его ждёт реально.","Некоторые чувствуют  закулисный мир сансары, а значит и своё будущее, свою неумолимо ведомую этим миром судьбу."
+</div>
+ <div onclick =  "gartacPachatak(28,'down')" id="idMotsCles28" style="border:none;height:auto;width:100%"> "-=-О кнопках включающих преступления-=-: Человек создан природой чтобы приспосабливаться. Он приспосабливает душу к судьбе и видит себя совсем не так как окружающие.","Боязнь причинить вред ближнему заменит боязнь перед УК. Это  кнопка, изменящая в будущем и внутренний мир человека, и строение общества.","Никто не знает что внутри другого и как он видит себя самого. Всякое сумасшествие смотрится изнутри как гениальность, всякое преступление — как выживание и самооборона.","Мы не знаем кто мы - пока судьба не включит нас, как робота, нажав на кнопку того или иного поведения.","Никто не знает каков внутри человек: в каждом монстре живёт обиженный ребёнок.","Природа не исправляет своих ошибок. И, если случайно нажмёт не на ту кнопку, просто выбрасывает свою испорченную игрушку.","Человек с детства играет роль, а что у него внутри — никто не знает: также как мы не знаем ничего о личной жизни и проблемах любимых актёров.","Общество измеряет вину и заслуги по роли которую назначила человеку судьба. Мы, как древнегреческие зрители, славим хороших и бьём плохих персонажей. Сложно понять что у человека внутри - как древним грекам заглянуть под маску актёра.","Мы ничего не знаем о небесном мире, неумело пытаясь какими-то традициями и церемониями вращать вселенские и быть может равнодушные к нам колёса высших сфер — те что качают маятник небытия и вечности.","Не только природа дёргает нас, как марионетку, за чувствительные нити. История тоже нажимает на кнопки, включая ту или иную судьбу.","Все пьяницы или ищут в собутыльнике понимания или жалуются что никто их не понимает. Значит, как утверждает пословица, и у всех трезвых на уме мысль  что никто не знает что у них внутри.",
+</div>
+ <div onclick =  "gartacPachatak(29,'down')" id="idMotsCles29" style="border:none;height:auto;width:100%"> "-=-О Матрице-=-: Людям всё скучнее распутывать сеть причин, и им предлагают готовую матрицу мнений: что ни произойдёт - ясно кто виноват.","Мы уже создали «Матрицу» для управления нами, приготовив всё для грядущего искусственного интеллекта, порабощающего человечество.","Человеку сложно лавировать, сохранять себя в системе. Его затягивает в матрицу и он становится её частью.","Государственная система завинчивает нас, как винтики, всё глубже в себя — подобно тому как матросы Корабля-призрака, умирая, встраиваются в его борта. Но матросы засыпают, а мы, становясь системой, работаем и ввинчиваем в неё новые души.","Усложнение организации общества ведёт людей в театральную «Матрицу», в которой, как в пчелиных сотах, каждый член общества даже не представляет как оно на самом деле устроено.","17 лет спустя выхода фильма «Матрица», я вижу как не роботы, а сами люди строят порабощающую их систему, добровольно стремясь погрузиться в как можно более глубокий сон.","Игры спецслужб на всемирной шахматной доске — предвестник Матрицы, в которую могут попасть наши внуки.","Человек разучивается жить своей внутренней жизнью - её заменяют на нужные образы, нужные мечты, симпатии и антипатии. Человек встраивается в операционную систему будущего.",
+</div>
+ <div onclick =  "gartacPachatak(30,'down')" id="idMotsCles30" style="border:none;height:auto;width:100%"> "-=-О других нелинейных книгах-=-: Народы, как и люди, могут страдать от амнезии, забывая своё имя, свой язык и историю (двулинейная книга «Бомба Федоровича»).","Этот текст также входит в нелинейный интерактивный сборник «Мешок сказок».","В каждом математическом узоре мороза, в каждом рисунке волн от брошенного в воду камня, природа посылает нам свои письма и учебники(текст«Самая длинная песня» в нелин.книге о реальности).","И над империей Чингизхана по-прежнему не заходит солнце(двулинейная книга).","Этот текст также входит в нелинейный интерактивный сборник рассказов «Там»"
+</div>
+ <div onclick =  "gartacPachatak(31,'down')" id="idMotsCles31" style="border:none;height:auto;width:100%"> "-=-О других книгах-=-: В обществе будущего будут другие ценности и богатства, а значит и  другая преступность (футурологическая книга).","За 2000 лет могущественные церковные организации, в своём сотрудничестве с приходящими и уходящими державами, ушли далеко от учения о том «не от мира сего» Царстве божьем каким было христианство. (книга о христианстве).","21ый - век нейронауки, а значит, и внутреннего мира (футурологическая книга).","Информационное общество будущего и эволюция мыслящей материи (книги «Цивилизация после людей» и «Апгрейд в сверхлюди»).","Будущее открывает многие варианты взаимодействия человека и его природы, вместо существующего сейчас единственного кабального пожизненного контракта (футурологическая книга).",
+</div>
+ <div onclick =  "gartacPachatak(32,'down')" id="idMotsCles32" style="border:none;height:auto;width:100%"> "-=-О видео-арте, науке и заметках путешественника-=-: Путешествуя по южной Африке рано или поздно понимаешь что этот благоприятный климат и этот лес по которому можно ходить босиком — и есть твоя биологическая родина.","Нейро-эксперименты углубляются всё дальше в тайны ума. А с другой стороны, в глубинах души копается культура. Эти два туннеля могут встретиться (организация экспериментов).","Системы искусственного интеллекта уже сейчас умеют развиваться. Но, как и человек, они развиваются по определённым законам — которые можно в них вложить на этапе создания.",
+</div>
+
+</fieldset>
+</div>
+
+<span id='divStarajaGall'></span>
+</body>
+</html>
