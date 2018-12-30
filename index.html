@@ -2,7 +2,10 @@
 <!-- (С) Алесь Мищенко -->
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Алесь Мищенко. "Индульгенция людей" (нелинейная интерактивная книга, издание 2018 года).</title> 
+<title>Алесь Мищенко. Нелинейная интерактивная книга "Индульгенция людей"</title> 
+<meta name="keywords" content="Индульгенция людей,Нелинейная интерактивная книга,Книга будущего,Алесь Мищенко,ЭРА МИЛОСЕРДИЯ,ХИРУРГ И ПСИХ,ПРИСНИЛАСЬ ЛЮБОВЬ,КОД САМОУНИЧТОЖЕНИЯ,КВАНТОВЫЕ ЛЮДИ,ДЕТИ И ПАУКИ,УЧЁНЫЙ И ПРИРОДА,СУДЫ И СУДЬБЫ,ЭРОТИЧЕСКИЙ ОСКАР,АВТОРЫ СВОИХ СУДЕБ,ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ,ДОГОВОР С ДЬЯВОЛОМ,ПЛАТА ЗА ВСЁ,ИСПОВЕДЬ ДИКАРЯ,МАТРИЦА МНОГОЭТАЖЕК,ДЕТСТВО НАРОДА,ДНО МОРЯ ЛЮБВИ,НЕСБЫВШЕЕСЯ,НЕОТПРАВЛЕННОЕ ПИСЬМО,НЕУЧ ПРИРОДЫ,ЛЮДИ ЕХАЛИ В ПОЕЗДЕ,ЦЕЛЬ ВСЕХ РАЗГОВОРОВ,РЕКЛАМА РАЯ,УТРО МАРИОНЕТКИ,ЗАМЕНИТЕЛЬ БУДУЩЕГО,ГДЕ У ЛЮДЕЙ КНОПКА,СОН БУДУЩЕГО,КОРОЛИ ВОДОВОРОТОВ,БИРЖА СМЫСЛОВ ЖИЗНИ,ВЗГЛЯД С ФОТОГРАФИИ,ЛЮБОВЬ,СМЕРТЬ,ЭРОС,НАУКА,ТВ,ФАНТАЗИИ,НЕПОНИМАНИЕ,ОБЩЕСТВО,МИРЫ,ИСТОРИЯ,ПРИРОДА,ДУША" />
+<meta name="description" content="Алесь Мищенко. Нелинейная интерактивная книга ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ" />
+<meta property="og:image" content="http://alesmishchenko.github.io/indulgentia/logo.png" />
 <script type='text/javascript' src='illustrate.js'></script>
 <script type='text/javascript' src='initiate.js'></script>
 <style>
@@ -59,7 +62,6 @@ display: inline;
 -->
 h3 { font-size: 120%;}
 </style>
-<meta property="og:image" content="http://alesmishchenko.github.io/indulgentia/logo.png" />
 </head>
 <!-- ======================================== END STYLE & HEAD ======================================== -->
 <body onload = " zrabicAllRadkiForTZmestIDfrom0();  zrabicTZmest(); illustrate(document.getElementById('divStarajaGall'))
@@ -102,8 +104,8 @@ document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style
 <!-- ======================================== START BODY ======================================== -->
 <!-- <div onmousedown =  "nazatCtobCvet();" onmouseup =  "otzatCtobChernobeloe();"> -->
 <h2 id="idh2zagolov"><a class="f1" id="idh2zagolov1" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank >Алесь Мищенко.</a> &nbsp; 
-<img src="./logo.png" width="40px" height="25px" alt="Автор	Fr. Jeronimus Munghofer, OSB, Источник http://www.gabrieleweis.de/3-geschichtsbits/histo-surfing/4-neuzeit1/4-2-renaissance/synopsenbilder/ablassbiref.jpg , общественное достояние,pd-old,PD-US"/><a href="./index.html">
 <a class="f2" id="idh2zagolov2" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank > Нелинейная интерактивная книга </a> &nbsp;
+<img src="./logo.png" width="60px" height="30px" alt="Автор	Fr. Jeronimus Munghofer, OSB, Источник http://www.gabrieleweis.de/3-geschichtsbits/histo-surfing/4-neuzeit1/4-2-renaissance/synopsenbilder/ablassbiref.jpg , общественное достояние,pd-old,PD-US"/><a href="./index.html">
 <a class="f3" id="idh2zagolov3" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank >"ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ"</a></h2> 
 
 
@@ -124,7 +126,7 @@ document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style
 
 <fieldset> 
 <legend id="idLegendZmest" title="Тексты, фильтрованные по темам и прочитанности">Оглавление и связи с текущим текстом:   </legend> 
-<div id="idDivTZmest" style="border:1px solid black;overflow:scroll;height:181px;width:100%;overflow:auto" ></div>
+<div id="idDivTZmest" style="border:1px solid black;overflow:scroll;height:481px;width:100%;overflow:auto" ></div>
 <div id="idDivFilterZmest" style="border:none;height:auto;width:100%" ></div>
 </fieldset>
 
@@ -233,6 +235,7 @@ if(temyKazhdogoEss[raspovLicnik].indexOf(11)>=0) {curW=screen.availWidth; while(
   <option value="p">письмо автору</option>
   <option value="o">оценка текущего текста</option>
   <option value="z">заказать персональный экземпляр книги</option>
+  <option value="s">замечания,предложения о работе сайта</option>  
 <script type="text/javascript">
 //document.getElementById('idFormh3').style.color = dopolnitCol(document.body.style.backgroundColor);
 function autotextFunction() {
@@ -246,6 +249,9 @@ autotext.value=' Оценка'+autoLegend.substring(autoLegend.indexOf('"'),auto
 };
 if(document.getElementById('idPismoIliOcenka').getElementsByTagName('option')[2].selected == true){
 autotext.value=' Ваше имя: \r\n Ваша фамилия:';
+};
+if(document.getElementById('idPismoIliOcenka').getElementsByTagName('option')[3].selected == true){
+autotext.value=' Не работает на сайте: \r\n Пожелания улучшения сайта:';
 };
 }
 </script>
@@ -369,7 +375,7 @@ function proverkaEmail() {
 </div>
  <div onclick =  "gartacPachatak(32,'down')" id="idMotsCles32" style="border:none;height:auto;width:100%"> "-=-О видео-арте, науке и заметках путешественника-=-: Путешествуя по южной Африке рано или поздно понимаешь что этот благоприятный климат и этот лес по которому можно ходить босиком — и есть твоя биологическая родина.","Нейро-эксперименты углубляются всё дальше в тайны ума. А с другой стороны, в глубинах души копается культура. Эти два туннеля могут встретиться (организация экспериментов).","Системы искусственного интеллекта уже сейчас умеют развиваться. Но, как и человек, они развиваются по определённым законам — которые можно в них вложить на этапе создания.",
 </div>
-
+-=-Темы и тексты книги-=-: ЭРА МИЛОСЕРДИЯ,ХИРУРГ И ПСИХ,ПРИСНИЛАСЬ ЛЮБОВЬ,КОД САМОУНИЧТОЖЕНИЯ,КВАНТОВЫЕ ЛЮДИ,ДЕТИ И ПАУКИ,УЧЁНЫЙ И ПРИРОДА,СУДЫ И СУДЬБЫ,ЭРОТИЧЕСКИЙ ОСКАР,АВТОРЫ СВОИХ СУДЕБ,ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ,ДОГОВОР С ДЬЯВОЛОМ,ПЛАТА ЗА ВСЁ,ИСПОВЕДЬ ДИКАРЯ,МАТРИЦА МНОГОЭТАЖЕК,ДЕТСТВО НАРОДА,ДНО МОРЯ ЛЮБВИ,НЕСБЫВШЕЕСЯ,НЕОТПРАВЛЕННОЕ ПИСЬМО,НЕУЧ ПРИРОДЫ,ЛЮДИ ЕХАЛИ В ПОЕЗДЕ,ЦЕЛЬ ВСЕХ РАЗГОВОРОВ,РЕКЛАМА РАЯ,УТРО МАРИОНЕТКИ,ЗАМЕНИТЕЛЬ БУДУЩЕГО,ГДЕ У ЛЮДЕЙ КНОПКА,СОН БУДУЩЕГО,КОРОЛИ ВОДОВОРОТОВ,БИРЖА СМЫСЛОВ ЖИЗНИ,ВЗГЛЯД С ФОТОГРАФИИ,ЛЮБОВЬ,СМЕРТЬ,ЭРОС,НАУКА,ТВ,ФАНТАЗИИ,НЕПОНИМАНИЕ,ОБЩЕСТВО,МИРЫ,ИСТОРИЯ,ПРИРОДА,ДУША
 </fieldset>
 </div>
 

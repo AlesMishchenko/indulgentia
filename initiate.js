@@ -369,7 +369,7 @@ if (krasitCIubrac.valueOf() == "krasit" && !naadvar) {
   document.getElementById('tableZmest').rows[curRowIndex].style.backgroundColor = colorName; 
   var curind = usePatrebnyaRadkiUZmest[i];
   if(curind instanceof Array) {curind=curind[0];};
-  <!-- document.getElementById('tableZmest').rows[curRowIndex].cells[0].innerHTML = vseIndsTXTofRadkiZmest[vseIndsIDofRadkiZmest.indexOf(curind)]+textTObyEss[i];    -->
+  // document.getElementById('tableZmest').rows[curRowIndex].cells[0].innerHTML = vseIndsTXTofRadkiZmest[vseIndsIDofRadkiZmest.indexOf(curind)]+textTObyEss[i];   
   document.getElementById('tableZmest').rows[curRowIndex].cells[0].innerHTML = vseIndsTXTofRadkiZmest[curind]+textTObyEss[i];   
 };}}
 }
