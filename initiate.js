@@ -115,7 +115,7 @@ if(kavalackisedevrikiSetojTemoi[item].includes(iEss))
 }
 };
 	
-const nacalnyRaspovVarianty=[0,11,19,     4,8,15,17,20,21,23,4,8,15,17,20,21,23,];
+const nacalnyRaspovVarianty=[0,21,19,     4,8,15,17,20,23,4,8,15,17,20,23];
 var raspovLicnik = nacalnyRaspovVarianty[Math.floor(Math.random()*nacalnyRaspovVarianty.length) + 0];
 var args
 var varZmest
@@ -233,7 +233,7 @@ for (var itr = 0; itr <= bujneishINvseIndsRaspov; itr++){
 	}
 //document.appendChild(allRadkiForTZmestIDfrom0);
 for (var itr = 0; itr <= bujneishINvseIndsRaspov; itr++){	
-	console.log(allRadkiForTZmestIDfrom0[itr].id+' =allRadkiID LOOP JUST TO PRINT');
+	//CONSOLE console.log(allRadkiForTZmestIDfrom0[itr].id+' =allRadkiID LOOP JUST TO PRINT');
 }	
 }
 function zrabicTZmest() {
@@ -264,22 +264,25 @@ break;}}}}
 }
 function bujnyaIndsPeradTZmest(indexPlace) {
 naadvar=document.getElementById("idGalkaParadak").checked;
+Npovtorov=1;
+if(indexPlace==1) {naadvar=!naadvar;Npovtorov=3;};
 var minTableImgs = Math.min(document.getElementById('tableZmest').rows.length-1,bujneishINvseIndsRaspov);
 var nearRi
 var farRj 
-console.log(minTableImgs+' =minTableImgs');
+//CONSOLE console.log(minTableImgs+' =minTableImgs');
 rows = document.getElementById('tableZmest').getElementsByTagName("TR");
+for(var ipovtorov=0;ipovtorov<Npovtorov;ipovtorov++){
 for(var Nadsartavannyh=0;Nadsartavannyh<minTableImgs-1;Nadsartavannyh++){
 for (var i = Nadsartavannyh; i < minTableImgs; i++) { 
 nearRi = document.getElementById('tableZmest').rows[i].cloneNode(true);
 for (var j = i+1; j <= minTableImgs; j++) { 
 farRj = document.getElementById('tableZmest').rows[j].cloneNode(true);
-console.log(nearRi.id+' =nearid'+'__'+farRj.id+' =farid');
-console.log(args.malunki[nearRi.id]+' =args.malunki[nearRi.id]'+'__'+args.malunki[farRj.id]+' =args.malunki[farRj.id]');
+//CONSOLE console.log(nearRi.id+' =nearid'+'__'+farRj.id+' =farid');
+//CONSOLE console.log(args.malunki[nearRi.id]+' =args.malunki[nearRi.id]'+'__'+args.malunki[farRj.id]+' =args.malunki[farRj.id]');
 if (args.malunki[farRj.id][indexPlace] != args.malunki[nearRi.id][indexPlace])
 {if (args.malunki[farRj.id][indexPlace] > args.malunki[nearRi.id][indexPlace] ? !naadvar : naadvar) {rows[i].parentNode.insertBefore(rows[j], rows[i]);}}
 }}
-}
+}}
 }
 
 
@@ -353,31 +356,35 @@ if(naadvar) {usePatrebnyaRadkiUZmest = vseIndsIDofRadkiZmest.filter(function(x) 
 else {usePatrebnyaRadkiUZmest = indTObyEss};
 for (i = 0; i < usePatrebnyaRadkiUZmest.length; i++) { 
 //deleteRow(document.getElementById(indices[i].toString()));
-console.log(usePatrebnyaRadkiUZmest[i].toString()+'=usePatrebnyaRadkiUZmest[i] to get rowID');
+//CONSOLE console.log(usePatrebnyaRadkiUZmest[i].toString()+'=usePatrebnyaRadkiUZmest[i] to get rowID');
 var curRow = document.getElementById(usePatrebnyaRadkiUZmest[i].toString())
 if(curRow) {
-console.log(document.getElementById(usePatrebnyaRadkiUZmest[i].toString()).id+'=rowID'+'__'+usePatrebnyaRadkiUZmest[i].toString()+'=usePatrebnyaRadkiUZmest[i].toString()');
+//CONSOLE console.log(document.getElementById(usePatrebnyaRadkiUZmest[i].toString()).id+'=rowID'+'__'+usePatrebnyaRadkiUZmest[i].toString()+'=usePatrebnyaRadkiUZmest[i].toString()');
 var curRowIndex = curRow.rowIndex;
-console.log(curRowIndex+' =curRowIndex'+'__'+curRow+' =curRow');
+//CONSOLE console.log(curRowIndex+' =curRowIndex'+'__'+curRow+' =curRow');
 if (krasitCIubrac.valueOf() == "znishchyc") {
 document.getElementById('tableZmest').deleteRow(curRowIndex);
 };
 if (krasitCIubrac.valueOf() == "krasit" && !naadvar) {
   //var x = document.getElementById("idDivTZmest").getElementsByTagName("td");
   //x[curRowIndex].style.backgroundColor = colorName; x[curRowIndex].innerHTML = colorName;
-  console.log(document.getElementById("id"+usePatrebnyaRadkiUZmest[i].toString())+' =...ElementById("id"+usePatrebnyaRadkiUZmest[i].toString())');
+  //CONSOLE console.log(document.getElementById("id"+usePatrebnyaRadkiUZmest[i].toString())+' =...ElementById("id"+usePatrebnyaRadkiUZmest[i].toString())');
   document.getElementById('tableZmest').rows[curRowIndex].style.backgroundColor = colorName; 
   var curind = usePatrebnyaRadkiUZmest[i];
   if(curind instanceof Array) {curind=curind[0];};
   // document.getElementById('tableZmest').rows[curRowIndex].cells[0].innerHTML = vseIndsTXTofRadkiZmest[vseIndsIDofRadkiZmest.indexOf(curind)]+textTObyEss[i];   
   document.getElementById('tableZmest').rows[curRowIndex].cells[0].innerHTML = vseIndsTXTofRadkiZmest[curind]+textTObyEss[i];   
+  //document.getElementById('tableZmest').rows[curRowIndex].cells[0].style.width = '75%';
+  //document.getElementById('tableZmest').rows[curRowIndex].cells[1].style.width = '25%';
+   //document.getElementById('tableZmest').rows[curRowIndex].cells[0].Style.Add("width", "75%");
+  //document.getElementById('tableZmest').rows[curRowIndex].cells[1].Style.Add("width", "25%"); 
 };}}
 }
 function titleAndValueByElementAdseu(elemByID) {
-//console.log(elemByID+'=elemByID'+'__'+document.getElementById(elemByID)+'=document.getElementById(elemByID)');
+////CONSOLE console.log(elemByID+'=elemByID'+'__'+document.getElementById(elemByID)+'=document.getElementById(elemByID)');
 //document.getElementById(elemByID).title=mapIDtoTitles.get(elemByID.id).get(document.getElementById("idGalkaAdsejac").checked);
 //document.getElementById(elemByID).value=mapIDtoValues.get(elemByID.id).get(document.getElementById("idGalkaAdsejac").checked);
-console.log(elemByID+'=elemByID'+'__'+document.getElementById(elemByID.id)+'=document.getElementById(elemByID.id)');
+//CONSOLE console.log(elemByID+'=elemByID'+'__'+document.getElementById(elemByID.id)+'=document.getElementById(elemByID.id)');
 elemByID.title=mapIDtoTitles.get(elemByID.id).get(document.getElementById("idGalkaAdsejac").checked);
 elemByID.value=mapIDtoValues.get(elemByID.id).get(document.getElementById("idGalkaAdsejac").checked);
 }

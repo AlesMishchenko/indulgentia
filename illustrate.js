@@ -671,8 +671,8 @@ var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
 document.body.style.backgroundImage = strurlW_;   document.body.style.backgroundAttachment = "fixed";
 document.body.style.mixBlendMode = "exclusion";
-console.log(document.body.style.backgroundImage+'=backgroundImage');
-console.log(document.body.style.backgroundColor+'=backgroundColor');
+//CONSOLE console.log(document.body.style.backgroundImage+'=backgroundImage');
+//CONSOLE console.log(document.body.style.backgroundColor+'=backgroundColor');
 ////document.body.style.backgroundImage = "url('./backimage/20amslerPIX.jpg')";
 
 /* imgBack.src=strBack;
@@ -716,7 +716,7 @@ if(ugoryCIdolu.toLowerCase()==="up") {parms.effect="staronkaUgoru";}
 else {parms.effect="staronkaUniz"; imLicnikiStarye.push(raspovLicnik); imLicnikiStaryeUse.push(raspovLicnik);};
 //zrabicTZmest()
 clearInterval(chasLichnik);
-console.log(this);
+//CONSOLE console.log(this);
 
 
 if (parms.malunki.length>=raspovLicnikNastupny) {
@@ -725,7 +725,8 @@ raspovLicnik = (raspovLicnikNastupny) //WAS 	raspovLicnik = (raspovLicnikNastupn
 //var x = document.getElementById("idDivTZmest").getElementsByTagName("td");
 vseIndsNUMofRadkiZmest = []; vseIndsTXTofRadkiZmest = []; vseIndsIDofRadkiZmest=[];
 for (i = 0; i < document.getElementById('tableZmest').rows.length; i++) { 
-curRowID=document.getElementById('tableZmest').rows[i].id; console.log(curRowID);
+curRowID=document.getElementById('tableZmest').rows[i].id; 
+//CONSOLE console.log(curRowID);
 //var strInfo=' '+i.toString()+')'+parms.malunki[curRowID][1].toString()+' '+parms.malunki[curRowID][2].toString()+' '+parms.malunki[curRowID][3].toString()+' '+parms.malunki[curRowID][4].toString()+' ';
 var strInfo=' ';
 vseIndsNUMofRadkiZmest.push(i); vseIndsTXTofRadkiZmest.push(strInfo); vseIndsIDofRadkiZmest.push(Number(curRowID)); 
@@ -737,7 +738,7 @@ var perehodyArr1elem=SlovaPerehoda[raspovLicnik][icvet];
 fabravacCIubracRadkiPaID([cvetaArr1elem],[perehodyArr1elem],"krasit",raspoCveta[cvetaArr1elem]); 	
 }
 KaliarovyaRadkiPeradBelymi(false);		
-console.log(raspovLicnik.toString()+'=raspovLicnik');
+//CONSOLE console.log(raspovLicnik.toString()+'=raspovLicnik');
 imgOld = img.cloneNode(true); //ME
 img.src = parms.malunki[raspovLicnik][0]	//globalCOPYimages  
 var uzacStaronk=gartanneVyklikFailaZnomarom[indStaronk].toString();
@@ -753,6 +754,7 @@ document.getElementById('idDivSortZmest').title=' Здесь можно сорт
 var foavtar=allbackImgs[raspovLicnik][indZadnika];
 foavtar = foavtar.substr(2);foavtar=foavtar.replace("_", " ");
 document.getElementById('jaceikaHolstID').title='Текст: '+parms.malunki[raspovLicnik][1]+', страница '+(indStaronk+1)+'. Фото:'+foavtar.substr(0,foavtar.indexOf('.'));	
+//document.getElementById('jaceikaHolstID').style.opacity = 1;
 }
 
 
@@ -765,8 +767,8 @@ document.getElementById('jaceikaHolstID').title='Текст: '+parms.malunki[ras
 var gartacPracjag = function(incr) {	
 var gartanneVyklikFailaZnomarom = [];for (var i = 0; i <= maxAposhStaronkPeradPershZadnik+9; i++) {if(i<=9){gartanneVyklikFailaZnomarom.push(parms.malunki[i][2] % 11);}else{gartanneVyklikFailaZnomarom.push(i+1);};};	
 	clearInterval(chasLichnik);
-	console.log(raspovLicnik.toString()+'=raspovLicnik'+'___'+indStaronk.toString()+'=indStaronk');
-	console.log(parms.malunki[raspovLicnik].toString()+'=parms.malunki[raspovLicnik]');
+	//CONSOLE console.log(raspovLicnik.toString()+'=raspovLicnik'+'___'+indStaronk.toString()+'=indStaronk');
+	//CONSOLE console.log(parms.malunki[raspovLicnik].toString()+'=parms.malunki[raspovLicnik]');
 	if(indStaronk+incr<=parms.malunki[raspovLicnik][2] && indStaronk+incr>=0) {
 		indStaronk = (indStaronk + incr);
 		parms.effect="no";
@@ -791,9 +793,9 @@ var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
 document.body.style.backgroundImage = strurlW_;
 document.body.style.mixBlendMode = "exclusion";
-console.log(indStaronk+'=indStaronk'+'____'+indGrupyStaronakDzeljaZadnika+'=indGrupyStaronakDzeljaZadnika'+'____'+indZadnika+'=indZadnika');
-console.log(document.body.style.backgroundImage+'=backgroundImage');
-console.log(document.body.style.backgroundColor+'=backgroundColor');	
+//CONSOLE console.log(indStaronk+'=indStaronk'+'____'+indGrupyStaronakDzeljaZadnika+'=indGrupyStaronakDzeljaZadnika'+'____'+indZadnika+'=indZadnika');
+//CONSOLE console.log(document.body.style.backgroundImage+'=backgroundImage');
+//CONSOLE console.log(document.body.style.backgroundColor+'=backgroundColor');	
 
 document.body.style.backgroundSize = "cover";
 if(indVgrupeStaronakDzeljaZadnika >= 2 && indVgrupeStaronakDzeljaZadnika <= 3){document.body.style.backgroundSize = "contain";}; //if(indStaronk>kolkascZadnikau+1 && indStaronk<2*kolkascZadnikau+1){document.body.style.backgroundSize = "contain";};
@@ -810,7 +812,8 @@ document.body.style.backgroundSize = dimBack[0].toString()+"px "+dimBack[1].toSt
 	var foavtar=allbackImgs[raspovLicnik][indZadnika];
 	foavtar = foavtar.substr(3);foavtar=foavtar.replace("_", " ");
 	document.getElementById('jaceikaHolstID').title='Текст: '+parms.malunki[raspovLicnik][1]+', страница '+(indStaronk+1)+'. Фото:'+foavtar.substr(0,foavtar.indexOf('.'));				
-}	
+	//document.getElementById('jaceikaHolstID').style.opacity = 1;
+	}	
 
 var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) {
 	if ((shyrSpacatku == shyrMiesca) && (vysotSpacatku >= vysotMiesca) || (vysotSpacatku == vysotMiesca) && (shyrSpacatku >= shyrMiesca)) {
