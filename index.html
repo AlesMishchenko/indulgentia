@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<!--  Алесь Мищенко  (С)2018   Ales Mishchenko -->
+<!-- (С) Алесь Мищенко -->
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Алесь Мищенко. Нелинейная книга "Индульгенция людей"</title> 
@@ -9,15 +9,8 @@
 <script type='text/javascript' src='illustrate.js'></script>
 <script type='text/javascript' src='initiate.js'></script>
 <style>
-<!--html, body { min-width: 100%; }-->
-<!--html, body { width: 100%; }-->
-<!--@media screen and (orientation:portrait) { … }-->
-<!--@media screen and (orientation:landscape) { … }-->
-
-
-
 body {background-color: #6cb5a9;
-background-image: url('./logo.png');   <!--For800: backW800-->
+background-image: url('./backW/03zMichael_Cramer.jpg');
 background-blend-mode: multiply; <!-- multiply  -->
 mix-blend-mode: exclusion; <!-- exclusion  -->
 -moz-filter: mix-blend-mode: normal; <!-- normal  -->
@@ -120,7 +113,7 @@ document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style
 <a class="f2" id="idh2zagolov2" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank > Нелинейная интерактивная книга </a> &nbsp;
 <img src="./logo.png" width="60px" height="30px" alt="Автор	Fr. Jeronimus Munghofer, OSB, Источник http://www.gabrieleweis.de/3-geschichtsbits/histo-surfing/4-neuzeit1/4-2-renaissance/synopsenbilder/ablassbiref.jpg , общественное достояние,pd-old,PD-US"/><a href="./index.html">
 <a class="f3" id="idh2zagolov3" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank >"ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ"</a>
-<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nВ квадратном окошке показывается кусочек текущего текста книги. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели(не нажимайте 2 раза, иначе пролистнёте на послеследующую страницу).\nЦветом в текущем тексте показаны связи с другими текстами. Для другого текста книги нужно нажать на его кнопку в оглавлении, которое располагается после текущего текста.\nТексты в оглавлении, которые связаны с текущим текстом, выделены тем же цветом, а также фразой, которая связывает текущий текст с ними.\nОглавление состоит из более 30 строчек(каждая соответствует какому-то другому тексту). На каждой строчке фраза связывающая другой текст с текущим текстом и кнопка вызова другого текста.\nОглавление можно фильтровать, оставляя в нём только тексты заданной темы, а также сортировать тексты по размеру, оценке, алфавиту, итд(кнопку сортировки по алфавиту иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст.\n')">КАК ЧИТАТЬ?</button>
+<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nВ квадратном окошке показывается кусочек текущего текста книги. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели.\nЦветом в текущем тексте показаны связи с другими текстами. Для другого текста книги нужно нажать на его кнопку в оглавлении, которое располагается после текущего текста.\nТексты в оглавлении, которые связаны с текущим текстом, выделены тем же цветом, а также фразой, которая связывает текущий текст с ними.\nОглавление состоит из более 30 строчек(каждая соответствует какому-то другому тексту). На каждой строчке фраза связывающая другой текст с текущим текстом и кнопка вызова другого текста.\nОглавление можно фильтровать, оставляя в нём только тексты заданной темы, а также сортировать тексты по размеру, оценке, алфавиту, итд(кнопку сортировки по алфавиту иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст.\n')">КАК ЧИТАТЬ?</button>
 </h1> 
 
 <!--<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.')">Как читать?</button>-->
@@ -181,7 +174,7 @@ document.body.style.mixBlendMode = "exclusion";
 //CONSOLE console.log(document.body.style.backgroundColor+'=backgroundColor');
 }
 function otzatCtobChernobeloe() {
-var strBack1 = './backW800/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';  For1MB: backW
+var strBack1 = './backW/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
 var strurlW_1="url('"+strBack1+"')";
 document.body.style.backgroundImage = strurlW_1;   document.body.style.backgroundAttachment = "fixed";
 document.body.style.mixBlendMode = "exclusion";

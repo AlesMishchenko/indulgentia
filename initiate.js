@@ -1,4 +1,4 @@
-// Алесь Мищенко  (С)2018   Ales Mishchenko
+// (С) Алесь Мищенко 
 // ======================================== START INIT VARS ========================================
 var adformShyrynja=537; //597
 var adformEffect="staronkaUperad";
