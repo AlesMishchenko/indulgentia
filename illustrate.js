@@ -1,4 +1,4 @@
-// Алесь Мищенко  (С)2018   Ales Mishchenko
+// (С) Алесь Мищенко 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	const maxAposhStaronkPeradPershZadnik=33;
 	var allbackImgs = [];
@@ -665,7 +665,7 @@ curW=screen.availWidth; while(curW<1000 && document.getElementById(('button'+iBu
 //ANOTHER POSSIBILITY 1vw = 1% of viewport width
 //ANOTHER POSSIBILITY rem values were invented in order to sidestep the compounding problem. rem values are relative to the root html element, not the parent AS em
 
-strBack = './backW800/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';For1MB: backW
+strBack = './backW/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
 strOrig = './backOrig/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
@@ -787,7 +787,7 @@ else if(indGrupyStaronakDzeljaZadnika===saredina) {indZadnika=maxAposhStaronkPer
 else if(indGrupyStaronakDzeljaZadnika<saredina) {indZadnika = (indGrupyStaronakDzeljaZadnika-1);}// % kolkascZadnikau;}
 else {indZadnika = (indGrupyStaronakDzeljaZadnika-2);};// % kolkascZadnikau;};
 if(indVgrupeStaronakDzeljaZadnika % 2 === 1){strBack = './backWF800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';} //-> backWhiteFLIP
-else {strBack = './backW800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};  For1MB: backW
+else {strBack = './backW/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};
 strOrig = './backOrig/'+allbackImgs[raspovLicnik][indZadnika];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
