@@ -1,4 +1,4 @@
-// (С) Алесь Мищенко 
+// Алесь Мищенко  (С)2018   Ales Mishchenko
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	const maxAposhStaronkPeradPershZadnik=33;
 	var allbackImgs = [];
@@ -665,7 +665,7 @@ curW=screen.availWidth; while(curW<1000 && document.getElementById(('button'+iBu
 //ANOTHER POSSIBILITY 1vw = 1% of viewport width
 //ANOTHER POSSIBILITY rem values were invented in order to sidestep the compounding problem. rem values are relative to the root html element, not the parent AS em
 
-strBack = './backW/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
+strBack = './backW800/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';For1MB: backW
 strOrig = './backOrig/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
@@ -786,8 +786,8 @@ else if(indGrupyStaronakDzeljaZadnika>=kanec-1) {indZadnika=maxAposhStaronkPerad
 else if(indGrupyStaronakDzeljaZadnika===saredina) {indZadnika=maxAposhStaronkPeradPershZadnik+2;}
 else if(indGrupyStaronakDzeljaZadnika<saredina) {indZadnika = (indGrupyStaronakDzeljaZadnika-1);}// % kolkascZadnikau;}
 else {indZadnika = (indGrupyStaronakDzeljaZadnika-2);};// % kolkascZadnikau;};
-if(indVgrupeStaronakDzeljaZadnika % 2 === 1){strBack = './backW/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';} //-> backWhiteFLIP
-else {strBack = './backW/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};
+if(indVgrupeStaronakDzeljaZadnika % 2 === 1){strBack = './backWF800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';} //-> backWhiteFLIP
+else {strBack = './backW800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};  For1MB: backW
 strOrig = './backOrig/'+allbackImgs[raspovLicnik][indZadnika];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
