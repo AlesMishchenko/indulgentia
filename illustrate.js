@@ -1,74 +1,87 @@
 // (С) Алесь Мищенко 
+var poluWidth;
+var poluMinRazmer;
+var poluHeight;
+var imgNaRaspovMinRazmer;
+
+
+
+
+var adformShyrynjaHolst=337; //537
+var adformEffect="staronkaUperad";
+var adformVyshinjaHolst=337; //537
+var adformChas=5000;
+var adformPerahod=2000;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	const maxAposhStaronkPeradPershZadnik=33;
+	var maxAposhStaronkPeradPershZadnik=33; //const
 	var allbackImgs = [];
-// [raspovLicnik] "nazvaFaila"
-//netZadnikov vNazvahFailov=12,15,19,29
-//det-pau
+
+//netZ vNazvahFailov=12,15,19,29
+//de-pa
 allbackImgs[8]=["00aDianne Lacourciere.jpg","00bPhilip_Howard.jpg","00dTony_Iwane.jpg","00fPaul_Hughes.jpg","00hIan_Glover.jpg","00jDaisy_Harper.jpg","00lMed_PhotoBlog.jpg","00nRob_Chandanais.jpg","00pKate.jpg","00rOzgur_Mulazımoglu.jpg", "00spostbear eater of worlds.jpg","00tMevout.jpg","","","","","","","","","","","","","","","","","","","","","","",			"00xSofi_Suivre,_Illustration_by_Vladislav_Erko.jpg","00yAuthor_from_movie_Finist_Yasnyy_Sokol,1975.jpg","00zJim_crossley.jpg"];
 
 //vra-pac
 allbackImgs[4]=["01bKUUNSTKUULTUR.jpg","01dMariano_Mantel.jpg","01fSIMTHIX.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																											"01xNima_Fatemi,_Madness_part2.jpg","01yJeremy_Brooks.jpg","01zJoy.jpg"];
-//sta-fot
+//sta-f
 allbackImgs[2]=["02aaleks-dralo.jpg","02bAino.jpg","02cAuthor_from_film_Kubanskie_kazaki,_director_Ivan_Pyryev,1950.jpg","02dJames Vaughan.jpg","02eOkinawa_Soba_-_Rob.jpg","02fAshley_Van_Haeften.jpg","02gMarc DUFOURNET,Le Theatre Transformation,representation de Romeo et Juliette.jpg","02hA_Currell.jpg","02iOkinawa_Soba_-_Rob.jpg","02jDan Diffendale.jpg","02kAltamar Trip.jpg","02lAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,center.jpg","02mAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,pravy flang.jpg","02nAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943l,levy flang.jpg","02oAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","02pKaty Warner.jpg","02rMichael Dawes.jpg","02sAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","","","","","","","","","","","","","","","","",					"02xAuthor,movie Podstrochnik,director Oleg Dorman,1997.jpg","02yMichelle_Dockrey.jpg","02zaleks-dralo.jpg"];
 
-//bir-smy
+//b-sm
 allbackImgs[1]=["04bstrange_whispers.jpg","04dakhenatenator.jpg","04eakhenatenator.jpg","04flkajsdfl.jpg","04gakhenatenator.jpg",	"04jMichael Kotter,Pripyat - Rooftop Sign.jpg","04njosemite23.jpg","04pzaleks-dralo.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","",																		"04xzenra.jpg","04yJames Vaughan.jpg","04zJames Vaughan.jpg"];
-//dog-sme
+//d-sme
 allbackImgs[6]=["05bRichard.jpg","05dTerry_M.jpg","05fMia_Feigelson,Andrew_Wyeth_-_Christmas_morning,1944.jpg","05hdie_minimalistin.jpg","05jjksimpson.jpg","05kLars Stormbom.jpg",	"05lPascal.jpg","05nmoonjazz,Death_and_the_Beautiful_Woman,_fontain_in_Nuremberg.jpg","05pmlhradio.jpg","05rDavid_G_Hawkins,_Angel_of_Death,_Painted_by_Bertram_M_Towle.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",		"05xClaraDon.jpg","05yCatarina_Carneiro_de_Sousa.jpg","05zen-_ri,_mutant_and_proud.jpg"];
 
-//dog-dja
+//d-dja
 allbackImgs[14]=["06bHoward_Stanbury.jpg","06dMidnight_Believer.jpg","06gstrange_whispers.jpg","06hAdam_Ross.jpg","06iJB,Toronto1.jpg","06jLen_Doc_Radin.jpg","06kCrossett Library,Devil Pumpkin tug-o-war,Halloween postcard,Flagrant,by Marilynn Gelfman Karp,NYAbrams2006.jpg","06lphotographymontreal.jpg","06nRob_Jewitt.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","",								"06xdek_dav.jpg","06yJames_Vaughan.jpg","06zbenjamin_sTone.jpg"]; // DELETED 06f-oriana.italy=C.jpg
 
 //ger-lub
 allbackImgs[11]=["07bprince_of_centraxis.jpg","07dPhilippe_Tolet_paintings.jpg","07fAlf_Igel.jpg","07hSari_Choche-Be.jpg","07jNancy_White.jpg","07lraphael_perez.jpg","07nSari_Choche-Be.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",						"07xPhilippe_Tolet_paintings.jpg","07ySari_Choche-Be_.jpg","07zLoKan_Sardari.jpg"];
 
-//kva-cas
+//kv-cas
 allbackImgs[7]=["08bLucas.jpg","08dDaniel_Arrhakis,The_Empire_Of_Shadows_by_Daniel_Arrhakis.jpg","08fJason_Devitt.jpg","08gDennis Amith.jpg","08hNASA's_Solar_Dynamics_Observatory.jpg","08jNathan_Witch_Doctor.jpg","08lXoan_Baltar.jpg","08nU.S._Geological_Survey,_Kilauea_Lava_Lake.jpg","08pJason_Major,_credit_SDO-NASA,AIA.jpg","08rEdmund_Gall.jpg",".jpg","08sMario,created with Terragen.jpg","","","","","","","","","","","","","","","","","","","","","","",				"08xKazuhiro_Shiozawa.jpg","08yFrancisco_Guevara.jpg","08zBrandon.jpg"];
 
-//mat-raj	17"mat-raj"vNazvahFailov=9
+//sp-raj	17"mat-raj"vNazvahFailov=9
 allbackImgs[17]=["09bJustin_Berger.jpg","09dDad_of_T&S.jpg","09fEugenia_Loli.jpg","09hDellboyy_Art.jpg","09hEric_Jusino.jpg","09hstraightfromthecask.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",														"09xKonstantin_Likhachev.jpg","09yEugenia_Loli.jpg","09zBob_May.jpg"];
 
 //zen-rol
 allbackImgs[10]=["10bESPRIT_U2.COM.jpg","10dErin_Nealey.jpg","10fIan_Fuller.jpg","10gDrewXXX.jpg","10hSewPixie.jpg","10jCarlos_Garcia_Campillo.jpg","10lClassic_Film,_Poor_Little_Rich_Girl_movie_1936.jpg","10nDavid_Robert_Bliwas.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",																												"10xAuthor_photo_from_Shallow_Hal_movie.jpg","10yAuthor_photo_from_Irony_of_Destiny_2_movie.jpg","10zGeorge_Weir.jpg"];
 
-//moi-naucny
+//moi-nauc
 allbackImgs[9]=["11bfox_fotos.jpg","11dLaurence_Barnes.jpg","11fCarlo_Raso,_Detail_of_the_Tomb_of_the_diver_.jpg","11gpaintings_photos.jpg","11hPetr_Kosina.jpg","11jMarco_Mazzei.jpg","11lraphael_perez.jpg","11nraphael_perez.jpg","11odasnake.jpg","11pDan_Lacey.jpg","11rKain_Drall.jpg","11tjean_louis_maziere,_Antonello_da_Messina,_Saint_Sébastien.jpg","","","","","","","","","","","","","","","","","","","","","","",									"11xEurecat.jpg","11yMargot Trudell.jpg","11zAnne.jpg"];
 
-//bas-rod
+//basi
 allbackImgs[13]=["13bTatters.jpg","13dcambiodia.jpg","13fPatrick_Down.jpg","13gMary_Harrsch.jpg","13hKevin_Nguyen-Tu.jpg","13jcarolyn.jpg","13lJens-Olaf_Walter.jpg","13nUS_Department_of_Agriculture,_Ela_Stein-Weissberger.jpg","13rtheodora.lumi.jpg","13tJames_Vaughan.jpg","","","","","","","","","","","","","","","","","","","","","","","","",							"13xAndris_Malygin.jpg","13yUS_Loxinha,_Repin,_Ivan_the_Terrible_and_his_Son_Ivan,_1885.jpg","13zNeil_Howard,_Arch_Bay,_Alderney.jpg"];
 
-//pri-lub
+//gusev
 allbackImgs[5]=["14bashtreehouse.jpg","14cDerek Kinzett,Fairy- Mother Sprite commission 2012.jpg","14djaci_XIII.jpg","14eBrotherMagneto.jpg","14fRafael_dP,_Iberia-Hispania,_Parque_Arqueologico_de_Carranque.jpg","14gpatrick verstappen.jpg","14hJohn_Keogh.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","", 										"14xPaul_Lofeodo.jpg","14yMatthew_Kirkland.jpg","14zMatt_Shalvatis.jpg"];
 
-//sob-aki	15"sob-aki"vNazvahFailov=17
+//sob	15"sob-aki"vNazvahFailov=17
 allbackImgs[15]=["17bwytze.jpg","17cThruhike98.jpg","17dInternational_Fund_for_Animals.jpg","17fAnimals_Asia.jpg","17hRoan_Retera.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",			"17xJana.jpg","17yLeJyBy.jpg","17zeugeny-p.jpg"];
 
-//dno-mor	19"dno-mor"vNazvahFailov=18
+//dn	19"dno-mor"vNazvahFailov=18
 allbackImgs[19]=["18bjivika.jpg","18dLaurent_Fintoni.jpg","18fJim_Howard.jpg","18gBen_Raynal.jpg","18hTrey_Ratcliff.jpg","18iJason Bowler.jpg","18jBruno_Casonato.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","",																			"18xPaladin27.jpg","18yjaci_XIII_Suivre,_A_cry_in_the_night.jpg","18zOle_Petter_Rust.jpg"];
 
-//isp-dik	16"isp-dik"vNazvahFailov=20
+//isD	16"isp-dik"vNazvahFailov=20
 allbackImgs[16]=["20bKatie_Harbath.jpg","20dEric_Mesa.jpg","20famaz.jpg","20hMo_Riza.jpg","20jClint_Gardner.jpg","20lEvan_Long.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																			"20xJolien_Van_Houtven.jpg","20yEd_Yourdon.jpg","20z1000_anuncios_de_publicidad_y_mas.jpg"];
 
 //sme-kaz
 allbackImgs[3]=["21bBest Picko,bestpicko.com.jpg","21cDerek K. Miller.jpg","21dAuthor,_Karnavalnaja_noch_movie,director_Rjazanov.jpg","21eWellcome_Images.jpg","21fBen_Raynal.jpg","21gMiyaoka_Hitchcock.jpg","21hMiyaoka_Hitchcock.jpg","21iLiz Wade.jpg","21jBeverly_Vealach.jpg","21kChris Phutully.jpg","21lGideon_Wright.jpg","21mGreg Mills.jpg","21nA K M Adam.jpg","21oBart.jpg","21pjean louis mazieres, William Blake,God Judging Adam,1795.jpg","","","","","","","","","","","","","","","","","","","",											"21xSIMTHIX.jpg","21yRoger Mommaerts.jpg","21zbbyrnes59.jpg"];
 
-//det-nar	18"det-nar"vNazvahFailov=22
+//denar	18"det-nar"vNazvahFailov=22
 allbackImgs[18]=["22bMichael_Kappel.jpg","22dChristiaan_Triebert.jpg","22fLynda_Giddens.jpg","22hAnke_L.jpg","22jAmy_Goodman.jpg","22lNaomiPeacockPhotography.jpg","22nFoto_Moskvy,Moscow-Live.ru.jpg","22pDigital_Archaeology.jpg","22rVlad_Tuchkov.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																							"22xFoto_Moskvy,Moscow-Live.ru.jpg","22yKarilyn_Kempton.jpg","22zDan_Zelazo.jpg"];
 
 //nit-kov	21"nit-kov"=23
 allbackImgs[21]=["23bAndrea_Mucelli.jpg","23dAitivamon_NATURE.jpg","23fWolfgang_Sterneck,A_Reality_called_Boom,Visions-Boom-2014,Android_Jones.jpg","23hEdmund_Gall.jpg","23jMaX_Fulcher,Paul_Gauguin,_Two_Tahitian_Women.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																							"23xg0d4ather.jpg","23yAmy_Wharton.jpg","23zShyralei_Resident,Dancing_with_the_Heavens,REALM_of_MYSTARA_NORTH.jpg"];
 
-//neu-pri	22"neu-pri"vNazvahFailov=24
+//obe	22"neu-pri"vNazvahFailov=24
 allbackImgs[22]=["24bErin_Nekervis.jpg","24drui_barros.jpg","24fAuthor,_Patsany_movie,director_Priemykhov.jpg","24hJohn_Hartnup.jpg","24jMiyaoka_Hitchcock.jpg","24ldomat33f.jpg","24nMayu_Shimizu.jpg","24pAuthor,_V_ne_vole_movie.jpg","24rIkhlasul_Amal.jpg","24tMiyaoka_Hitchcock.jpg","24uWalters_Art_Museum,LabBodies.jpg","","","","","","","","","","","","","","","","","","","","","","","",																"24xCorwin_I.jpg","24yAuthor,_Delai_raz_movie,director_Maljukov.jpg","24zBob Jagendorf.jpg"];
 
 
-//lud-poe
+//star
 allbackImgs[23]=["25bEyal_Teutsch.jpg","25dSeb_Fowler.jpg","25estefanochu.jpg","25fDavid_Gubler.jpg","25hTimon91.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",				"25xKonstantin.jpg","25yTomky.jpg","25zSerenity_Ibsen.jpg"];
 
 //smy-raz
 allbackImgs[24]=["26bmsu.ru.jpg","26ddubrovinlab.msu.ru.jpg","26finternat.msu.ru.jpg","26gRalph_Sanderson,Bob_hawke_-_museum_of_australian_democracy.jpg","26hMd_Saidul_Islam,_Sheikh_Mujibur_Rahman.jpg","26lCN_NG._Edmund_Burke.jpg","26nSoutheast Asian Fisheries Development Center Aquaculture Department, Sen Edgardo Angara.jpg","26pAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																						"26xphys.msu.ru.jpg","26ypshab,_Detail_in_apes_running_parliament,_by_Bansky.jpg","26zMatthew_Stinson.jpg"];
-//zam-bud
+//za-bud
 allbackImgs[27]=["27bAaron_Cheng.jpg","27dIan_T_Edwards.jpg","27fPaul_Townsend.jpg","27hJonathan_Melhuish.jpg","27jErin_Nekervis.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																	"27xPhotos_of_the_Past.jpg","27yYangTS.jpg","27zPeter_Kirkeskov_Rasmussen.jpg"];
 
 
@@ -77,32 +90,32 @@ allbackImgs[27]=["27bAaron_Cheng.jpg","27dIan_T_Edwards.jpg","27fPaul_Townsend.j
 
 //++++++++++++  SVERHU ETOGO ZAMENA BEZ STAROI KOPII      ++++++++++++++++
 
-//kol-kno
+//kol-kn
 //STARYbylo allbackImgs[28]=[  "28bM_Cheng.jpg","28dWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
 allbackImgs[28]=["28bM_Cheng.jpg","28cBmazing.jpg","28dtommy.jpg","28eWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","28sYangTS,galaxy-wallpaper-6.jpg","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
 
-//kor-raj
+//ko-raj
 //STARYbylo allbackImgs[0]=[  "03bMichael_Kreibohm.jpg","03dDoug_DuCap.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","03xTed_McGrath.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
 allbackImgs[0]=["03aAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03bAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03dSean.jpg","03eDoug_DuCap.jpg","03fTed_McGrath.jpg","03hjobrowski35.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","",			"03xAuthor,The_Lion_King_by_Allers&Minkoff,Disney,1994","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
 
-//utr-kuk
+//ut-kuk
 allbackImgs[26]=[  "16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","","","","","","","","","","","","","",				"16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
 //allbackImgs[26]=["16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
 
-//nes-byv	20"nes-byv"vNazvahFailov=19 ????????????????????????????????????????
-allbackImgs[20]=["40aPrayitno.jpg","40bJenny Mealing.jpg","40cMike Mozart.jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40gMarco Verch.jpg","40hAbu Hasan Mehedi.jpg","40iPrayitno.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","","","","","","","","","","","",			"40xTee Vincent.jpg","40yBen Robinson.jpg","40zLauri Sten.jpg"];
+//ne-by	20"ne-by"vNazvahFailov=19 ????????????????????????????????????????   "40xTee Vincent.jpg",
+allbackImgs[20]=["40bJenny Mealing.jpg","40cMike Mozart.jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40hAbu Hasan Mehedi.jpg","40gMarco Verch.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40yBen Robinson.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","40xTee Vincent.jpg","","","","","","","","","","","","",			"40iPrayitno.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40zLauri Sten.jpg"];
 //allbackImgs[20]=["40aPrayitno.jpg","40bJenny Mealing.jpg","40cMike Mozart.jpg",".jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40gMarco Verch.jpg","40hAbu Hasan Mehedi.jpg","40iPrayitno.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","40xTee Vincent.jpg","40yBen Robinson.jpg","40zLauri Sten.jpg"];
-
+//UBRANO  1e 
 
 //bub-niz
 allbackImgs[29]=["42aAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42bSergio Ceron.jpg","42cSteve Rhodes.jpg","42dJedimentat44.jpg","42eChris Phutully .jpg","42eEwan Munro.jpg","42eJean-Pierre Dalbera.jpg","42eKeijo Knutas,1941 Ne boltai by Vatolina N.N., Denisov N.V.jpg","42fDefence Images.jpg","42gAndrew FastLizard4 Adams.jpg","42gGordon Dymowski.jpg","42hChris Phutully.jpg","42iAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","42jKonstantin_Likhachev.jpg","42kAuthor, film Matrix by Andy & Larry Wachowski, 1999 - Copie.jpg","42lXeni Jardin,Hotshot the Robot, at Coachella, 2007.jpg","42mWeb Summit.jpg","42nThomas Hawk.jpg","42oFort Belvoir Community Hospital.jpg","42pTimo.jpg","42sR.Crap Mariner.jpg","","","","","","","","","","","","","",									"42xAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42yJenni Konrad.jpg","42zEric Richards.jpg"];
-//avt-sud
+//avSud
 allbackImgs[12]=[														   "12bAuthor, film Black Book by Paul Verhoeven,2006.jpg","12cAuthor, film Black Book by Paul Verhoeven,2006.jpg","12dDavid Rothwell.jpg","12eChris Chabot.jpg","12fDavid Campbell.jpg","12gTribes of the World.jpg",							"12jAuthor, film Black Book by Paul Verhoeven,2006.jpg","12kAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12lAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12mEx-InTransit.jpg","12nCassowary Colorizations.jpg","12oMike Ensor.jpg","12pNicolas Mirguet.jpg","","","","","","","","","","","","","","","","","","","","","",					"12aAuthor, film Black Book by Paul Verhoeven,2006.jpg","12iAndry Fridman.jpg","12qPaulo Alegria.jpg"];
 //allbackImgs[12]=["12aAuthor, film Black Book by Paul Verhoeven,2006.jpg","12bAuthor, film Black Book by Paul Verhoeven,2006.jpg","12cAuthor, film Black Book by Paul Verhoeven,2006.jpg","12dDavid Rothwell.jpg","12eChris Chabot.jpg","12fDavid Campbell.jpg","12gTribes of the World.jpg","12iAndry Fridman.jpg",	"12jAuthor, film Black Book by Paul Verhoeven,2006.jpg","12kAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12lAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12mEx-InTransit.jpg","12nCassowary Colorizations.jpg","12oMike Ensor.jpg","12oMike Ensor.jpg","12qPaulo Alegria.jpg","","","","","",".jpg",".jpg",".jpg"];
 
 
 
-//netZadnikov vRaspovNomer=25,	30,31,32
+//netZadnikov v=25,	30,31,32
 //moi-rek
 allbackImgs[25]=["41bClassic Film, 1958 Beauty Ad, Dorothy Gray Satura Moisture Cream, with Elegant 1950's Super-Model Anne St. Marie.jpg","41bClassic Film, 1966 Cosmetics Ad, Helena Rubinstein Tulips Colors for Lips & Nails.jpg","41cIan D. Keating.jpg","41dBob Peters.jpg","41dStephen Downes.jpg","41eJohnLocke.jpg","41eR. Crap Mariner.jpg","41fliborius.jpg","41gJames Vaughan.jpg","41gKumar's Edit.jpg","41gRonan Shenhav.jpg","41gWonder Woman,Angelicka.jpg","41gWonder Woman,Olesya.jpg","41hoBev Sykes.jpg","41hThomas Euler.jpg","41iHernan Pinera, Anna Bolena.jpg","41jEddie Lawrance.jpg","41kAndor Kish, Warwick Castle.jpg","41kjoan vila.jpg","41lBart.jpg","41lWonder Woman, Irina.jpg","41mEwen Roberts.jpg","41nEl Sabroso.jpg","41oDavid de Lara, model Samantha Valeria, hair & make up Tami Milicia.jpg","41pJose Gallego.jpg","41rYangTS,galaxy-wallpaper-6.jpg","41smriggen.jpg","41tGreg Walters.jpg","41uPhilip McMaster.jpg","41uTorsten Mangner.jpg","41wSuneel Madhekar.jpg","41xmoonjazz.jpg","41yXudong Zhai, Church next to Lake Tekapo.jpg","",		"41xAuthor,Futurama by Matt Groening,Fox BC,1999-2003.jpg","41yconorwithonen, Buckman Flair Promo.jpg","41zGiuseppe Milo.jpg"];
 
@@ -110,7 +123,7 @@ allbackImgs[25]=["41bClassic Film, 1958 Beauty Ad, Dorothy Gray Satura Moisture 
 
 //ese-sai
 allbackImgs[30]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
-//dru-kni
+//dru-kn
 allbackImgs[31]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
 //vid-put
 allbackImgs[32]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
@@ -150,39 +163,80 @@ slideGallery = function () {
 //neIspolzOldVerOfCol PaleGoldenRodLine=	[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 //neIspolzOldVerOfCol AquamarineLine=		[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 //neIspolzOldVerOfCol GoldenRodLine=		[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
-	
-	
+
+
+//1,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
+LepshPerehodyPaRaspovIstaronke=[
+[08,08,26,26,12,12,29,07,07,07,12,25,13,12,02,26,08,			18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,		   45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[14,14,24,02,13,13,02,18,13,02,14,14,07,07,25,06,25,25,02,02,02,25,02,25,20,		    26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,		   50,51,52,53,54,55,56,57,58,59,60],
+[01,01,01,20,20,14,25,25,25,13,13,03,01,01,03,13,11,13,14,13,13,13,20,20,20,13,13,12,12,07,07,18,18,18,07,07,20,29,20,24,24,24,			   43,44,45,46,47,		   48,49,50,51,52,53,54,55,56,57,58,59,60],
+[06,06,08,08,30,30,30,30,07,07,08,26,07,07,26,07,07,31,00,00,07,22,22,22,22,01,01,01,00,00,28,28,13,13,			   35,36,37,38,39,40,41,42,43,44,		   45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[02,20,20,28,28,17,28,23,11,20,			   11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,		   43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[19,25,25,21,02,20,20,21,22,20,20,10,00,20,26,10,10,26,04,			  20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,		   48,49,50,51,52,53,54,55,56,57,58,59,60],
+[17,17,02,02,04,17,09,15,27,27,12,12,27,27,04,00,00,00,00,04,04,27,27,27,27,27,23,23,			 29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,		   44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[17,28,20,28,28,28,28,04,04,12,12,12,02,03,03,28,09,09,17,28,03,03,28,06,17,03,03,28,28,06,06,06,06,06,			   35,36,37,38,39,40,41,		   42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[16,04,06,04,19,16,16,17,17,18,04,20,04,18,17,28,28,20,20,20,10,10,10,30,30,00,00,00,00,			30,31,32,33,34,35,36,37,38,		   39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[08,31,31,13,26,22,14,14,14,14,22,22,22,22,22,22,26,26,26,22,22,11,26,26,25,25,25,			  28,29,30,31,32,33,34,35,36,37,38,39,40,		   41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[27,21,17,12,09,03,03,03,03,03,28,28,14,28,08,17,23,23,20,20,12,28,07,07,07,			26,27,28,29,30,31,32,33,34,35,36,		   37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[25,25,19,19,17,17,09,19,09,25,25,21,21,25,25,26,26,09,22,22,			 21,22,23,24,25,26,27,28,29,30,31,32,33,34,		   35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[10,10,10,24,24,19,19,17,05,05,18,19,19,17,07,07,			 17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,		   33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[20,20,02,22,22,12,08,01,01,22,22,01,01,08,29,29,08,08,15,07,07,05,05,08,21,			26,27,28,29,30,31,32,33,34,35,36,		   37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[16,06,06,02,01,13,01,01,02,02,31,25,25,06,06,20,20,20,			   19,20,21,22,23,24,25,26,27,28,29,30,		   31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[06,06,20,08,00,28,00,28,28,00,00,07,07,00,00,28,19,21,21,			  20,21,22,23,24,25,26,27,28,29,30,31,32,		   33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[14,14,05,18,18,14,08,24,08,04,17,17,17,		    14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,		   30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[24,24,08,08,25,19,19,20,24,11,24,11,07,07,19,08,19,			18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,		   33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[13,13,29,16,23,16,08,08,02,01,17,17,27,27,27,13,16,16,15,15,19,19,			   23,24,25,26,27,28,29,30,		   31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[17,17,20,20,22,22,26,24,22,08,26,11,11,26,21,21,21,22,22,21,21,				  22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,		   37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[25,00,17,00,00,23,10,25,25,17,25,12,12,12,25,25,28,28,19,19,19,25,25,25,25,25,				   	 27,28,29,30,31,32,33,34,35,36,37,38,39,40,		   41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[19,19,19,15,15,15,04,05,05,11,11,11,23,05,11,11,				   17,18,19,20,21,22,23,24,25,26,27,28,29,30,		   31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[24,09,00,00,24,24,24,16,09,04,03,04,04,10,01,24,04,01,08,09,00,03,16,29,10,24,29,03,03,03,					 31,32,33,34,35,36,37,38,39,40,		   41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[20,20,21,25,04,20,25,20,04,15,15,					12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,		   32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[02,02,02,22,19,19,09,04,29,29,16,16,16,22,22,09,09,09,09,09,09,09,09,15,15,				  26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,		   42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[20,20,20,20,24,17,11,11,29,29,29,29,20,12,12,08,08,08,29,02,02,02,02,02,26,26,26,09,09,28,28,28,28,15,15,15,15,15,15,15,				   41,42,43,44,		   45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[08,00,00,08,08,09,09,17,24,21,11,24,09,09,28,28,28,09,24,09,24,09,09,09,00,08,09,24,24,24,24,20,09,08,20,20,				   37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,		   54,55,56,57,58,59,60],
+[14,24,21,12,12,12,28,28,20,06,04,04,10,12,10,10,04,12,12,12,12,				  22,23,24,25,26,27,28,29,30,31,32,33,		   34,35,36,37,38,39,40,41,42,		   43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[16,02,00,22,00,22,22,09,11,03,04,26,02,07,17,17,02,02,17,17,07,23,23,23,27,27,27,27,			29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,		   45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[17,17,17,17,25,24,26,26,01,26,26,06,06,06,06,26,26,06,06,06,06,06,06,06,01,14,14,01,13,13,13,13,23,23,23,00,00,17,17,26,26,06,06,			44,45,46,47,48,49,50,51,52,53,		   54,55,56,57,58,59,60]
+[25,00,17,00,00,23,10,25,25,17,		   25,12,12,12,25,25,28,28,19,19,19,25,25,25,25,25,				27,28,29,30,31,32,33,34,35,36,37,38,39,		   40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[19,19,19,15,15,15,		   04,05,05,11,11,11,23,05,11,11,				17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,		   40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[24,09,00,00,		   24,24,24,16,09,04,03,04,04,10,01,24,04,01,08,09,24,03,16,29,10,24,29,03,03,03,							31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,		   47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[20,20,21,		   25,04,20,25,20,04,15,15,				12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,		   44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[02,02,02,22,19,19,09,04,29,		   29,16,16,16,22,22,09,09,09,09,09,09,09,09,15,15,				26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,		   50,51,52,53,54,55,56,57,58,59,60],
+[20,20,20,20,24,		   17,11,11,29,29,29,29,20,12,12,08,08,08,29,02,02,02,02,02,26,26,26,09,09,28,28,28,28,15,15,15,15,15,15,15,				41,42,43,44,45,		   46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+];
+
+
 CvetaPerehoda=
-[[[8],[26],[12],[29],[7],[25],[13],[10],[2],[32]],//0
-[[14],[24],[6],[2],[13],[18],[7],[25],[20]],
-[[1],[20],[14],[25],[13],[3],[23],[11],[12],[7],[28],[29],[16],[24]],
-[[6],[8],[30],[7],[31],[26],[0],[22],[1],[28],[15],[32]],
-[[2],[20],[18],[17],[28],[23],[11]],
-[[4],[19],[21],[2],[20],[22],[25],[10],[0],[26]],//5
-[[17],[2],[4],[9],[15],[27],[12],[0],[21]],
-[[17],[28],[20],[12],[4],[2],[3],[9],[13],[22],[29],[31]],
-[[16],[4],[6],[19],[17],[18],[28],[20],[10],[0],[30]],
-[[8],[13],[26],[22],[1],[14],[18],[28],[11],[19],[15],[30]],
-[[27],[21],[17],[12],[9],[3],[8],[28],[14],[23],[20],[7]],//10
-[[25],[26],[17],[9],[19],[21],[22]],
-[[10],[24],[19],[17],[5],[18],[6],[7]],
-[[20],[2],[8],[22],[12],[1],[29],[15],[7],[5],[21]],
-[[16],[6],[2],[1],[13],[31],[25],[7],[29],[8],[20]],
-[[6],[20],[8],[0],[28],[7],[19],[21]],//15 corrected 14->6
-[[14],[5],[18],[8],[4],[24],[0],[17]],
-[[24],[8],[25],[19],[20],[11],[7],[26]],
-[[13],[29],[23],[16],[8],[2],[1],[17],[27],[30],[15],[22],[19]],
-[[17],[20],[22],[24],[26],[8],[11],[21]],//19 pervyje tri plus
-[[25],[0],[12],[23],[10],[17],[5],[27],[19],[15]],
-[[19],[15],[4],[5],[11],[23]],//21 nit dobavlena
-[[24],[9],[16],[4],[3],[10],[8],[1],[0],[14],[31]],
-[[20],[21],[25],[15],[4],[2],[30]],
-[[2],[22],[19],[7],[4],[29],[16],[9],[15]],
-[[20],[24],[17],[11],[12],[29],[8],[2],[26],[9],[28],[15]],//25
-[[8],[0],[9],[17],[24],[21],[11],[28],[31],[20]],
-[[14],[24],[21],[17],[6],[12],[28],[20],[4],[22],[10]],
-[[16],[2],[0],[22],[9],[11],[26],[4],[3],[7],[17],[23],[27]],
-[[17],[25],[24],[26],[6],[1],[14],[13],[23],[0],[32],[9],[15]],
+[[[8],[26],[12],[29],[7],[25],[13],[10],[2],[32]                      ,[13]],//0
+[[14],[24],[6],[2],[13],[18],[7],[25],[20]					,[25],[20]],
+[[1],[20],[14],[25],[13],[3],[23],[11],[12],[7],[28],[29],[16],[24]				,[29],[18]],
+[[6],[8],[30],[7],[31],[26],[0],[22],[1],[28],[15],[32]					,[32],[13]],//3
+[[2],[20],[18],[17],[28],[23],[11]					],
+[[4],[19],[21],[2],[20],[22],[25],[10],[0],[26]					],//5
+[[17],[2],[4],[9],[15],[27],[12],[0],[21]					,[23]],
+[[17],[28],[20],[12],[4],[2],[3],[9],[13],[22],[29],[31]					,[9],[3],[6]],
+[[16],[4],[6],[19],[17],[18],[28],[20],[10],[0],[30]					],
+[[8],[13],[26],[22],[1],[14],[18],[28],[11],[19],[15],[31]					,[25],[21]],
+[[27],[21],[17],[12],[9],[3],[8],[28],[14],[23],[20],[7]					],//10
+[[25],[26],[17],[9],[19],[21],[22]					],
+[[10],[24],[19],[17],[5],[18],[6],[7]					],//12
+[[20],[2],[8],[22],[12],[1],[29],[15],[7],[5],[21]					],
+[[16],[6],[2],[1],[13],[31],[25],[7],[29],[8],[20]					],
+[[6],[20],[8],[0],[28],[7],[19],[21]					],//15 corrected 14->6
+[[14],[5],[18],[8],[4],[24],[0],[17]					],
+[[24],[8],[25],[19],[20],[11],[7],[26]					],
+[[13],[29],[23],[16],[8],[2],[1],[17],[27],[30],[15],[22],[19]					],
+[[17],[20],[22],[24],[26],[8],[11],[21]					],//19 pervyje tri plus
+[[25],[0],[12],[23],[10],[17],[5],[27],[19],[15]					,[28]],
+[[19],[15],[4],[5],[11],[23]					],//21 nit dobavlena
+[[24],[9],[16],[4],[3],[10],[8],[1],[0],[14],[31]					,[29]],
+[[20],[21],[25],[15],[4],[2],[30]					],
+[[2],[22],[19],[7],[4],[29],[16],[9],[15]					],
+[[20],[24],[17],[11],[12],[29],[8],[2],[26],[9],[28],[15]					],//25
+[[8],[0],[9],[17],[24],[21],[11],[28],[31],[20]					],
+[[14],[24],[21],[17],[6],[12],[28],[20],[4],[22],[10]					],
+[[16],[2],[0],[22],[9],[11],[26],[4],[3],[7],[17],[23],[27]					],
+[[17],[25],[24],[26],[6],[1],[14],[13],[23],[0],[32],[9],[15]					],
 [[31],[32]],//30
 [[30],[32]],
 [[30],[31]]
@@ -197,7 +251,9 @@ SlovaPerehoda=[//---------------------------------   0
 "Победители строят на руинах. Внизу остаётся не только культурный слой из разбитых черепков, но и ад из погребённых душ и забытых культур:",
 "За каждой ролью, которую мы играем в жизни, стоит, как сценарист, та любовь или нелюбовь которую мы получили в детстве:",
 "Культуры уходят, оставляя лишь сухие факты, по которым не понять тех людей, не проследить ту логику в которой они мыслили, не ощутить тех чувств:",
-"Путешествуя по южной Африке рано или поздно понимаешь что этот благоприятный климат и этот лес по которому можно ходить босиком — и есть твоя биологическая родина:"
+"Путешествуя по южной Африке рано или поздно понимаешь что этот благоприятный климат и этот лес по которому можно ходить босиком — и есть твоя биологическая родина:",
+
+"Споры 'кто добро, а кто зло' всегда в истории разрешались убийством. Поэтому она - нескончаемые переодевания зла в добро:"
 ],//-----------   1
 ["Продажа души дьяволу - не миф, это происходит вокруг, просто незаметно:",
 "Инопланетяне, наблюдая за нами, видят то же что мы видим в зоопарке:",
@@ -207,7 +263,10 @@ SlovaPerehoda=[//---------------------------------   0
 "Ценности всех цивилизаций одинаковы, просто названы разными словами. Цивилизации разделяются только потому что не понимают друг друга:",
 "Как микрочастице подходит любой атом, так и человеку — любой смысл жизни, чтобы ни предложило ему общество:",
 "Пропаганда - это реклама, только не товаров, а смыслов. Но тоже для выгоды:",
-"Образы счастья на телеэкране уже настолько профессиональны и привлекательны, что заменили собственые мечты:"
+"Образы счастья на телеэкране уже настолько профессиональны и привлекательны, что заменили собственые мечты:",
+
+"Пропаганды рекламируют смыслы жизни - так же как фирмы рекламируют свои марки:",
+"Счастье - это мираж, и поэтому оно всегда не в руках, а на горизонте:"
 ],//-----------   2
 ["Египетские фрески — это древние фотографии. Там, в глазах, так же как и на современных фотошедеврах, виден странный внутренний мир строителей пирамид:",
 "Внутренний мир людей прошлого похож на твою несбывшуюся судьбу: кажется такие миры всё ещё где-то существуют, и можно оказаться там, одним усилием воображения:",
@@ -222,7 +281,10 @@ SlovaPerehoda=[//---------------------------------   0
 "Человек создан природой чтобы приспосабливаться. Он приспосабливает душу к судьбе и видит себя совсем не так как окружающие:",
 "Мы уже создали «Матрицу» для управления нами, приготовив всё для грядущего искусственного интеллекта, порабощающего человечество:",
 "Футурология может показать будущее, но мы поймём в показанном нам мире не больше попавших в цивилизацию дикарей:",
-"Все видят разный смысл — в фильмах, книгах, и даже в простом разговоре собеседники говорят о разном:"
+"Все видят разный смысл — в фильмах, книгах,... И даже в простом разговоре собеседники говорят о разном:",
+
+"Пока непонятно кто в будущем будет иметь душу - наши разленившиеся потомки или потомки наших смартфонов и пылесосов:",
+"Формирующийся сегодня народ будет чувствовать себя завтра одиноким и непонятым:"
 ],//-----------   3
 ["В ожидании смерти — и перед казнью, и просто в старости — появляется безучастность, заканчивающаяся добровольным принятием судьбы:",
 "Взрослые — это дети, вооружившиеся против неприветливого мира:",
@@ -235,7 +297,10 @@ SlovaPerehoda=[//---------------------------------   0
 "Если государство не обеспечивает сохранность жизни, то оно начинает придумывать смыслы, за которые можно умереть:",
 "Боязнь причинить вред ближнему заменит боязнь перед УК. Это  кнопка, изменящая в будущем и внутренний мир человека, и строение общества:",
 "Будущую эру милосердия можно почувствовать уже сейчас — в глазах людей или животных к которым проявляешь сострадание:",
-"Нейро-эксперименты углубляются всё дальше в тайны ума. А с другой стороны, в глубинах души копается культура. Эти два туннеля могут встретиться (организация экспериментов):"
+"Нейро-эксперименты углубляются всё дальше в тайны ума. А с другой стороны, в глубинах души копается культура. Эти два туннеля могут встретиться (организация экспериментов):",
+
+"Нейроэксперименты показывают иллюзорность и необъективность всего что мы чувствуем и понимаем как 'Я':",
+"Желание построить окончательное и справедливое и счастливое общество - одна из причин нескончаемой смены эпох в истории:"
 ],//-----------   4
 ["Не понять внутренний мир людей прошлого. События остаются в истории, а души — нет:",
 "Неудовлетворённость и несбывшееся пробуждает душу и зовёт её в иные миры — и только так, в стремлении к чему-то «не от мира сего» она рождается и растёт вместе с человеком:",
@@ -262,9 +327,11 @@ SlovaPerehoda=[//---------------------------------   0
 "В программах природы есть свои ошибки, которые становятся нашим характером, нашими желаниями и страхами:",
 "В приюте для старых собак можно увидеть то же ожидание смерти и примерение с судьбой что и доме престарелых:",
 "Добившиеся успеха утверждают что их судьба — результат веры в себя. Но скорее наоборот: успешная судьба питает веру... Судьба и характер; отсутствие перспектив и пьянство — что чья причина?:",
-"В голове всё согласуется со всем. Так воспоминания и ощущение успеха в жизни взаимно подстраиваются, изменяя друг друга, выстраивая, из хаоса жизни, логичную биографию:",
+"В голове всё согласуется со всем. Так воспоминания и ощущение успеха или несчастья взаимно подстраиваются, изменяя друг друга, выстраивая, из хаоса жизни, логичную биографию:",
 "Мы все упали в водоворот жизни с райского, поросшего пальмами, берега детства:",
-"Не только в конце, но и в течении жизни, внешнее умирает, а внутренее остаётся — как остаётся внутри общий мир после расставания:"
+"Не только в конце, но и в течении жизни, внешнее умирает, а внутренее остаётся — как остаётся внутри общий мир после расставания:",
+
+"Вырваться из своего мира - как выпрыгнуть с поезда: можно погибнуть или выжить, но в любом случае это навсегда:"
 ],//-----------   7
 ["Телезритель, как квантовая частица, находится в смешанном состоянии -  одновременно и перед и за экраном:",
 "Мы не знаем кто мы - пока судьба не включит нас, как робота, нажав на кнопку того или иного поведения:",
@@ -277,7 +344,11 @@ SlovaPerehoda=[//---------------------------------   0
 "В меняющимся мире каждый — тайный агент: или нового или разрушенного старого:",
 "Природа человека — война и насилие, и только хрупкая культура удерживает этот хаос от революционных взрывов:",
 "Человеку сложно лавировать, сохранять себя в системе. Его затягивает в матрицу и он становится её частью:",
-"За 2000 лет могущественные церковные организации, в своём сотрудничестве с приходящими и уходящими державами, ушли далеко от учения о том «не от мира сего» Царстве божьем каким было христианство. (книга о христианстве):"
+"За 2000 лет могущественные церковные организации, в своём сотрудничестве с приходящими и уходящими державами, ушли далеко от учения о том «не от мира сего» Царстве божьем каким было христианство. (книга о христианстве):",
+
+"Учёные находят причины - и революций и поступков - но всегда после, когда уже поздно проверить их правильность:",
+"В каждом чиновнике живёт и оппозиционер и корруционер, и даже осуждённый за оба проступка:",
+"Подвижная плазма истории ионизирует людей, и они идут на смерть в общем раскалённом потоке:"
 ],//-----------   8
 ["Дети - дикари древнего племени, попавшие в цивилизацию:",
 "Способность играть излечивается как детская болезнь — взрослением:",
@@ -288,7 +359,7 @@ SlovaPerehoda=[//---------------------------------   0
 "Никто не знает каков внутри человек: в каждом монстре живёт обиженный ребёнок:",
 "Страна детства граничит со страной несбывшегося:",
 "Ещё в детстве нам одевают маску, которую, как роль, мы играем всю жизнь:",
-"Добро и зло - берега жизни на которые нас выносит её водоворотистое течение:",
+"Добро или зло - лишь водовороты огромной реки жизни. Но именно они могут утянуть на дно или вынести на берег:", //"Добро и зло - берега жизни на которые нас выносит её водоворотистое течение:",
 "Этот текст также входит в нелинейный интерактивный сборник «Мешок сказок»:"
 ],//-----------   9
 ["Мир в детстве кажется больше и удивительней. Все интересы и увлечения взрослых — это попытка вернуть тот изначальный интерес к миру, который даётся природой только раз:",
@@ -302,7 +373,10 @@ SlovaPerehoda=[//---------------------------------   0
 "В сексуальных фантазиях и снах нет места стыду. Потому что, в момент представления, они ярче и важнее далёкой реальности:",
 "Культура придумывает смыслы всем животным переживаниям и проявлениям инстинктов:",
 "Сострадание и любовь — душа природы, которую можно разглядеть в глазах всех живых существ:",
-"В каждом математическом узоре мороза, в каждом рисунке волн от брошенного в воду камня, природа посылает нам свои письма и учебники(текст«Самая длинная песня» в нелин.книге о реальности):"
+"В каждом математическом узоре мороза, в каждом рисунке волн от брошенного в воду камня, природа посылает нам свои письма и учебники(текст«Самая длинная песня»,книга о реальности):",
+
+"Желания, которые нам даёт природа - это реклама и пропаганда её нехитрых проектов:",
+"Природа не даёт ни сил ни ответов при расставании - с её прагматичной точки зрения это лишь ненужная, отработанная попытка размножения:"
 ],//-----------   10
 ["Счастливы писатели у которых нет глубоких мыслей: они могут писать о том за что платят деньги и не спиваться из-за  отсутствия творческой реализации:",
 "Внутренние миры тоже рождаются и умирают – как умирает общий мир после расставания:",
@@ -342,7 +416,7 @@ SlovaPerehoda=[//---------------------------------   0
 "Все империи скрепляются смыслами. Это им заменяет историческую правду.",
 "Государственная система завинчивает нас, как винтики, всё глубже в себя — подобно тому как матросы Корабля-призрака, умирая, встраиваются в его борта. Но матросы засыпают, а мы, становясь системой, работаем и ввинчиваем в неё новые души:",
 "Ту высоту на которую мы все поднимемся после завершения жизненного пути, можно разглядеть везде — и в сверкающих горных вершинах, и в грустных глазах старой собаки:",
-"Как плазма солнца, складывается из миллиардов частиц с неопределённым состоянием, так и поток истории складывается из миллионов так и  неопределившихся людей:",
+"Как плазма солнца, складывается из миллиардов частиц с неопределённым состоянием, так и поток истории складывается из миллионов замагниченных но по сути неопределившихся людей:",
 "Важен ли кастинг людей — как на исторические роли, так и на роли в твоей судьбе? Или всё записано в сценарии?:",
 "Всё утерянное найдётся и все разделённые когда-то внутренние миры соединяться снова. По закону сохранения ничто не должно потеряться бесследно:"
 ],//-----------   14
@@ -398,7 +472,7 @@ SlovaPerehoda=[//---------------------------------   0
 "И зло человека, и агрессия собак — это лишь защитные реакции, способы приспособления к несовершенному миру:",
 "Общество учит человека — как стая обезьянку. Учит одному и тому же уже миллионы лет: как приспособиться и защитить себя от окружающих:",
 "Характеры и истории народов начинаются с историй обезьянних стай: большинство культур исчезли до появления письменности:"
-],//-----------   19 pervye 3 dobavleno
+],//-----------   19 pervye 3 dobavleno    OTSUDA NE DELAL
 ["Киносюжеты красивой любви доносят до нас то что мы не можем выделить, раскопать в собственной жизни. Наш замыленный, отягощённый корыстью и мелочностью взгляд уже неспособен на это:",
 "Далёкие горизонты зовут нас нашими несбывшимися судьбами путешественников и первооткрывателей:",
 "Учёные понимают схемы поведения животных, но не чувствовуют тех переживаний которые заставляют их так поступать. Да и друг друга люди так чувствуют редко:",
@@ -416,8 +490,10 @@ SlovaPerehoda=[//---------------------------------   0
 "Несбывшееся в реальности женское счастье реализуется в просмотре сериалов и фильмов о красивой любви:",
 "Тщательно забытое несбывшееся проглядывает в ярких снах и тревожит бессонными ночами — как неосуществившаяся любовь:",
 "Человек сразу чувствует какая судьба может его ждать в лучшем случае. И, только повзослев - какое будущее его ждёт реально:",
-"99% снов, разговоров, долгих зим тянулись тысячелетиями в пещерах и землянках, окружённых первобытным непонятным миром. А  значит 99% философских идей и религиозных озарений пропали до письменности:",
-"Несбывшееся всегда реализуется, хотя и не в материальном мире. Но его зов не обманывает — ни человека, ни собаку, ни играющие тысячи ролей облака:"
+"99% снов, разговоров, долгих зим тянулись тысячелетиями в пещерах, окружённых первобытным непонятным миром. А  значит 99% философских идей, гениальных стихов и религиозных озарений пропали до письменности:",
+"Несбывшееся всегда реализуется, хотя и не в материальном мире. Но его зов не обманывает — ни человека, ни собаку, ни играющие тысячи ролей облака:",
+
+"Счастье есть. Ведь многомирная вселенная содержит все варианты всех наших судеб, выборов и поступков:"
 ],//-----------   21 dobavleno
 ["Миллиарды внутренних миров и есть душа человечества. Эта душа забывается, исчезает с каждым поколением. Вся культура — это попытка её запечатлеть:",
 "Внутренний мир собак беднее нашего, но зато он состоит из самого важного. Собака сразу знает то что останется от нашего с ней общего внутреннего мира:",
@@ -432,11 +508,13 @@ SlovaPerehoda=[//---------------------------------   0
 "Есть ли смысл у сострадания(особенно к дальним, неважным для тебя существам)? Или это ошибка природы, знак психического нездоровья?:",
 "Общество, с животных времён, построено на страхе, унижении и насилии. И природные импульсы всегда предлагают нам преступные решения проблем:",
 "Артистические тусовки неприветливы не по своей воле. Там каждый играет свою роль, часто определённую ещё в детстве:",
-"Дети близки к природе и на 90% они состоят из жестоких обезьян. Воспитание поможет только тем чтобы не потерять те 10% что даны им свыше:",
-"Политика - это экономика, в которой, вместо вместо материальных ценностей, продаются идеи:",
-"В сюжетах о природе (от мультфильмов до романов) наверх пробивается достойнейший. Но природа не различает добро и зло — просто все, с детства, вынуждены приспосабливаться. И всё:",
+"Детство - наше краткое превращение в животных предков. Дети на 90% они состоят из жестоких обезьян. Воспитание может только сохранить те 10% что даны им свыше:",
+"Политика - это экономика, в которой, вместо вместо материальных ценностей, скупаются и продаются оптом идеи. И, поскольку идеи выращиваются в людях... Политика - это оптовая торговля людьми:",
+"В сюжетах о природе (от мультфильмов до романов) наверх пробивается достойнейший. Но природа не знает других достоинств кроме приспособления к среде. Наверх, как в природе, так и в обществе, пробиваются приспособленцы. Приспосабливаться - это всё чему нас с детства учит общество:",
 "Деньги правят всем. И, поэтому, у них есть мистическая сторона. Но они гораздо мрачнее тех популярных и безобидных  «правил привлечения денег в свою жизнь»:",
-"Информационное общество будущего и эволюция мыслящей материи (книги «Цивилизация после людей» и «Апгрейд в сверхлюди»):"
+"Информационное общество будущего и эволюция мыслящей материи (книги «Цивилизация после людей» и «Апгрейд в сверхлюди»):",
+
+"Общество 21века станет гораздо болле человечным. Если останется состояшим из людей:"
 ],//-----------   23
 ["В фрагментах чужой жизни, мелькнувших из окна поезда или на экране телевизора — можно разглядеть собственную несбывшуюся судьбу:",
 "Из незаметных сперва моментов общей жизни — как пережидали грохочущий мимо поезд, как ехали смеясь на одном велосипеде — незаметно сложилось воспоминание ушедшего счастья. Это общее и остаётся в вечности:",
@@ -452,9 +530,9 @@ SlovaPerehoda=[//---------------------------------   0
 "Ничто так не способствует полёту фантазии как лекция на которой ты потерял нить рассуждений:",
 "Ничем не опровергнуть мысль что все вокруг — сумасшедшие, искуссно, как в фильмах, притворяющиеся нормальными людьми:",
 "Игры спецслужб на всемирной шахматной доске — предвестник Матрицы, в которую могут попасть наши внуки:",
-"Тарзан, попавший к людям, мог бы вести себя глупо с нашей техникой, но он не увидел бы ничего нового в человеческом обществе:",
-"В природе (а значит и в поведении человека) нет логики. Всё состоит из странных но работающих, проверенных миллионами лет схем:",
-"Мы все — и люди и животные, чувствуем — и что спасёт мир, и что останется после нас. Но это — не совсем «красота», как  пообещал Достоевский:"
+"Попав в цивилизацию, дикарь может не уловить смыслов науки и чувств искусства, но суть политики он уловит очень точно:", //"Тарзан, попавший к людям, мог бы вести себя глупо с нашей техникой, но он не увидел бы ничего нового в человеческом обществе:",
+"Возможно, только издалека, только инопланетные зоологи увидят в нашем галдеже и смене вожаков - смысл заложенный в них насмешливой природой:", //"В природе (а значит и в поведении человека) нет логики. Всё состоит из странных но работающих, проверенных миллионами лет схем:",
+"Красота может и спасти и погубить мир. И спасти - это если сможет вызвать любовь:" //"Мы все — и люди и животные, чувствуем — и что спасёт мир, и что останется после нас. Но это — не совсем «красота», как  пообещал Достоевский:"
 ],//-----------   25
 ["Люди перестали мечтать собственными образами. Начали брать приготовленные для них шаблоны - из фильмов, из рекламы. Воображение заменилось на «хочу как там»... там, в чужом варианте счастья:",
 "Вечерний гогот гопников во дворе так похож на гиканье обезьяньих компаний что возвращает в те времена когда они оба, вместе с щебетанием птиц и далёкими трубами слонов, составляли природные звуки вечерней саванны:",
@@ -463,9 +541,9 @@ SlovaPerehoda=[//---------------------------------   0
 "В финале старого фильма о Буратино, за куском холста оказывалась... страна СССР. Мне в детстве нравилась такая фантастика — что Буратино может появиться прямо здесь... Только повзрослев я понял что снимали не фантастику а пропаганду. Так зритель сам создаёт жанр:",
 "Человек разучивается жить своей внутренней жизнью - её заменяют на нужные образы, нужные мечты, симпатии и антипатии. Человек встраивается в операционную систему будущего:",
 "Детские сказки и стремление к счастью так и остаются, нереализованными, внутри. Всё взросление — это попытка забыть и заменить их:",
-"Мечты, чувства, мысли — все внутренние миры ушедших цивилизаций — оказываются безвозвратно утеряны. И уже странным нездешним взглядом смотрят люди со старых фотографий:",
+"Счастье советских людей светится в глазах на плакатах, но не на старых фотографиях. Все истинные мечты и чувства ушедших цивилизаций оказываются утеряны. Остаются лишь пропаганда и непонятный взгляд на старых фотографиях:", //"Мечты, чувства, мысли — все внутренние миры ушедших цивилизаций — оказываются безвозвратно утеряны. И только странным нездешним взглядом смотрят люди со старых фотографий:",
 "Природа — режиссёр нашего счастья, управляющая нами, как марионетками, за созданные ею нити желаний:",
-"Природа заботится не о человеке а о человечестве в среднем, оставив учёным объяснять смысл случаных отклонений от статистики:",
+"Природа заботится не о человеке а о человечестве в среднем, оставив учёным и поэтам находить 'смысл' индивидуальных отклонений:",
 "Мы ничего не знаем о небесном мире, неумело пытаясь какими-то традициями и церемониями вращать вселенские и быть может равнодушные к нам колёса высших сфер — те что качают маятник небытия и вечности:",
 "Нигде не найти информацию о том кто ты. Но можно найти понимание: то что останется, то что не умрёт — это и есть ты:"
 ],//-----------   26
@@ -478,7 +556,7 @@ SlovaPerehoda=[//---------------------------------   0
 "На основе сомнительных прелестей и неуклюжих сопящих движений в голове рождаются все головокружительные страсти и эротические фантазии:",
 "Не только природа дёргает нас, как марионетку, за чувствительные нити. История тоже нажимает на кнопки, включая ту или иную судьбу:",
 "Будущее открывает многие варианты взаимодействия человека и его природы, вместо существующего сейчас единственного кабального пожизненного контракта (футурологическая книга):",
-"По теории множественных вселенных, где-то есть миры, в которых у нас другая, более счастливая но несбывшаяся здесь судьба:"
+"Теория множественных вселенных обещает что, где-то существует мир в котором у нас другая судьба, где-то сбылись все мечты и живёт наше счастье. И возможно именно оттуда мы слышим его зов:" //""По теории множественных вселенных, где-то есть миры, в которых у нас другая, более счастливая но несбывшаяся здесь судьба:"
 ],//-----------   27
 ["Что-то портиться при конвертации таланта в профессию. Душа  уходит оттуда куда приходят деньги:",
 "Теперь и не вспомнить что же было веселого в юности, что было смешного в разговорах на вечеринках... и вообще какой в них был смысл:",
@@ -487,10 +565,10 @@ SlovaPerehoda=[//---------------------------------   0
 "Предчувствие смерти меняет человека — и в ожидании казни, и в старости — как меняет человека война. Проигранная война с самым страшным врагом:",
 "У каждой жизни, как у фильма, есть свой жанр — от него зависит её трагический конец или хэппиэнд:",
 "Все пьяницы или ищут в собутыльнике понимания или жалуются что никто их не понимает. Значит, как утверждает пословица, и у всех трезвых на уме мысль  что никто не знает что у них внутри:",
-"Предчувствия, как и ощущения несбывшегося, приходят из того закулисного мира где складываются мозайки судеб:",
+"Предчувствия, как и мечты о несбывшемся, зовут нас образами альтернативных судеб. Но не вскочить в лучшую судьбу, как в соседний поезд на полном ходу, наши рельсы вскоре расходятся навсегда:", //"Предчувствия, как и ощущения несбывшегося, приходят из того закулисного мира где складываются мозайки судеб:",
 "Всё необъяснимое логикой — и сильные чувства, и фатальные предчувствия — для окружающих лишь проблемы психики, которые они берутся вылечить:",
 "Попасть в туссовку было сложно ещё в обезьяньи времена. В иерархии надо  уметь унижать и унижаться:",
-"Все сыгранные актрисами роли — это одна роль, которую они начали играть ещё в детстве:"
+"Голливуд, как и всякая фабрика, прячет свою рутинную машинерию за яркой, привлекающей потребителей витриной:" //"Все сыгранные актрисами роли — это одна роль, которую они начали играть ещё в детстве:",
 ],//-----------   28
 ["Никто нас не воспринимает такими как мы есть глубоко внутри — одинокими, непонятыми обществом, первобытными детьми:",
 "Внешность эпохи остаётся в истории, но её душа теряется, оставаясь лишь в детских воспоминаниях брежневского времени и во взгляде на старых фотографиях сталинской эпохи:",
@@ -498,13 +576,13 @@ SlovaPerehoda=[//---------------------------------   0
 "Пока есть сострадание - принять мир невозможно: слишком много несправедливости и страданий в равнодушной логике природы и общества:",
 "Наука никогда не найдёт смысл в том каким тебя сделала природа. Для того чтобы придумать смысл нужна лженаука:",
 "Весь мир - театр и люди в нём актёры. Весь секс - театр и люди в нём — фантазии:",
-"Мы - театр марионеток, запущенный ещё в детстве и ведомый по сцене жестоким колесом причин и следствий:",
-"Врач может залезть в мозг но не во внутренний мир пациента:",
-"Многое может неузнаваемо изменить человека — взросление, страдания, религия, или даже просто ожидание смерти:",
-"Состояния людей, как частиц в физике, не известны заранее — они смешанные:",
-"Женщинам проще увидеть принца в негодяе, чем ждать того кто грезился в юности. А если не получится его полюбить — на помощь приходят мечты, женские романы и сериалы:",
-"Мы смотрим друг на друга с непониманием и интересом - как пассажиры поезда и провожающие его взглядом жители деревень:",
-"Некоторые чувствуют  закулисный мир сансары, а значит и своё будущее, свою неумолимо ведомую этим миром судьбу:"
+"Весь мир - автоматический театр марионеток, где нас тянут за нити вселенские шестерёнки причин и следствий:",  //"Мы - театр марионеток, запущенный ещё в детстве и ведомый по сцене жестоким колесом причин и следствий:",
+"То что инзутри, для нас, чувство неудовлетворённости жизнью или вины - снаружи, для медицины, просто нарушение обмена веществ. Врач может залезть в мозг но не во внутренний мир пациента:",
+"В ожидании смерти человек меняется - неузнаваемо для себя самого, но незаметно для других. Это верно и для больницы, и для тюрьмы:", //"Многое может неузнаваемо изменить человека — взросление, страдания, религия, или даже просто ожидание смерти:",
+"Внутренних состояний у человека не меньше чем у квантовой частицы, мы же признаём лишь два(вменяем или нет):", //"Состояния людей, как частиц в физике, не известны заранее — они смешанные:",
+"Женщины хотят пробиться в своё женское счастье - закрывая глаза и на то что принц оказывается преступником, и на то что он существует только на киноэкране:", //"Женщинам проще увидеть принца в негодяе, чем ждать того кто грезился в юности. А если не получится его полюбить — на помощь приходят мечты, женские романы и сериалы:",
+"Мы смотрим на окружающих как на пассажиров поезда, удаляющихся куда-то по непересекающимся с нашими рельсам своих жизней:", //"Мы смотрим друг на друга с непониманием и интересом - как пассажиры поезда и провожающие его взглядом жители деревень:",
+"Не понять окружающих, и только когда копнёшь, заглянешь вглубь души человека - качнёшься в бездну, где вращаются галактические шестерёнки сансары:" //"Некоторые чувствуют  закулисный мир сансары, а значит и своё будущее, свою неумолимо ведомую этим миром судьбу:"
 ],//-----------   29
 ["Люди в ячейках многоэтажек, просматривающие красочные сны сериалов, - это и есть прототип будущей «Матрицы»:",
 "Пока реклама  и пропаганда транслируется посредством телепередач, а не напрямую с помощью воздействующих на мозг волн. И только природа, уже миллионы лет, транслирует нам свою рекламу напрямую в мозг. Мы называем это счастьем:",
@@ -514,8 +592,8 @@ SlovaPerehoda=[//---------------------------------   0
 "Государственные системы стремятся контролировать симпатии, антипатии и смыслы в головах граждан. Это началось со строительства пирамид и закончится построением «Матрицы»:",
 "«Знание - сила» - это ошибочно переводённое на русский высказывание Френсиса Бэкона «Знание — это власть». В новом информационном обществе власть переходит от денег к информации, и именно туда  переселяется дьявол:",
 "Империи понимают, что народы, вырвавшиеся из-под их влияния, уже никогда не захотят обратно. Они оказываются перед выбором: либо распад, либо уничтожение многообразия своих культур:",
-"Все культуры одинаковы: все они построены на разделении мира на ОНИ и МЫ, и поэтому все считают себя очень непохожими:",
-"Люди увлекаются пропагандой как водоворотистой рекой, и течение несёт нас так, что уже не выплыть на тот райский берег где ещё не было, как в Библии, ни добра ни зла:",
+"Все культуры одинаковы: все они построены на разделении мира на ОНИ и МЫ, и поэтому все считают себя очень непохожими. Все видят события по разному, обшаясь через звуконепроницаемое стекло - как провожающие и пассажиры поезда:",
+"Нас увлекает генеральное течение жизни, навязывая разделение мира на 'наше'добро и 'их'зло - так же как в древние времена нас унесло от рая:", //"Люди увлекаются пропагандой как водоворотистой рекой, и течение несёт нас так, что уже не выплыть на тот райский берег где ещё не было, как в Библии, ни добра ни зла:",
 "Системы искусственного интеллекта уже сейчас умеют развиваться. Но, как и человек, они развиваются по определённым законам — которые можно в них вложить на этапе создания:",
 "Природа запрограммировала наши желания ещё в первобытные времена, и совсем для других целей. И мы до сих пор функционируем по её устаревшим программам:",
 "Собаки живут в нашем мире как сталкеры в зоне описанной в «Пикнике на обочине»: не понимают его устройства, но чувствуют что надо делать. Так будем жить и мы в мире будущего искусственного интеллекта:"
@@ -545,7 +623,7 @@ SlovaPerehoda=[//---------------------------------   0
 //neIspolzOldVerOfCol AquamarinePerehod=		[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 //neIspolzOldVerOfCol GoldenRodPerehod=		[[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
 
-var parms = {"width":500,"height":500,"duration":5000,"transition":2000,"effect":"staronkaUperad","id":""};	// defaults
+var parms = {"width":adformShyrynjaHolst-10,"height":adformVyshinjaHolst-10,"duration":5000,"transition":2000,"effect":"staronkaUperad","id":""};	// defaults
 var pershyPakaz = true;
 //var raspovLicnik;         //WAS var raspovLicnik = -1; 
 var imLicnikiStarye = [];//ME
@@ -570,7 +648,7 @@ var kolkascZadnikau=4;
 
 
 
-var gartacPachatak = function(raspovLicnikNastupny,ugoryCIdolu) {
+var gartacPachatak = function(raspovLicnikNastupny,ugoryCIdolu) {//NOvar function=>function declaration=>defined as soon as its surrounding function or script is executed
 indZadnika=maxAposhStaronkPeradPershZadnik+1;	
 kolkascZadnikau=0; do{kolkascZadnikau++;}while (allbackImgs[raspovLicnikNastupny][kolkascZadnikau].length>4);//kolkascZadnikau++;
 kolkascZadnikau=kolkascZadnikau+3;//nacalo,seredina,konec
@@ -725,14 +803,14 @@ raspovLicnik = (raspovLicnikNastupny) //WAS 	raspovLicnik = (raspovLicnikNastupn
 //var x = document.getElementById("idDivTZmest").getElementsByTagName("td");
 vseIndsNUMofRadkiZmest = []; vseIndsTXTofRadkiZmest = []; vseIndsIDofRadkiZmest=[];
 for (i = 0; i < document.getElementById('tableZmest').rows.length; i++) { 
-curRowID=document.getElementById('tableZmest').rows[i].id; 
-//CONSOLE console.log(curRowID);
-//var strInfo=' '+i.toString()+')'+parms.malunki[curRowID][1].toString()+' '+parms.malunki[curRowID][2].toString()+' '+parms.malunki[curRowID][3].toString()+' '+parms.malunki[curRowID][4].toString()+' ';
+curRid=document.getElementById('tableZmest').rows[i].id; 
+//CONSOLE console.log(curRid);
+//var strInfo=' '+i.toString()+')'+parms.malunki[curRid][1].toString()+' '+parms.malunki[curRid][2].toString()+' '+parms.malunki[curRid][3].toString()+' '+parms.malunki[curRid][4].toString()+' ';
 var strInfo=' ';
-vseIndsNUMofRadkiZmest.push(i); vseIndsTXTofRadkiZmest.push(strInfo); vseIndsIDofRadkiZmest.push(Number(curRowID)); 
+vseIndsNUMofRadkiZmest.push(i); vseIndsTXTofRadkiZmest.push(strInfo); vseIndsIDofRadkiZmest.push(Number(curRid)); 
 }
 fabravacCIubracRadkiPaID(vseIndsNUMofRadkiZmest,vseIndsTXTofRadkiZmest,"krasit","White"); 
-for(var icvet=0;icvet<=5;icvet++) if(icvet<CvetaPerehoda[raspovLicnik].length) {
+for(var icvet=0;icvet<=15;icvet++) if(icvet<CvetaPerehoda[raspovLicnik].length) {
 var cvetaArr1elem=CvetaPerehoda[raspovLicnik][icvet];
 var perehodyArr1elem=SlovaPerehoda[raspovLicnik][icvet];	
 fabravacCIubracRadkiPaID([cvetaArr1elem],[perehodyArr1elem],"krasit",raspoCveta[cvetaArr1elem]); 	
@@ -755,16 +833,14 @@ var foavtar=allbackImgs[raspovLicnik][indZadnika];
 foavtar = foavtar.substr(2);foavtar=foavtar.replace("_", " ");
 document.getElementById('jaceikaHolstID').title='Текст: '+parms.malunki[raspovLicnik][1]+', страница '+(indStaronk+1)+'. Фото:'+foavtar.substr(0,foavtar.indexOf('.'));	
 //document.getElementById('jaceikaHolstID').style.opacity = 1;
+
+tabRs = document.getElementById('tableZmest').getElementsByTagName("TR");
+tabRs[0].parentNode.insertBefore(document.getElementById('id'+LepshPerehodyPaRaspovIstaronke[raspovLicnik][indStaronk]).parentNode, tabRs[0]);
 }
 
 
 
-
-
-
-
-
-var gartacPracjag = function(incr) {	
+var gartacPracjag = function(incr) {//var function => function expression=>only defined when that line is reached	
 var gartanneVyklikFailaZnomarom = [];for (var i = 0; i <= maxAposhStaronkPeradPershZadnik+9; i++) {if(i<=9){gartanneVyklikFailaZnomarom.push(parms.malunki[i][2] % 11);}else{gartanneVyklikFailaZnomarom.push(i+1);};};	
 	clearInterval(chasLichnik);
 	//CONSOLE console.log(raspovLicnik.toString()+'=raspovLicnik'+'___'+indStaronk.toString()+'=indStaronk');
@@ -813,9 +889,13 @@ document.body.style.backgroundSize = dimBack[0].toString()+"px "+dimBack[1].toSt
 	foavtar = foavtar.substr(3);foavtar=foavtar.replace("_", " ");
 	document.getElementById('jaceikaHolstID').title='Текст: '+parms.malunki[raspovLicnik][1]+', страница '+(indStaronk+1)+'. Фото:'+foavtar.substr(0,foavtar.indexOf('.'));				
 	//document.getElementById('jaceikaHolstID').style.opacity = 1;
-	}	
 
-var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) {
+tabRs = document.getElementById('tableZmest').getElementsByTagName("TR");
+tabRs[0].parentNode.insertBefore(document.getElementById('id'+LepshPerehodyPaRaspovIstaronke[raspovLicnik][indStaronk]).parentNode, tabRs[0]);
+//tabRs[0].parentNode.insertBefore(tabRs[LepshPerehodyPaRaspovIstaronke[raspovLicnik][indStaronk]], tabRs[0]);
+}	
+
+var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) {//var function => function expression=>only defined when that line is reached
 	if ((shyrSpacatku == shyrMiesca) && (vysotSpacatku >= vysotMiesca) || (vysotSpacatku == vysotMiesca) && (shyrSpacatku >= shyrMiesca)) {
 		return [shyrMiesca,vysotMiesca];	// adrez
 	} else { 					// pamensh i adrez
@@ -829,7 +909,7 @@ var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) 
 
 
 
-var staronkuUperad = function() {
+var staronkuUperad = function() {//var function => function expression=>only defined when that line is reached
 	var wPrec = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	kadrGartannja--;
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
@@ -953,11 +1033,14 @@ var zrabicGalounyVid = function() {
 	galounyVid.id = "tablePageID";//AFTER
 	canv.parentNode.appendChild(galounyVid) 
 	document.getElementById("idDivUSEkartynkaStaronkaTableJacejkiGart").appendChild(galounyVid)   //ME
+	galounyVid.setAttribute('style','width:'+Math.floor(adformShyrynjaHolst*1.00000000)+'px');//hope that 'px' is default, so  +'px'); is not necessary. without it '100'+1='101'// NOT WORKING?
+	galounyVid.width=adformShyrynjaHolst+00000000000000;
 	
 	var RowUverhu = galounyVid.insertRow();
 	var jaceika1uverhu  = RowUverhu.insertCell();
 	jaceika1uverhu.style.cursor = 'pointer';
-	jaceika1uverhu.setAttribute('style','font-size: 325%; cursor: pointer; text-align:center;');
+	jaceika1uverhu.setAttribute('style','font-size: 325%; cursor: pointer; text-align:center;width:'+adformShyrynjaHolst+'px');//hope that 'px' is default, so  +'px'); is not necessary. without it '100'+1='101'// NOT WORKING?
+	jaceika1uverhu.width=adformShyrynjaHolst;
 	jaceika1uverhu.innerHTML = "&#9167"; //fast upward(bad in Chrome): "&#x24eb";	// up: with pause &#9167
 	jaceika1uverhu.style.border = "2px solid #000";
 	jaceika1uverhu.addEventListener("click",function() {if(imLicnikiStarye.length>0) {
@@ -975,7 +1058,8 @@ var zrabicGalounyVid = function() {
 	if (neAutoGartanne) {
 		var jaceikaZleva  = tryJaceiki.insertCell();
 		jaceikaZleva.style.cursor = 'pointer';
-		jaceikaZleva.setAttribute('style','font-size:325%; cursor: pointer; text-align:center;');// width:36px
+		jaceikaZleva.setAttribute('style','font-size:325%; cursor: pointer; text-align:center;height:'+adformVyshinjaHolst+'px');//hope that 'px' is default, so  +'px'); is not necessary. without it '100'+1='101'// NOT WORKING? width:36px
+		jaceikaZleva.height=adformVyshinjaHolst;
 		jaceikaZleva.innerHTML = "&#x23ea";	// left triangle  &#9668;   "&#9616"
 		jaceikaZleva.style.border = "2px solid #000";
 		jaceikaZleva.addEventListener("click",function() {gartacPracjag(-1);}); //WAS gartacPracjag(parms.malunki.length-1)
@@ -986,10 +1070,14 @@ var zrabicGalounyVid = function() {
 	jaceikaHolst.appendChild(canv);		// the canvas
 	jaceikaHolst.title='Алесь Мищенко. Нелинейная интерактивная книга "Индульгенция людей"';
 	jaceikaHolst.id="jaceikaHolstID";
+	//jaceikaHolst.setAttribute('style','height:adformVyshinjaHolst;width:adformShyrynjaHolst;'); NOT WORKING
+	jaceikaHolst.width=adformShyrynjaHolst;  jaceikaHolst.style.width=adformShyrynjaHolst;
+	jaceikaHolst.height=adformVyshinjaHolst; jaceikaHolst.style.height=adformVyshinjaHolst;
 	if (neAutoGartanne) {
 		var jaceikaZprava  = tryJaceiki.insertCell();
 		jaceikaZprava.style.cursor = 'pointer';
-		jaceikaZprava.setAttribute('style','font-size: 325%; cursor: pointer; text-align:center;');// width:36px
+		jaceikaZprava.setAttribute('style','font-size: 325%; cursor: pointer; text-align:center;height:'+adformVyshinjaHolst+'px');//hope that 'px' is default, so  +'px'); is not necessary. without it '100'+1='101'// NOT WORKING? width:36px  adformVyshinjaHolst adformShyrynjaHolst
+		jaceikaZprava.height=adformVyshinjaHolst;
 		jaceikaZprava.innerHTML = "&#x23e9";	// right triangle  &#9658; << &#x23e9
 		jaceikaZprava.style.border = "2px solid #000";
 		jaceikaZprava.addEventListener("click",function() {gartacPracjag(1);});
@@ -1011,7 +1099,8 @@ imgNaRaspovMinRazmer = Math.min(imgNaRaspov.width, imgNaRaspov.height);
 poluWidth=Math.floor(imgNaRaspov.width/2); poluHeight=Math.floor(imgNaRaspov.height/2); poluMinRazmer=Math.floor(imgNaRaspovMinRazmer/2);
 	ctx1 = canv.getContext('2d'); ctx1.globalAlpha=prozrac; //raspovLicnik = Math.floor(Math.random()*3) + 0;
 	//ctx1.drawImage(imgNaRaspov, 0, 0, imgNaRaspov.width,    imgNaRaspov.height, 0, 0, canv.width, canv.height);
-	ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
+	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height); end2018
+	ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, parms.width, parms.height);
 }
 
 
@@ -1166,4 +1255,89 @@ return {
 }
 }();
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+function changeText(delta) {//posle nazatia etoi knopki omouseover->miganie
+adformShyrynjaHolst=Math.floor(adformShyrynjaHolst*delta);adformVyshinjaHolst=Math.floor(adformVyshinjaHolst*delta);
+var shyrynjaKVARD=adformShyrynjaHolst;
+var vyshinjaKVARD=adformVyshinjaHolst;
+if(!shyrynjaKVARD>0){shyrynjaKVARD=vyshinjaKVARD};if(!vyshinjaKVARD>0){vyshinjaKVARD=shyrynjaKVARD};
+//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'width:'+shyrynjaKVARD+'px');//setAttribute ERASES all other attributes
+//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("divStarajaGall_canvas").style.width=			shyrynjaKVARD.toString()+'px';
+document.getElementById("divStarajaGall_canvas").style.height=			vyshinjaKVARD.toString()+'px';
+
+//document.getElementById("jaceikaHolstID").setAttribute('style',	'width:'+shyrynjaKVARD+'px');
+//document.getElementById("jaceikaHolstID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaHolstID").style.width=			shyrynjaKVARD.toString()+'px';
+document.getElementById("jaceikaHolstID").style.height=			vyshinjaKVARD.toString()+'px';
+
+malrazmerSTRELOK=Math.floor(shyrynjaKVARD/5);
+bolrazmerSTRELOK=Math.floor(7*vyshinjaKVARD/5);
+
+//document.getElementById("jaceikaZpravaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
+//document.getElementById("jaceikaZpravaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaZpravaID").style.width=			malrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceikaZpravaID").style.height=			vyshinjaKVARD.toString()+'px';
+document.getElementById('jaceikaZpravaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZpravaID').style.opacity = 0.5981;
+
+//document.getElementById("jaceikaZlevaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
+//document.getElementById("jaceikaZlevaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaZlevaID").style.width=			malrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceikaZlevaID").style.height=			vyshinjaKVARD.toString()+'px';
+document.getElementById('jaceikaZlevaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZlevaID').style.opacity = 0.5981;
+
+//document.getElementById("jaceika1uverhuID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
+//document.getElementById("jaceika1uverhuID").setAttribute('style',	'height:'+malrazmerSTRELOK+'px');
+document.getElementById("jaceika1uverhuID").style.width=			bolrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceika1uverhuID").style.height=			malrazmerSTRELOK.toString()+'px';
+document.getElementById('jaceika1uverhuID').style.backgroundColor = 'white';
+document.getElementById('jaceika1uverhuID').style.opacity = 0.5981;
+
+//document.getElementById("tablePageID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');//setAttribute ERASES all other attributes
+//document.getElementById("tablePageID").setAttribute('style',	'height:'+bolrazmerSTRELOK+'px');
+document.getElementById("tablePageID").style.width=			bolrazmerSTRELOK.toString()+'px';
+document.getElementById("tablePageID").style.height=			bolrazmerSTRELOK.toString()+'px';
+
+/*
+var tds = document.getElementById("idDivTZmest").getElementsByTagName("td");
+////ctx1 = document.getElementById("divStarajaGall_canvas").getContext('2d');
+////ctx1.drawImage(document.getElementsByTagName('img')[1], poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, adformShyrynjaHolst, adformVyshinjaHolst);
+for (var i = 0; i < tds.length; i++) {
+if(document.getElementById(tds[i].id)!=null)
+{
+s=document.getElementById(tds[i].id).style.width;
+//if(s[s.length-1]=='x'){s = s.substring(0, s.length - 1);};
+//if(s[s.length-1]=='p'){s = s.substring(0, s.length - 1);};
+//shyrynjaKVARD=Math.floor(Number(s)*delta);
+//neww=Math.floor(document.getElementById(tds[i].id).style.width*delta);
+//document.getElementById(tds[i].id).style.width=neww;
+//document.getElementById(tds[i].id).setAttribute('style','width:'+neww+'px');
+
+document.getElementById(tds[i].id).setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
+document.getElementById(tds[i].id).style.width=			bolrazmerSTRELOK.toString()+'px';
+}
+else {neww=Math.floor(tds[i].width*delta);
+tds[i].width=neww;
+};
+};
+*/
+document.getElementById("idDivUSEkartynkaStaronkaTableJacejkiGart").style.height=			bolrazmerSTRELOK.toString()+'px';
+allign2ids(bolrazmerSTRELOK,"idDivUSEkartynkaStaronkaTableJacejkiGart","idDivOglavANDsortOglav");
+}
+
+function allign2ids(razmLeft,idLeft,idRight) {
+document.getElementById(idLeft).style.width=			razmLeft.toString()+'px';
+document.getElementById(idLeft).style.height=			razmLeft.toString()+'px';
+//document.getElementById(idLeft).setAttribute('style',	'float:left');
+document.getElementById(idLeft).style.cssFloat =			'left';
+if(razmLeft<window.innerWidth/2){
+document.getElementById(idRight).style.width=Math.floor((window.innerWidth-razmLeft)*0.9-10).toString()+"px";
+document.getElementById(idRight).style.cssFloat =			'right';
+}else{
+document.getElementById(idRight).style.width=Math.floor(window.innerWidth*0.9-10).toString()+"px";
+document.getElementById(idRight).style.cssFloat =			'right';
+}
+}
 

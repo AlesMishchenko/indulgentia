@@ -1,10 +1,7 @@
 // (С) Алесь Мищенко 
 // ======================================== START INIT VARS ========================================
-var adformShyrynja=537; //597
-var adformEffect="staronkaUperad";
-var adformVyshinja=537; //597
-var adformChas=5000;
-var adformPerahod=2000;
+
+
 sjarNazvy=["ЭРА МИЛОСЕРДИЯ","ХИРУРГ И ПСИХ","ПРИСНИЛАСЬ ЛЮБОВЬ",
 "КОД САМОУНИЧТОЖЕНИЯ","КВАНТОВЫЕ ЛЮДИ","ДЕТИ И ПАУКИ","УЧЁНЫЙ И ПРИРОДА","СУДЫ И СУДЬБЫ","ЭРОТИЧЕСКИЙ ОСКАР","АВТОРЫ СВОИХ СУДЕБ",
 "ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ","ДОГОВОР С ДЬЯВОЛОМ","ПЛАТА ЗА ВСЁ","ИСПОВЕДЬ ДИКАРЯ","МАТРИЦА МНОГОЭТАЖЕК","ДЕТСТВО НАРОДА","ДНО МОРЯ ЛЮБВИ",
@@ -21,32 +18,32 @@ raspoCveta[2]=rgb2hex(255,255,153); //yellow chel
 raspoCveta[3]=rgb2hex(0,153,153);//3Cyan4 Kogo
 raspoCveta[4]=rgb2hex(153,153,153);//4Gray5 Vrach
 raspoCveta[5]=rgb2hex(153,0,255);//5Purple Mne
-raspoCveta[6]=rgb2hex(255,102,0);//6Orange dogov
+raspoCveta[6]=rgb2hex(255,102,0);//6Orange dogo
 raspoCveta[7]=rgb2hex(255,0,0); //7 red3 chast
 raspoCveta[8]=rgb2hex(221,221,221);//8 gray2 skazk
-raspoCveta[9]=rgb2hex(204,0,102);//9 rose4 moi nauch
+raspoCveta[9]=rgb2hex(204,0,102);//9 rose4 moi nauc
 raspoCveta[10]=rgb2hex(255,0,102);//10 pink3 zensc
 raspoCveta[11]=rgb2hex(255,153,153);//11 red1 RolGeroa
-raspoCveta[12]=rgb2hex(255,153,255);//12 magenta1 my-avtr
-raspoCveta[13]=rgb2hex(204,0,204);//13 magenta4 bashibuzuk
-raspoCveta[14]=rgb2hex(255,153,0);//14 orange2 Dogov
+raspoCveta[12]=rgb2hex(255,153,255);//12 magenta1 my-av
+raspoCveta[13]=rgb2hex(204,0,204);//13 magenta4 bashib
+raspoCveta[14]=rgb2hex(255,153,0);//14 orange2 Dogo
 raspoCveta[15]=rgb2hex(153,153,255); //15 blue1 ProSob   WAS17
 raspoCveta[16]=rgb2hex(102,255,255);//16w20Cyan Dik   WAS20
-raspoCveta[17]=rgb2hex(255,0,204);//17w21Pink Matr   WAS21
-raspoCveta[18]=rgb2hex(0,255,102);//18w22Turquoise2 detNar   WAS22
+raspoCveta[17]=rgb2hex(255,0,204);//17w21Pink Mat   WAS21
+raspoCveta[18]=rgb2hex(0,255,102);//18w22Turquoise2 detNa   WAS22
 raspoCveta[19]=rgb2hex(0,0,255);//19w18Blue3 Dno   WAS18
-raspoCveta[20]=rgb2hex(0,204,255);//20 skyblue  nesb   WAS19
+raspoCveta[20]=rgb2hex(0,204,255);//20 skyblue  nes   WAS19
 raspoCveta[21]=rgb2hex(0,204,51);//21 tourquose3 nit   WAS23
 raspoCveta[22]=rgb2hex(153,255,153);//22w24Green1 neuc   WAS24
 raspoCveta[23]=rgb2hex(0,153,0);//23w25Green4 Lud   WAS25
 raspoCveta[24]=rgb2hex(204,255,0);//24w26YellowGreen smys   WAS26
 raspoCveta[25]=rgb2hex(204,102,255);//25w15Purple1 moi-rek   WAS15
-raspoCveta[26]=rgb2hex(102,102,255);//26w16Blue UtVkuk   WAS16
-raspoCveta[27]=rgb2hex(204,255,102);//27 yellowGreen1 Zamen
+raspoCveta[26]=rgb2hex(102,102,255);//26w16Blue UtVku   WAS16
+raspoCveta[27]=rgb2hex(204,255,102);//27 yellowGreen1 Zam
 raspoCveta[28]=rgb2hex(102,255,0);//28YellowGreen3 poisk-vin
 raspoCveta[29]=rgb2hex(255,102,102); //red2 buben  29buben
-raspoCveta[30]=rgb2hex(153,255,51); //yellowGreen2 toze na sait
-raspoCveta[31]=rgb2hex(204,51,0); //Orange4 drugKn
+raspoCveta[30]=rgb2hex(153,255,51); //yellowGreen2 tozsait
+raspoCveta[31]=rgb2hex(204,51,0); //Orange4 druK
 raspoCveta[32]=rgb2hex(51,255,153); //Turquoise Drug
 raspoCveta[33]=rgb2hex(102,0,255); //33Purple3
 raspoCveta[34]=rgb2hex(204,0,0); //34Red4
@@ -54,28 +51,28 @@ raspoCveta[35]=rgb2hex(153,255,102); //35Green
 raspoCveta[36]=rgb2hex(153,102,0); //36Yellow4
 raspoCveta[37]=rgb2hex(0,153,51); //37Turquoise4
 
-	const vseIndsRaspov=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32]
-	const bujneishINvseIndsRaspov = vseIndsRaspov[vseIndsRaspov.length-1];
-const allIndsByTemy=[0,       1,       2,     3,      4,   5,         6,            7,         8,     9,       10,        11]
-const ValuesByTemy=["ЛЮБОВЬ","СМЕРТЬ","ЭРОС","НАУКА","ТВ","ФАНТАЗИИ","НЕПОНИМАНИЕ","ОБЩЕСТВО","МИРЫ","ИСТОРИЯ","ПРИРОДА","ДУША"];
-const pach3=["КОРОЛИ ВОДОВОРОТОВ","БИРЖА СМЫСЛОВ ЖИЗНИ","ВЗГЛЯД С ФОТОГРАФИИ"];
-const idGuzikiPaTemam=['idGuzikUbracLU','idGuzikUbracSM','idGuzikUbracER','idGuzikUbracNA','idGuzikUbracTV','idGuzikUbractFA','idGuzikUbracNE','idGuzikUbracOB','idGuzikUbracMI','idGuzikUbracIS','idGuzikUbracPR','idGuzikUbracDU'];
-const kan3=["Издания (нелинейные книги)","Издания(линейные книги)","Издания(нелитературные)"];
-const maxIndINtemy = allIndsByTemy[allIndsByTemy.length-1];
-	const temyBezEtogoTexta  = [[2,3,4,5],[1,2,3,4,5],[0,3,4,5],[1,2,3,4,5],[0,2,3,4,5],[0,1,4,5]];	 //ne karystaetsa t.k. delete
+	var vseIndsRaspov=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32] //const
+	var bujneishINvseIndsRaspov = vseIndsRaspov[vseIndsRaspov.length-1]; //const
+var allIndsByTemy=[0,       1,       2,     3,      4,   5,         6,            7,         8,     9,       10,        11] //const
+var ValuesByTemy=["ЛЮБОВЬ","СМЕРТЬ","ЭРОС","НАУКА","ТВ","ФАНТАЗИИ","НЕПОНИМАНИЕ","ОБЩЕСТВО","МИРЫ","ИСТОРИЯ","ПРИРОДА","ДУША"]; //const
+var pach3=["КОРОЛИ ВОДОВОРОТОВ","БИРЖА СМЫСЛОВ ЖИЗНИ","ВЗГЛЯД С ФОТОГРАФИИ"]; //const
+var idGuzikiPaTemam=['idGuzikUbracLU','idGuzikUbracSM','idGuzikUbracER','idGuzikUbracNA','idGuzikUbracTV','idGuzikUbractFA','idGuzikUbracNE','idGuzikUbracOB','idGuzikUbracMI','idGuzikUbracIS','idGuzikUbracPR','idGuzikUbracDU']; //const
+var kan3=["Издания (нелинейные книги)","Издания(линейные книги)","Издания(нелитературные)"]; //const
+var maxIndINtemy = allIndsByTemy[allIndsByTemy.length-1]; //const
+	var temyBezEtogoTexta  = [[2,3,4,5],[1,2,3,4,5],[0,3,4,5],[1,2,3,4,5],[0,2,3,4,5],[0,1,4,5]];	 //ne karystaetsa t.k. delete //const
 	//for(var i of allIndsByTemy) for(var j of textyKazhdoiTemy[i]) {essBezEtojTemy[i].splice(textyKazhdoiTemy[i].indexOf(j), 1);};
 	//	vseIndsRaspov.filter(function(x) { return textyKazhdoiTemy.indexOf(x) < 0 })}	
 	
-const textyKazhdoiTemy =[[0,1,3,5],[0,2,4],[2,5],[5]]; //ne karystaetsa t.k. delete
+var textyKazhdoiTemy =[[0,1,3,5],[0,2,4],[2,5],[5]]; //ne karystaetsa t.k. delete //const
 //const kavalackisedevrikiSetojTemoi = [[5,10,17,18,21,23,24],[1,3,6,13,17,18,23,27],[9,11,12,15,16,21],
 //[1,4,6,7,9,10,26],[10,11,15,21,28,29],[4,5,8,12,15,19,21,22],
 //[2,4,5,8,13,16,20,22,24,25],[0,3,6,8,10,14,19,20,21,24,25,26,27,28,29],[2,4,12,13,16,17,18,19,23,25,27,28,29],
 //[1,2,7,12,13,14,20,22,29],[0,6,9,11,15,16,17,18,20,23,24,26],[0,3,5,7,8,10,12,14,17,18,19,23,27,28]];	 //ne karystaetsa
-const kavalackisedevrikiSetojTemoi = [[5,10,15,19,17,21,22],[1,3,6,13,15,19,21,27],[9,11,12,25,26,17],
+var kavalackisedevrikiSetojTemoi = [[5,10,15,19,17,21,22],[1,3,6,13,15,19,21,27],[9,11,12,25,26,17], //const
 [1,4,6,7,9,10,24],[10,11,25,17,28,29],[4,5,8,12,25,20,17,18],
 [2,4,5,8,13,26,16,18,22,23],[0,3,6,8,10,14,20,16,17,22,23,24,27,28,29],[2,4,12,13,26,15,19,20,21,23,27,28,29],
 [1,2,7,12,13,14,16,18,29],[0,6,9,11,25,26,15,19,16,21,22,24],[0,3,5,7,8,10,12,14,15,19,20,21,27,28]];	 //ne isp1lzuetsa
-const temyKazhdogoEss = [[7,10,11],[1,3,9],[6,8,9],[1,7,11],[6,3,8,5],[0,5,11,6],
+var temyKazhdogoEss = [[7,10,11],[1,3,9],[6,8,9],[1,7,11],[6,3,8,5],[0,5,11,6], //const
 [1,10,3,7],[9,11,3],[7,11,6,5],[10,2,3],[0,3,4,7,11],
 [2,10,4],[2,9,8,5,11],[6,8,9,1],[7,11,9],[0,1,8,11,10],
 [10,7,9,6],[0,2,4,7,5],[9,5,6],[0,10,8,11,1],[8,5,11,7],
@@ -115,13 +112,13 @@ if(kavalackisedevrikiSetojTemoi[item].includes(iEss))
 }
 };
 	
-const nacalnyRaspovVarianty=[0,21,19,     4,8,15,17,20,23,4,8,15,17,20,23];
+var nacalnyRaspovVarianty=[0,21,19,     4,8,15,17,20,23,4,8,15,17,20,23]; //const
 var raspovLicnik = nacalnyRaspovVarianty[Math.floor(Math.random()*nacalnyRaspovVarianty.length) + 0];
-var args
-var varZmest
-var vseIndsTXTofRadkiZmest=[]
-var vseIndsNUMofRadkiZmest=[]
-var vseIndsIDofRadkiZmest=[]
+var args;
+var varZmest;
+var vseIndsTXTofRadkiZmest=[];
+var vseIndsNUMofRadkiZmest=[];
+var vseIndsIDofRadkiZmest=[];
 //document.onload = function () {
 //essBezEtojTemy =[vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov];
 //	for(var i of allIndsByTemy) for(var j of textyKazhdoiTemy[i]) {
@@ -129,8 +126,8 @@ var vseIndsIDofRadkiZmest=[]
 //	};
 //	zrabicAllRadkiForTZmestIDfrom0();zrabicTZmest();
 //}
-var allRadkiForTZmestIDfrom0
-var imLicnikiStaryeUse=[] 
+var allRadkiForTZmestIDfrom0;
+var imLicnikiStaryeUse=[];
 
 //maps dlja napaunenna knopak funkciej titleAndValueByElementAdseu
 var mapIDtoValues = new Map(); 
@@ -245,6 +242,7 @@ varZmest.setAttribute('id', 'tableZmest');
 }
 for (var itr = 0; itr <= bujneishINvseIndsRaspov; itr++){
     varZmest.appendChild(allRadkiForTZmestIDfrom0[itr]);
+	//allRadkiForTZmestIDfrom0[itr].setAttribute('id', 'idR'+itr.toString());//
 }
 if (!varTZmestOLD) {
 document.getElementById("idDivTZmest").appendChild(varZmest);//document.body.appendChild(varZmest);
@@ -291,10 +289,10 @@ if (args.malunki[farRj.id][indexPlace] != args.malunki[nearRi.id][indexPlace])
 
 
 
-//------------------------------------- GALOUNAJA FUNCTIA -----------------------------------------
+//------------------------------------- GALOUN -----------------------------------------
 function illustrate(div) {
 	document.getElementById("divStarajaGall").innerHTML = "";
-	args = {"width":adformShyrynja,"Height":adformVyshinja,"duration":adformChas,"transition":adformPerahod,"effect":adformEffect,"id":"divStarajaGall",
+	args = {"width":adformShyrynjaHolst,"Height":adformVyshinjaHolst,"duration":adformChas,"transition":adformPerahod,"effect":adformEffect,"id":"divStarajaGall",
 "malunki":[ 	//ot 0 do 32 - stolko dolzno byt strok !!!!!!!!!!!!!!!!!!!!!!!!
 ["./zagluskaa0.log","kor-raj",17,4.0,3.4 ,4.7], //POTYM PERERABIC
 ["./zagluskab0.log","bir-smy",25,3.5,4.7 ,4.0], //
@@ -392,3 +390,10 @@ function titleAndValueByElementParadak(elemByID) {
 elemByID.title=mapIDtoTitles.get(elemByID.id).get(document.getElementById("idGalkaParadak").checked);
 elemByID.value=mapIDtoValues.get(elemByID.id).get(document.getElementById("idGalkaParadak").checked);
 }
+
+
+
+
+
+
+

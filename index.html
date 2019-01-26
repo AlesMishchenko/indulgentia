@@ -9,11 +9,13 @@
 <script type='text/javascript' src='illustrate.js'></script>
 <script type='text/javascript' src='initiate.js'></script>
 <style>
-body {background-color: #6cb5a9;
+html {transform: translateZ(0);}
+body {background-color: white;
 background-image: url('./logo.png');
-background-blend-mode: multiply; <!-- multiply  -->
-mix-blend-mode: exclusion; <!-- exclusion  -->
--moz-filter: mix-blend-mode: normal; <!-- normal  -->
+background-blend-mode: multiply; <!-- background-blend-mode: multiply;  -->
+<!-- EMPTY  -->   <!--   background-blend-mode: -moz-normal;   -->
+mix-blend-mode: exclusion; <!-- mix-blend-mode: exclusion;  -->
+mix-blend-mode: -moz-normal; <!-- -moz-filter: mix-blend-mode: normal;  -->
          <!-- -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -->
          <!-- -o-filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); -->
          <!-- -webkit-filter: grayscale(100%); -->
@@ -106,6 +108,21 @@ document.getElementById('idFormh3').style.color = dopolnitCol(document.body.styl
 document.getElementById('idLegendForm').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idEmailh3').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style.backgroundColor);
+if(window.innerWidth>window.innerHeight){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
+}else{
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
+
+};changeText(1.1);
+changeText(0.9);
+allign2ids(Math.floor(window.innerWidth*0.9),'idForm');
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivKeywords');
+console.log('idDivUSEkartynkaStaronkaTableJacejkiGart width = '+document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGart').style.width);
+console.log('idDivUSEkartynkaStaronkaTableJacejkiGart height = '+document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGart').style.height);
+console.log('idDivOglavANDsortOglav width = '+document.getElementById('idDivOglavANDsortOglav').style.width);
+console.log('idDivOglavANDsortOglav height = '+document.getElementById('idDivOglavANDsortOglav').style.height);
+console.log('window.innerWidth = '+window.innerWidth);
+console.log('window.innerHeight = '+window.innerHeight);
 ">
 <!-- ======================================== START BODY ======================================== -->
 <!-- <div onmousedown =  "nazatCtobCvet();" onmouseup =  "otzatCtobChernobeloe();"> -->
@@ -113,21 +130,28 @@ document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style
 <a class="f2" id="idh2zagolov2" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank > Нелинейная интерактивная книга </a> &nbsp;
 <img src="./logo.png" width="60px" height="30px" alt="Автор	Fr. Jeronimus Munghofer, OSB, Источник http://www.gabrieleweis.de/3-geschichtsbits/histo-surfing/4-neuzeit1/4-2-renaissance/synopsenbilder/ablassbiref.jpg , общественное достояние,pd-old,PD-US"/><a href="./index.html">
 <a class="f3" id="idh2zagolov3" font-size="100%" href='https://alesmishchenko.github.io/indulgentia/' target=_blank >"ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ"</a>
-<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nВ квадратном окошке показывается кусочек текущего текста книги. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели(не нажимайте 2 раза, иначе пролистнёте до послеследующей страницы).\nЦветом в текущем тексте показаны связи с другими текстами. Для другого текста книги нужно нажать на его кнопку в оглавлении, которое располагается после текущего текста.\nТексты в оглавлении, которые связаны с текущим текстом, выделены тем же цветом, а также фразой, которая связывает текущий текст с ними.\nОглавление состоит из более 30 строчек(каждая соответствует какому-то другому тексту). На каждой строчке фраза связывающая другой текст с текущим текстом и кнопка вызова другого текста.\nОглавление можно фильтровать, оставляя в нём только тексты заданной темы, а также сортировать тексты по размеру, оценке, алфавиту, итд(кнопку сортировки по алфавиту иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст.\n')">КАК ЧИТАТЬ?</button>
+<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.\nВ квадратном окошке показывается кусочек текущего текста книги. Листать текущий текст можно нажимая на правую (&#x23e9) и левую (&#x23ea) панели(не нажимайте 2 раза, иначе пролистнёте до послеследующей страницы).\nЦветом в текущем тексте показаны связи с другими текстами. Для выбора другого текста нужно нажать на его кнопку в оглавлении. Оглавление располагается после текущего текста и состоит из фраз и кнопок вызова всех текстов.\nТе тексты в оглавлении, которые связаны с текущим текстом, выделены цветом. Текст, связанный с читаемой страницей, обычно сверху, в начале оглавления. Фразы в оглавлении - это переход от текущего текста к связанным с ним текстам. \nРекомендуется читать каждый текст 1ый раз не отвлекаясь на оглавление, а затем 2ой раз просмотреть заинтересовавшие страницы чтобы выбрать следующий текст, развивающий понравившуюся тему. \nРазвивать тему можно также фильтруя оглавление(оставляя в нём только тексты заданной темы). Оглавление можно также сортировать по размеру, оценке, алфавиту, итд(кнопку сортировки иногда надо нажать несколько раз).\nПосле оглавления располагается форма контакта с автором, а затем цитаты из книги, на которые также можно кликать, вызывая соответствующий текст. \nИзвестные баги: не показывается 4ая страница текста ХИРУРГ И ПСИХ и последние страницы текста СОН БУДУЩЕГО, не всё работает в некоторых версиях Интернет Эксплорера. Другие замеченные баги просьба отправлять автору.\n')">КАК ЧИТАТЬ?</button>
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 <script src="//yastatic.net/share2/share.js" async="async"></script>
 <div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook,gplus,moimir,whatsapp,skype" data-counter="" data-image="http://alesmishchenko.github.io/indulgentia/logo.png" data-image:facebook="http://alesmishchenko.github.io/indulgentia/logo.png" data-url:facebook="http://alesmishchenko.github.io/indulgentia"  data-description="Алесь Мищенко. Нелинейная интерактивная книга 'Индульгенция людей'."></div> 
+<button id="idUmenTxt">УМЕНЬШИТЬ ТЕКСТ</button>
+<button id="idUvelTxt">УВЕЛИЧИТЬ ТЕКСТ</button>
+<!--  var tds = document.getElementsByTagName("td");for (var i = 0; i < tds.length; i++)tds[i].style.width-=10;  -->
+<!--   <button id="idUvelTxt" onclick='changeText(-9,parms);'>    -->
 </h1> 
 
 <!--<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.')">Как читать?</button>-->
 
-<div style='float:left;padding-right:10px;'> 
-<div id="idDivUSEkartynkaStaronkaTableJacejkiGart" style="border:none">
+<!--<div id="idDivUSEkartynkaStaronkaTableJacejkiGartOuter" style='width:adformShyrynjaHolst+110;float:left;padding-right:10px;'> -->
+
+
+
+<div id="idDivUSEkartynkaStaronkaTableJacejkiGart" style="width:adformShyrynjaHolst;border:none;display: table-cell;">
 <div id="idDivUSEkartynkaStaronkaTableJacejkiGartNazva" style="border:none" onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;">
 </div> 
 </div> 
-</div>  <!--MOZET POMENSE, TOGA BUDET NE VROVEN S KVARDATOM NO MOZET VLEZET style='width:602px;-->
-<div id="idDivOglavANDsortOglav" style='width:632px;float:left;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;"> 
+<!--</div>  MOZET POMENSE, TOGA BUDET NE VROVEN S KVARDATOM NO MOZET VLEZET style='width:602px;--> 
+<div id="idDivOglavANDsortOglav" style='width:632px;display: table-cell;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;"> 
 <fieldset id="idTemyKontur" title="Здесь можно выбрать из оглавления тексты по тем же темам / другим темам (нажатие на кнопку ТЕМЫ оставляет в оглавлении только тексты с выбранной темой / убирает тему из оглавления)">
 <legend id='idLegendTemy'>Фильтры оглавления и Темы текста </legend> 
   <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="Непрочитанные" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
@@ -236,7 +260,7 @@ if(temyKazhdogoEss[raspovLicnik].indexOf(11)>=0) {curW=screen.availWidth; while(
 
 <div> 
 <!--<div id="idForm" style='float:left;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.1985;">-->
-<div id="idForm" style='float:left;padding-right:10px;width:632px;'> 
+<div id="idForm" style='display: table-cell;padding-right:10px;width:632px;'> 
 <fieldset id='idfieldsetForm' title="Здесь можно отправить сообщение автору">
 <legend id='idLegendForm'>ОЦЕНИТЬ текст или СВЯЗАТЬСЯ с автором </legend> 
 <form name="formspreeForm" action="https://formspree.io/alesmichtchenko@mail.ru" method="POST">
@@ -295,7 +319,7 @@ function proverkaEmail() {
 </div>
 
 <!--onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.3984;"-->
-<div id="idDivKeywords" font="5px" style='float:left;padding-right:10px;width:632px;' > 
+<div id="idDivKeywords" font="5px" style='display: table-cell;padding-right:10px;width:632px;' > 
 <fieldset title="Нажмите на ключевое слово чтобы получить соответствующий текст"> 
 <legend>Ключевые слова и цитаты книги (выбор следующего текста по ключевому слову)</legend> <!-- ot 0 do 32 stroki !!!!!! -->
 <div onclick =  "gartacPachatak(20,'down')" id="idMotsCles20" style="border:none;height:auto;width:100%"> "-=-О мечтах-=-: Образы счастья на телеэкране уже настолько профессиональны и привлекательны, что заменили собственые мечты.","Внутренний мир людей прошлого похож на твою несбывшуюся судьбу: кажется такие миры всё ещё где-то существуют, и можно оказаться там, одним усилием воображения.","Неудовлетворённость и несбывшееся пробуждает душу и зовёт её в иные миры — и только так, в стремлении к чему-то «не от мира сего» она рождается и растёт вместе с человеком.","Зрачок женщины — чёрная дыра в пространстве, ведущая в другой мир, в несбывшееся счастье, которое будет безвозвратно упущено уже в следующий миг.","Мечты — это ощущение альтернативного мира, существующего, согласно квантовой теории Эверетта, в другой, несбывшейся с нами, вселенной.","Страна детства граничит со страной несбывшегося.","Все считают кого-то другого счастливее себя — словно вселенский аист случайно перетасовал все души.","Наша небесная Родина зовёт нас — и это голос несбывшегося.","Наши неосуществлённые судьбы остаются с нами и, словно в параллельном мире, сопровождают нас всю оставшуюся жизнь.","Где-то в глубине души мы уверены, что ушедшее и несбывшееся где-то живёт и сейчас. Поэтому и трудно смириться что мы здесь а не там. Всю жизнь оно видится нам во снах, в случайных фильмах и кадрах далёких стран.","Мир грёз переселился из снов в телевизор, именно оттуда современный человек берёт образы счастья.","Далёкие горизонты зовут нас нашими несбывшимися судьбами путешественников и первооткрывателей.","В фрагментах чужой жизни, мелькнувших из окна поезда или на экране телевизора — можно разглядеть собственную несбывшуюся судьбу.","Люди перестали мечтать собственными образами. Начали брать приготовленные для них шаблоны - из фильмов, из рекламы. Воображение заменилось на «хочу как там»... там, в чужом варианте счастья.","По теории множественных вселенных, где-то есть миры, в которых у нас другая, более счастливая но несбывшаяся здесь судьба.","Предчувствия, как и ощущения несбывшегося, приходят из того закулисного мира где складываются мозайки судеб.",
@@ -386,9 +410,15 @@ function proverkaEmail() {
 -=-Темы и тексты книги-=-: ЭРА МИЛОСЕРДИЯ,ХИРУРГ И ПСИХ,ПРИСНИЛАСЬ ЛЮБОВЬ,КОД САМОУНИЧТОЖЕНИЯ,КВАНТОВЫЕ ЛЮДИ,ДЕТИ И ПАУКИ,УЧЁНЫЙ И ПРИРОДА,СУДЫ И СУДЬБЫ,ЭРОТИЧЕСКИЙ ОСКАР,АВТОРЫ СВОИХ СУДЕБ,ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ,ДОГОВОР С ДЬЯВОЛОМ,ПЛАТА ЗА ВСЁ,ИСПОВЕДЬ ДИКАРЯ,МАТРИЦА МНОГОЭТАЖЕК,ДЕТСТВО НАРОДА,ДНО МОРЯ ЛЮБВИ,НЕСБЫВШЕЕСЯ,НЕОТПРАВЛЕННОЕ ПИСЬМО,НЕУЧ ПРИРОДЫ,ЛЮДИ ЕХАЛИ В ПОЕЗДЕ,ЦЕЛЬ ВСЕХ РАЗГОВОРОВ,РЕКЛАМА РАЯ,УТРО МАРИОНЕТКИ,ЗАМЕНИТЕЛЬ БУДУЩЕГО,ГДЕ У ЛЮДЕЙ КНОПКА,СОН БУДУЩЕГО,КОРОЛИ ВОДОВОРОТОВ,БИРЖА СМЫСЛОВ ЖИЗНИ,ВЗГЛЯД С ФОТОГРАФИИ,ЛЮБОВЬ,СМЕРТЬ,ЭРОС,НАУКА,ТВ,ФАНТАЗИИ,НЕПОНИМАНИЕ,ОБЩЕСТВО,МИРЫ,ИСТОРИЯ,ПРИРОДА,ДУША
 </fieldset>
 </div>
-<script type="text/javascript">
-document.getElementById("idDivKeywords").style.fontSize = "xx-small";
-</script>
 <span id='divStarajaGall'></span>
 </body>
+<script type="text/javascript"> //after body=>same as onload, but also after images loaded
+document.getElementById("idDivKeywords").style.fontSize = "xx-small";
+
+document.getElementById('idUvelTxt').addEventListener('click', function() {changeText(1.2,parms);});
+document.getElementById('idUmenTxt').addEventListener('click', function() {changeText(0.8,parms);});
+//document.getElementById('idUvelTxt').onclick = function() {changeText(1.1,parms);};//Uncaught ReferenceError:  changeText is not defined
+//document.getElementById('idUmenTxt').onclick = function() {changeText(0.9,parms);};//Uncaught ReferenceError:  changeText is not defined
+
+</script>
 </html>
