@@ -196,13 +196,13 @@ LepshPerehodyPaRaspovIstaronke=[
 [08,00,00,08,08,09,09,17,24,21,11,24,09,09,28,28,28,09,24,09,24,09,09,09,00,08,09,24,24,24,24,20,09,08,20,20,				   37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,		   54,55,56,57,58,59,60],
 [14,24,21,12,12,12,28,28,20,06,04,04,10,12,10,10,04,12,12,12,12,				  22,23,24,25,26,27,28,29,30,31,32,33,		   34,35,36,37,38,39,40,41,42,		   43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
 [16,02,00,22,00,22,22,09,11,03,04,26,02,07,17,17,02,02,17,17,07,23,23,23,27,27,27,27,			29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,		   45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
-[17,17,17,17,25,24,26,26,01,26,26,06,06,06,06,26,26,06,06,06,06,06,06,06,01,14,14,01,13,13,13,13,23,23,23,00,00,17,17,26,26,06,06,			44,45,46,47,48,49,50,51,52,53,		   54,55,56,57,58,59,60]
+[17,17,17,17,25,24,26,26,01,26,26,06,06,06,06,26,26,06,06,06,06,06,06,06,01,14,14,01,13,13,13,13,23,23,23,00,00,17,17,26,26,06,06,			44,45,46,47,48,49,50,51,52,53,		   54,55,56,57,58,59,60],
 [25,00,17,00,00,23,10,25,25,17,		   25,12,12,12,25,25,28,28,19,19,19,25,25,25,25,25,				27,28,29,30,31,32,33,34,35,36,37,38,39,		   40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
 [19,19,19,15,15,15,		   04,05,05,11,11,11,23,05,11,11,				17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,		   40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
 [24,09,00,00,		   24,24,24,16,09,04,03,04,04,10,01,24,04,01,08,09,24,03,16,29,10,24,29,03,03,03,							31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,		   47,48,49,50,51,52,53,54,55,56,57,58,59,60],
 [20,20,21,		   25,04,20,25,20,04,15,15,				12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,		   44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
 [02,02,02,22,19,19,09,04,29,		   29,16,16,16,22,22,09,09,09,09,09,09,09,09,15,15,				26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,		   50,51,52,53,54,55,56,57,58,59,60],
-[20,20,20,20,24,		   17,11,11,29,29,29,29,20,12,12,08,08,08,29,02,02,02,02,02,26,26,26,09,09,28,28,28,28,15,15,15,15,15,15,15,				41,42,43,44,45,		   46,47,48,49,50,51,52,53,54,55,56,57,58,59,60],
+[20,20,20,20,24,		   17,11,11,29,29,29,29,20,12,12,08,08,08,29,02,02,02,02,02,26,26,26,09,09,28,28,28,28,15,15,15,15,15,15,15,				41,42,43,44,45,		   46,47,48,49,50,51,52,53,54,55,56,57,58,59,60]
 ];
 
 
@@ -1105,23 +1105,23 @@ poluWidth=Math.floor(imgNaRaspov.width/2); poluHeight=Math.floor(imgNaRaspov.hei
 
 
 // onclick onmousedown onmouseover
-jaceikaHolst.onmouseover = function() {PisovkaZadnikaNaRaspovSprozrac(0.3+Math.random()*0.3);
+jaceikaHolst.onmouseover = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=0.5; 
 	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
 	};
-jaceikaHolst.onclick = function() {PisovkaZadnikaNaRaspovSprozrac(0.3+Math.random()*0.3);
+jaceikaHolst.onclick = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=0.5; 
 	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
 	};	
-jaceikaHolst.ontouchdown = function() {PisovkaZadnikaNaRaspovSprozrac(0.3+Math.random()*0.3);		
+jaceikaHolst.ontouchdown = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);		
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=Math.random() * 0.44;
 	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
 	};		
-jaceikaHolst.ontouchup = function() {PisovkaZadnikaNaRaspovSprozrac(0.3+Math.random()*0.3);			
+jaceikaHolst.ontouchup = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);			
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=Math.random() * 0.44;
 	//ctx1.drawImage(imgNaRaspov,img, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
 	};		
-jaceikaHolst.oncontextmenu = function() {PisovkaZadnikaNaRaspovSprozrac(0.3+Math.random()*0.3);			
+jaceikaHolst.oncontextmenu = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);			
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=Math.random() * 0.44;
 	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
 	};		//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //					
