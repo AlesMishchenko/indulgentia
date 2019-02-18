@@ -6,85 +6,85 @@ var imgNaRaspovMinRazmer;
 
 
 
-
+var tilicCanv=38;
 var adformShyrynjaHolst=337; //537
 var adformEffect="staronkaUperad";
 var adformVyshinjaHolst=337; //537
 var adformChas=5000;
 var adformPerahod=2000;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	var maxAposhStaronkPeradPershZadnik=33; //const
+	var maxAposhStaronkPeradPershZadnik=45; //const
 	var allbackImgs = []; var toReader = [];
 var sizeKVARDstr = 5;
 
 	
 //netZ vNazvahFailov=12,15,19,29
 //de-pa
-allbackImgs[8]=["00aDianne Lacourciere.jpg","00bPhilip_Howard.jpg","00dTony_Iwane.jpg","00fPaul_Hughes.jpg","00hIan_Glover.jpg","00jDaisy_Harper.jpg","00lMed_PhotoBlog.jpg","00nRob_Chandanais.jpg","00pKate.jpg","00rOzgur_Mulazımoglu.jpg", "00spostbear eater of worlds.jpg","00tMevout.jpg","","","","","","","","","","","","","","","","","","","","","","",			"00xSofi_Suivre,_Illustration_by_Vladislav_Erko.jpg","00yAuthor_from_movie_Finist_Yasnyy_Sokol,1975.jpg","00zJim_crossley.jpg"];
+allbackImgs[8]=["00aDianne Lacourciere.jpg","00bPhilip_Howard.jpg","00dTony_Iwane.jpg","00fPaul_Hughes.jpg","00hIan_Glover.jpg","00jDaisy_Harper.jpg","00lMed_PhotoBlog.jpg","00nRob_Chandanais.jpg","00pKate.jpg","00rOzgur_Mulazımoglu.jpg", "00spostbear eater of worlds.jpg","00tMevout.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",			"00xSofi_Suivre,_Illustration_by_Vladislav_Erko.jpg","00yAuthor_from_movie_Finist_Yasnyy_Sokol,1975.jpg","00zJim_crossley.jpg"];
 
 //vra-pac
-allbackImgs[4]=["01bKUUNSTKUULTUR.jpg","01dMariano_Mantel.jpg","01fSIMTHIX.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																											"01xNima_Fatemi,_Madness_part2.jpg","01yJeremy_Brooks.jpg","01zJoy.jpg"];
+allbackImgs[4]=["01bKUUNSTKUULTUR.jpg","01dMariano_Mantel.jpg","01fSIMTHIX.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																											"01xNima_Fatemi,_Madness_part2.jpg","01yJeremy_Brooks.jpg","01zJoy.jpg"];
 //sta-f
-allbackImgs[2]=["02aaleks-dralo.jpg","02bAino.jpg","02cAuthor_from_film_Kubanskie_kazaki,_director_Ivan_Pyryev,1950.jpg","02dJames Vaughan.jpg","02eOkinawa_Soba_-_Rob.jpg","02fAshley_Van_Haeften.jpg","02gMarc DUFOURNET,Le Theatre Transformation,representation de Romeo et Juliette.jpg","02hA_Currell.jpg","02iOkinawa_Soba_-_Rob.jpg","02jDan Diffendale.jpg","02kAltamar Trip.jpg","02lAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,center.jpg","02mAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,pravy flang.jpg","02nAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943l,levy flang.jpg","02oAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","02pKaty Warner.jpg","02rMichael Dawes.jpg","02sAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","","","","","","","","","","","","","","","","",					"02xAuthor,movie Podstrochnik,director Oleg Dorman,1997.jpg","02yMichelle_Dockrey.jpg","02zaleks-dralo.jpg"];
+allbackImgs[2]=["02aaleks-dralo.jpg","02bAino.jpg","02cAuthor_from_film_Kubanskie_kazaki,_director_Ivan_Pyryev,1950.jpg","02dJames Vaughan.jpg","02eOkinawa_Soba_-_Rob.jpg","02fAshley_Van_Haeften.jpg","02gMarc DUFOURNET,Le Theatre Transformation,representation de Romeo et Juliette.jpg","02hA_Currell.jpg","02iOkinawa_Soba_-_Rob.jpg","02jDan Diffendale.jpg","02kAltamar Trip.jpg","02lAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,center.jpg","02mAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943,pravy flang.jpg","02nAndrey Korchagin, Proryv blokady Leningrada, 18Jan1943l,levy flang.jpg","02oAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","02pKaty Warner.jpg","02rMichael Dawes.jpg","02sAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","",					"02xAuthor,movie Podstrochnik,director Oleg Dorman,1997.jpg","02yMichelle_Dockrey.jpg","02zaleks-dralo.jpg"];
 
 //b-sm
-allbackImgs[1]=["04bstrange_whispers.jpg","04dakhenatenator.jpg","04eakhenatenator.jpg","04flkajsdfl.jpg","04gakhenatenator.jpg",	"04jMichael Kotter,Pripyat - Rooftop Sign.jpg","04njosemite23.jpg","04pzaleks-dralo.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","",																		"04xzenra.jpg","04yJames Vaughan.jpg","04zJames Vaughan.jpg"];
+allbackImgs[1]=["04bstrange_whispers.jpg","04dakhenatenator.jpg","04eakhenatenator.jpg","04flkajsdfl.jpg","04gakhenatenator.jpg",	"04jMichael Kotter,Pripyat - Rooftop Sign.jpg","04njosemite23.jpg","04pzaleks-dralo.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																		"04xzenra.jpg","04yJames Vaughan.jpg","04zJames Vaughan.jpg"];
 //d-sme
-allbackImgs[6]=["05bRichard.jpg","05dTerry_M.jpg","05fMia_Feigelson,Andrew_Wyeth_-_Christmas_morning,1944.jpg","05hdie_minimalistin.jpg","05jjksimpson.jpg","05kLars Stormbom.jpg",	"05lPascal.jpg","05nmoonjazz,Death_and_the_Beautiful_Woman,_fontain_in_Nuremberg.jpg","05pmlhradio.jpg","05rDavid_G_Hawkins,_Angel_of_Death,_Painted_by_Bertram_M_Towle.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",		"05xClaraDon.jpg","05yCatarina_Carneiro_de_Sousa.jpg","05zen-_ri,_mutant_and_proud.jpg"];
+allbackImgs[6]=["05bRichard.jpg","05dTerry_M.jpg","05fMia_Feigelson,Andrew_Wyeth_-_Christmas_morning,1944.jpg","05hdie_minimalistin.jpg","05jjksimpson.jpg","05kLars Stormbom.jpg",	"05lPascal.jpg","05nmoonjazz,Death_and_the_Beautiful_Woman,_fontain_in_Nuremberg.jpg","05pmlhradio.jpg","05rDavid_G_Hawkins,_Angel_of_Death,_Painted_by_Bertram_M_Towle.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",		"05xClaraDon.jpg","05yCatarina_Carneiro_de_Sousa.jpg","05zen-_ri,_mutant_and_proud.jpg"];
 
 //d-dja
-allbackImgs[14]=["06bHoward_Stanbury.jpg","06dMidnight_Believer.jpg","06gstrange_whispers.jpg","06hAdam_Ross.jpg","06iJB,Toronto1.jpg","06jLen_Doc_Radin.jpg","06kCrossett Library,Devil Pumpkin tug-o-war,Halloween postcard,Flagrant,by Marilynn Gelfman Karp,NYAbrams2006.jpg","06lphotographymontreal.jpg","06nRob_Jewitt.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","",								"06xdek_dav.jpg","06yJames_Vaughan.jpg","06zbenjamin_sTone.jpg"]; // DELETED 06f-oriana.italy=C.jpg
+allbackImgs[14]=["06bHoward_Stanbury.jpg","06dMidnight_Believer.jpg","06gstrange_whispers.jpg","06hAdam_Ross.jpg","06iJB,Toronto1.jpg","06jLen_Doc_Radin.jpg","06kCrossett Library,Devil Pumpkin tug-o-war,Halloween postcard,Flagrant,by Marilynn Gelfman Karp,NYAbrams2006.jpg","06lphotographymontreal.jpg","06nRob_Jewitt.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",								"06xdek_dav.jpg","06yJames_Vaughan.jpg","06zbenjamin_sTone.jpg"]; // DELETED 06f-oriana.italy=C.jpg
 
 //ger-lub
-allbackImgs[11]=["07bprince_of_centraxis.jpg","07dPhilippe_Tolet_paintings.jpg","07fAlf_Igel.jpg","07hSari_Choche-Be.jpg","07jNancy_White.jpg","07lraphael_perez.jpg","07nSari_Choche-Be.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",						"07xPhilippe_Tolet_paintings.jpg","07ySari_Choche-Be_.jpg","07zLoKan_Sardari.jpg"];
+allbackImgs[11]=["07bprince_of_centraxis.jpg","07dPhilippe_Tolet_paintings.jpg","07fAlf_Igel.jpg","07hSari_Choche-Be.jpg","07jNancy_White.jpg","07lraphael_perez.jpg","07nSari_Choche-Be.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",						"07xPhilippe_Tolet_paintings.jpg","07ySari_Choche-Be_.jpg","07zLoKan_Sardari.jpg"];
 
 //kv-cas
-allbackImgs[7]=["08bLucas.jpg","08dDaniel_Arrhakis,The_Empire_Of_Shadows_by_Daniel_Arrhakis.jpg","08fJason_Devitt.jpg","08gDennis Amith.jpg","08hNASA's_Solar_Dynamics_Observatory.jpg","08jNathan_Witch_Doctor.jpg","08lXoan_Baltar.jpg","08nU.S._Geological_Survey,_Kilauea_Lava_Lake.jpg","08pJason_Major,_credit_SDO-NASA,AIA.jpg","08rEdmund_Gall.jpg",".jpg","08sMario,created with Terragen.jpg","","","","","","","","","","","","","","","","","","","","","","",				"08xKazuhiro_Shiozawa.jpg","08yFrancisco_Guevara.jpg","08zBrandon.jpg"];
+allbackImgs[7]=["08bLucas.jpg","08dDaniel_Arrhakis,The_Empire_Of_Shadows_by_Daniel_Arrhakis.jpg","08fJason_Devitt.jpg","08gDennis Amith.jpg","08hNASA's_Solar_Dynamics_Observatory.jpg","08jNathan_Witch_Doctor.jpg","08lXoan_Baltar.jpg","08nU.S._Geological_Survey,_Kilauea_Lava_Lake.jpg","08pJason_Major,_credit_SDO-NASA,AIA.jpg","08rEdmund_Gall.jpg",".jpg","08sMario,created with Terragen.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",				"08xKazuhiro_Shiozawa.jpg","08yFrancisco_Guevara.jpg","08zBrandon.jpg"];
 
 //sp-raj	17"mat-raj"vNazvahFailov=9
-allbackImgs[17]=["09bJustin_Berger.jpg","09dDad_of_T&S.jpg","09fEugenia_Loli.jpg","09hDellboyy_Art.jpg","09hEric_Jusino.jpg","09hstraightfromthecask.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",														"09xKonstantin_Likhachev.jpg","09yEugenia_Loli.jpg","09zBob_May.jpg"];
+allbackImgs[17]=["09bJustin_Berger.jpg","09dDad_of_T&S.jpg","09fEugenia_Loli.jpg","09hDellboyy_Art.jpg","09hEric_Jusino.jpg","09hstraightfromthecask.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",														"09xKonstantin_Likhachev.jpg","09yEugenia_Loli.jpg","09zBob_May.jpg"];
 
 //zen-rol
-allbackImgs[10]=["10bESPRIT_U2.COM.jpg","10dErin_Nealey.jpg","10fIan_Fuller.jpg","10gDrewXXX.jpg","10hSewPixie.jpg","10jCarlos_Garcia_Campillo.jpg","10lClassic_Film,_Poor_Little_Rich_Girl_movie_1936.jpg","10nDavid_Robert_Bliwas.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",																												"10xAuthor_photo_from_Shallow_Hal_movie.jpg","10yAuthor_photo_from_Irony_of_Destiny_2_movie.jpg","10zGeorge_Weir.jpg"];
+allbackImgs[10]=["10bESPRIT_U2.COM.jpg","10dErin_Nealey.jpg","10fIan_Fuller.jpg","10gDrewXXX.jpg","10hSewPixie.jpg","10jCarlos_Garcia_Campillo.jpg","10lClassic_Film,_Poor_Little_Rich_Girl_movie_1936.jpg","10nDavid_Robert_Bliwas.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																												"10xAuthor_photo_from_Shallow_Hal_movie.jpg","10yAuthor_photo_from_Irony_of_Destiny_2_movie.jpg","10zGeorge_Weir.jpg"];
 
 //moi-nauc
-allbackImgs[9]=["11bfox_fotos.jpg","11dLaurence_Barnes.jpg","11fCarlo_Raso,_Detail_of_the_Tomb_of_the_diver_.jpg","11gpaintings_photos.jpg","11hPetr_Kosina.jpg","11jMarco_Mazzei.jpg","11lraphael_perez.jpg","11nraphael_perez.jpg","11odasnake.jpg","11pDan_Lacey.jpg","11rKain_Drall.jpg","11tjean_louis_maziere,_Antonello_da_Messina,_Saint_Sébastien.jpg","","","","","","","","","","","","","","","","","","","","","","",									"11xEurecat.jpg","11yMargot Trudell.jpg","11zAnne.jpg"];
+allbackImgs[9]=["11bfox_fotos.jpg","11dLaurence_Barnes.jpg","11fCarlo_Raso,_Detail_of_the_Tomb_of_the_diver_.jpg","11gpaintings_photos.jpg","11hPetr_Kosina.jpg","11jMarco_Mazzei.jpg","11lraphael_perez.jpg","11nraphael_perez.jpg","11odasnake.jpg","11pDan_Lacey.jpg","11rKain_Drall.jpg","11tjean_louis_maziere,_Antonello_da_Messina,_Saint_Sébastien.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",									"11xEurecat.jpg","11yMargot Trudell.jpg","11zAnne.jpg"];
 
 //basi
-allbackImgs[13]=["13bTatters.jpg","13dcambiodia.jpg","13fPatrick_Down.jpg","13gMary_Harrsch.jpg","13hKevin_Nguyen-Tu.jpg","13jcarolyn.jpg","13lJens-Olaf_Walter.jpg","13nUS_Department_of_Agriculture,_Ela_Stein-Weissberger.jpg","13rtheodora.lumi.jpg","13tJames_Vaughan.jpg","","","","","","","","","","","","","","","","","","","","","","","","",							"13xAndris_Malygin.jpg","13yUS_Loxinha,_Repin,_Ivan_the_Terrible_and_his_Son_Ivan,_1885.jpg","13zNeil_Howard,_Arch_Bay,_Alderney.jpg"];
+allbackImgs[13]=["13bTatters.jpg","13dcambiodia.jpg","13fPatrick_Down.jpg","13gMary_Harrsch.jpg","13hKevin_Nguyen-Tu.jpg","13jcarolyn.jpg","13lJens-Olaf_Walter.jpg","13nUS_Department_of_Agriculture,_Ela_Stein-Weissberger.jpg","13rtheodora.lumi.jpg","13tJames_Vaughan.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",							"13xAndris_Malygin.jpg","13yUS_Loxinha,_Repin,_Ivan_the_Terrible_and_his_Son_Ivan,_1885.jpg","13zNeil_Howard,_Arch_Bay,_Alderney.jpg"];
 
 //gusev
-allbackImgs[5]=["14bashtreehouse.jpg","14cDerek Kinzett,Fairy- Mother Sprite commission 2012.jpg","14djaci_XIII.jpg","14eBrotherMagneto.jpg","14fRafael_dP,_Iberia-Hispania,_Parque_Arqueologico_de_Carranque.jpg","14gpatrick verstappen.jpg","14hJohn_Keogh.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","", 										"14xPaul_Lofeodo.jpg","14yMatthew_Kirkland.jpg","14zMatt_Shalvatis.jpg"];
+allbackImgs[5]=["14bashtreehouse.jpg","14cDerek Kinzett,Fairy- Mother Sprite commission 2012.jpg","14djaci_XIII.jpg","14eBrotherMagneto.jpg","14fRafael_dP,_Iberia-Hispania,_Parque_Arqueologico_de_Carranque.jpg","14gpatrick verstappen.jpg","14hJohn_Keogh.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","", 										"14xPaul_Lofeodo.jpg","14yMatthew_Kirkland.jpg","14zMatt_Shalvatis.jpg"];
 
 //sob	15"sob-aki"vNazvahFailov=17
-allbackImgs[15]=["17bwytze.jpg","17cThruhike98.jpg","17dInternational_Fund_for_Animals.jpg","17fAnimals_Asia.jpg","17hRoan_Retera.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",			"17xJana.jpg","17yLeJyBy.jpg","17zeugeny-p.jpg"];
+allbackImgs[15]=["17bwytze.jpg","17cThruhike98.jpg","17dInternational_Fund_for_Animals.jpg","17fAnimals_Asia.jpg","17hRoan_Retera.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",			"17xJana.jpg","17yLeJyBy.jpg","17zeugeny-p.jpg"];
 
 //dn	19"dno-mor"vNazvahFailov=18
-allbackImgs[19]=["18bjivika.jpg","18dLaurent_Fintoni.jpg","18fJim_Howard.jpg","18gBen_Raynal.jpg","18hTrey_Ratcliff.jpg","18iJason Bowler.jpg","18jBruno_Casonato.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","",																			"18xPaladin27.jpg","18yjaci_XIII_Suivre,_A_cry_in_the_night.jpg","18zOle_Petter_Rust.jpg"];
+allbackImgs[19]=["18bjivika.jpg","18dLaurent_Fintoni.jpg","18fJim_Howard.jpg","18gBen_Raynal.jpg","18hTrey_Ratcliff.jpg","18iJason Bowler.jpg","18jBruno_Casonato.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																			"18xPaladin27.jpg","18yjaci_XIII_Suivre,_A_cry_in_the_night.jpg","18zOle_Petter_Rust.jpg"];
 
 //isD	16"isp-dik"vNazvahFailov=20
-allbackImgs[16]=["20bKatie_Harbath.jpg","20dEric_Mesa.jpg","20famaz.jpg","20hMo_Riza.jpg","20jClint_Gardner.jpg","20lEvan_Long.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																			"20xJolien_Van_Houtven.jpg","20yEd_Yourdon.jpg","20z1000_anuncios_de_publicidad_y_mas.jpg"];
+allbackImgs[16]=["20bKatie_Harbath.jpg","20dEric_Mesa.jpg","20famaz.jpg","20hMo_Riza.jpg","20jClint_Gardner.jpg","20lEvan_Long.jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																			"20xJolien_Van_Houtven.jpg","20yEd_Yourdon.jpg","20z1000_anuncios_de_publicidad_y_mas.jpg"];
 
 //sme-kaz
-allbackImgs[3]=["21bBest Picko,bestpicko.com.jpg","21cDerek K. Miller.jpg","21dAuthor,_Karnavalnaja_noch_movie,director_Rjazanov.jpg","21eWellcome_Images.jpg","21fBen_Raynal.jpg","21gMiyaoka_Hitchcock.jpg","21hMiyaoka_Hitchcock.jpg","21iLiz Wade.jpg","21jBeverly_Vealach.jpg","21kChris Phutully.jpg","21lGideon_Wright.jpg","21mGreg Mills.jpg","21nA K M Adam.jpg","21oBart.jpg","21pjean louis mazieres, William Blake,God Judging Adam,1795.jpg","","","","","","","","","","","","","","","","","","","",											"21xSIMTHIX.jpg","21yRoger Mommaerts.jpg","21zbbyrnes59.jpg"];
+allbackImgs[3]=["21bBest Picko,bestpicko.com.jpg","21cDerek K. Miller.jpg","21dAuthor,_Karnavalnaja_noch_movie,director_Rjazanov.jpg","21eWellcome_Images.jpg","21fBen_Raynal.jpg","21gMiyaoka_Hitchcock.jpg","21hMiyaoka_Hitchcock.jpg","21iLiz Wade.jpg","21jBeverly_Vealach.jpg","21kChris Phutully.jpg","21lGideon_Wright.jpg","21mGreg Mills.jpg","21nA K M Adam.jpg","21oBart.jpg","21pjean louis mazieres, William Blake,God Judging Adam,1795.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",											"21xSIMTHIX.jpg","21yRoger Mommaerts.jpg","21zbbyrnes59.jpg"];
 
 //denar	18"det-nar"vNazvahFailov=22
-allbackImgs[18]=["22bMichael_Kappel.jpg","22dChristiaan_Triebert.jpg","22fLynda_Giddens.jpg","22hAnke_L.jpg","22jAmy_Goodman.jpg","22lNaomiPeacockPhotography.jpg","22nFoto_Moskvy,Moscow-Live.ru.jpg","22pDigital_Archaeology.jpg","22rVlad_Tuchkov.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																							"22xFoto_Moskvy,Moscow-Live.ru.jpg","22yKarilyn_Kempton.jpg","22zDan_Zelazo.jpg"];
+allbackImgs[18]=["22bMichael_Kappel.jpg","22dChristiaan_Triebert.jpg","22fLynda_Giddens.jpg","22hAnke_L.jpg","22jAmy_Goodman.jpg","22lNaomiPeacockPhotography.jpg","22nFoto_Moskvy,Moscow-Live.ru.jpg","22pDigital_Archaeology.jpg","22rVlad_Tuchkov.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																							"22xFoto_Moskvy,Moscow-Live.ru.jpg","22yKarilyn_Kempton.jpg","22zDan_Zelazo.jpg"];
 
 //nit-kov	21"nit-kov"=23
-allbackImgs[21]=["23bAndrea_Mucelli.jpg","23dAitivamon_NATURE.jpg","23fWolfgang_Sterneck,A_Reality_called_Boom,Visions-Boom-2014,Android_Jones.jpg","23hEdmund_Gall.jpg","23jMaX_Fulcher,Paul_Gauguin,_Two_Tahitian_Women.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																							"23xg0d4ather.jpg","23yAmy_Wharton.jpg","23zShyralei_Resident,Dancing_with_the_Heavens,REALM_of_MYSTARA_NORTH.jpg"];
+allbackImgs[21]=["23bAndrea_Mucelli.jpg","23dAitivamon_NATURE.jpg","23fWolfgang_Sterneck,A_Reality_called_Boom,Visions-Boom-2014,Android_Jones.jpg","23hEdmund_Gall.jpg","23jMaX_Fulcher,Paul_Gauguin,_Two_Tahitian_Women.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																							"23xg0d4ather.jpg","23yAmy_Wharton.jpg","23zShyralei_Resident,Dancing_with_the_Heavens,REALM_of_MYSTARA_NORTH.jpg"];
 
 //obe	22"neu-pri"vNazvahFailov=24
-allbackImgs[22]=["24bErin_Nekervis.jpg","24drui_barros.jpg","24fAuthor,_Patsany_movie,director_Priemykhov.jpg","24hJohn_Hartnup.jpg","24jMiyaoka_Hitchcock.jpg","24ldomat33f.jpg","24nMayu_Shimizu.jpg","24pAuthor,_V_ne_vole_movie.jpg","24rIkhlasul_Amal.jpg","24tMiyaoka_Hitchcock.jpg","24uWalters_Art_Museum,LabBodies.jpg","","","","","","","","","","","","","","","","","","","","","","","",																"24xCorwin_I.jpg","24yAuthor,_Delai_raz_movie,director_Maljukov.jpg","24zBob Jagendorf.jpg"];
+allbackImgs[22]=["24bErin_Nekervis.jpg","24drui_barros.jpg","24fAuthor,_Patsany_movie,director_Priemykhov.jpg","24hJohn_Hartnup.jpg","24jMiyaoka_Hitchcock.jpg","24ldomat33f.jpg","24nMayu_Shimizu.jpg","24pAuthor,_V_ne_vole_movie.jpg","24rIkhlasul_Amal.jpg","24tMiyaoka_Hitchcock.jpg","24uWalters_Art_Museum,LabBodies.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																"24xCorwin_I.jpg","24yAuthor,_Delai_raz_movie,director_Maljukov.jpg","24zBob Jagendorf.jpg"];
 
 
 //star
-allbackImgs[23]=["25bEyal_Teutsch.jpg","25dSeb_Fowler.jpg","25estefanochu.jpg","25fDavid_Gubler.jpg","25hTimon91.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","",				"25xKonstantin.jpg","25yTomky.jpg","25zSerenity_Ibsen.jpg"];
+allbackImgs[23]=["25bEyal_Teutsch.jpg","25dSeb_Fowler.jpg","25estefanochu.jpg","25fDavid_Gubler.jpg","25hTimon91.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",				"25xKonstantin.jpg","25yTomky.jpg","25zSerenity_Ibsen.jpg"];
 
 //smy-raz
-allbackImgs[24]=["26bmsu.ru.jpg","26ddubrovinlab.msu.ru.jpg","26finternat.msu.ru.jpg","26gRalph_Sanderson,Bob_hawke_-_museum_of_australian_democracy.jpg","26hMd_Saidul_Islam,_Sheikh_Mujibur_Rahman.jpg","26lCN_NG._Edmund_Burke.jpg","26nSoutheast Asian Fisheries Development Center Aquaculture Department, Sen Edgardo Angara.jpg","26pAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																						"26xphys.msu.ru.jpg","26ypshab,_Detail_in_apes_running_parliament,_by_Bansky.jpg","26zMatthew_Stinson.jpg"];
+allbackImgs[24]=["26bmsu.ru.jpg","26ddubrovinlab.msu.ru.jpg","26finternat.msu.ru.jpg","26gRalph_Sanderson,Bob_hawke_-_museum_of_australian_democracy.jpg","26hMd_Saidul_Islam,_Sheikh_Mujibur_Rahman.jpg","26lCN_NG._Edmund_Burke.jpg","26nSoutheast Asian Fisheries Development Center Aquaculture Department, Sen Edgardo Angara.jpg","26pAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																						"26xphys.msu.ru.jpg","26ypshab,_Detail_in_apes_running_parliament,_by_Bansky.jpg","26zMatthew_Stinson.jpg"];
 //za-bud
-allbackImgs[27]=["27bAaron_Cheng.jpg","27dIan_T_Edwards.jpg","27fPaul_Townsend.jpg","27hJonathan_Melhuish.jpg","27jErin_Nekervis.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																	"27xPhotos_of_the_Past.jpg","27yYangTS.jpg","27zPeter_Kirkeskov_Rasmussen.jpg"];
+allbackImgs[27]=["27bAaron_Cheng.jpg","27dIan_T_Edwards.jpg","27fPaul_Townsend.jpg","27hJonathan_Melhuish.jpg","27jErin_Nekervis.jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																	"27xPhotos_of_the_Past.jpg","27yYangTS.jpg","27zPeter_Kirkeskov_Rasmussen.jpg"];
 
 
 
@@ -93,15 +93,15 @@ allbackImgs[27]=["27bAaron_Cheng.jpg","27dIan_T_Edwards.jpg","27fPaul_Townsend.j
 //++++++++++++  SVERHU ETOGO ZAMENA BEZ STAROI KOPII      ++++++++++++++++
 
 //kol-kn
-//STARYbylo allbackImgs[28]=[  "28bM_Cheng.jpg","28dWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
-allbackImgs[28]=["28bM_Cheng.jpg","28cBmazing.jpg","28dtommy.jpg","28eWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","28sYangTS,galaxy-wallpaper-6.jpg","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
+//STARYbylo allbackImgs[28]=[  "28bM_Cheng.jpg","28dWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
+allbackImgs[28]=["28bM_Cheng.jpg","28cBmazing.jpg","28dtommy.jpg","28eWayan_Vota.jpg","28fWaleed_Alzuhair.jpg","28hacb,_Fragment_of_advertisement.jpg","28jJames_Vaughan.jpg","28lbright_strangely.jpg","28nElisa_Speranza.jpg","28pClint_Chilcott.jpg","28rjim_crossley.jpg",".jpg","28sYangTS,galaxy-wallpaper-6.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",																										"28xAuthor_from_movie_Perestupit_chertu,_Director_Koltun,1985.jpg","28yobject,_Promised,_Destroyed.jpg","28zTimothy_Takemoto.jpg"];
 
 //ko-raj
-//STARYbylo allbackImgs[0]=[  "03bMichael_Kreibohm.jpg","03dDoug_DuCap.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","03xTed_McGrath.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
-allbackImgs[0]=["03aAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03bAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03dSean.jpg","03eDoug_DuCap.jpg","03fTed_McGrath.jpg","03hjobrowski35.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","",			"03xAuthor,The_Lion_King_by_Allers&Minkoff,Disney,1994.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
+//STARYbylo allbackImgs[0]=[  "03bMichael_Kreibohm.jpg","03dDoug_DuCap.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","03xTed_McGrath.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
+allbackImgs[0]=["03aAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03bAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03dSean.jpg","03eDoug_DuCap.jpg","03fTed_McGrath.jpg","03hjobrowski35.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",			"03xAuthor,The_Lion_King_by_Allers&Minkoff,Disney,1994.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
 
 //ut-kuk
-allbackImgs[26]=[  "16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","","","","","","","","","","","","","",				"16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
+allbackImgs[26]=[  "16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",				"16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
 //allbackImgs[26]=["16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
 
 //ne-by	20"ne-by"vNazvahFailov=19 ????????????????????????????????????????   "40xTee Vincent.jpg",
@@ -110,9 +110,9 @@ allbackImgs[20]=["40bJenny Mealing.jpg","40cMike Mozart.jpg","40dAlvin Smith.jpg
 //UBRANO  1e 
 
 //bub-niz
-allbackImgs[29]=["42aAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42bSergio Ceron.jpg","42cSteve Rhodes.jpg","42dJedimentat44.jpg","42eChris Phutully .jpg","42eEwan Munro.jpg","42eJean-Pierre Dalbera.jpg","42eKeijo Knutas,1941 Ne boltai by Vatolina N.N., Denisov N.V.jpg","42fDefence Images.jpg","42gAndrew FastLizard4 Adams.jpg","42gGordon Dymowski.jpg","42hChris Phutully.jpg","42iAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","42jKonstantin_Likhachev.jpg","42kAuthor, film Matrix by Andy & Larry Wachowski, 1999 - Copie.jpg","42lXeni Jardin,Hotshot the Robot, at Coachella, 2007.jpg","42mWeb Summit.jpg","42nThomas Hawk.jpg","42oFort Belvoir Community Hospital.jpg","42pTimo.jpg","42sR.Crap Mariner.jpg","","","","","","","","","","","","","",									"42xAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42yJenni Konrad.jpg","42zEric Richards.jpg"];
+allbackImgs[29]=["42aAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42bSergio Ceron.jpg","42cSteve Rhodes.jpg","42dJedimentat44.jpg","42eChris Phutully .jpg","42eEwan Munro.jpg","42eJean-Pierre Dalbera.jpg","42eKeijo Knutas,1941 Ne boltai by Vatolina N.N., Denisov N.V.jpg","42fDefence Images.jpg","42gAndrew FastLizard4 Adams.jpg","42gGordon Dymowski.jpg","42hChris Phutully.jpg","42iAuthor,Pervyj kanal,Novosti,Programma Leontjeva Odnako,2014.jpg","42jKonstantin_Likhachev.jpg","42kAuthor, film Matrix by Andy & Larry Wachowski, 1999 - Copie.jpg","42lXeni Jardin,Hotshot the Robot, at Coachella, 2007.jpg","42mWeb Summit.jpg","42nThomas Hawk.jpg","42oFort Belvoir Community Hospital.jpg","42pTimo.jpg","42sR.Crap Mariner.jpg","","","","","","","","","","","","","","","","","","","","","","","","","",									"42xAuthor, film Matrix by Andy & Larry Wachowski, 1999.jpg","42yJenni Konrad.jpg","42zEric Richards.jpg"];
 //avSud
-allbackImgs[12]=[														   "12bAuthor, film Black Book by Paul Verhoeven,2006.jpg","12cAuthor, film Black Book by Paul Verhoeven,2006.jpg","12dDavid Rothwell.jpg","12eChris Chabot.jpg","12fDavid Campbell.jpg","12gTribes of the World.jpg",							"12jAuthor, film Black Book by Paul Verhoeven,2006.jpg","12kAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12lAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12mEx-InTransit.jpg","12nCassowary Colorizations.jpg","12oMike Ensor.jpg","12pNicolas Mirguet.jpg","","","","","","","","","","","","","","","","","","","","","",					"12aAuthor, film Black Book by Paul Verhoeven,2006.jpg","12iAndry Fridman.jpg","12qPaulo Alegria.jpg"];
+allbackImgs[12]=[														   "12bAuthor, film Black Book by Paul Verhoeven,2006.jpg","12cAuthor, film Black Book by Paul Verhoeven,2006.jpg","12dDavid Rothwell.jpg","12eChris Chabot.jpg","12fDavid Campbell.jpg","12gTribes of the World.jpg",							"12jAuthor, film Black Book by Paul Verhoeven,2006.jpg","12kAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12lAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12mEx-InTransit.jpg","12nCassowary Colorizations.jpg","12oMike Ensor.jpg","12pNicolas Mirguet.jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",					"12aAuthor, film Black Book by Paul Verhoeven,2006.jpg","12iAndry Fridman.jpg","12qPaulo Alegria.jpg"];
 //allbackImgs[12]=["12aAuthor, film Black Book by Paul Verhoeven,2006.jpg","12bAuthor, film Black Book by Paul Verhoeven,2006.jpg","12cAuthor, film Black Book by Paul Verhoeven,2006.jpg","12dDavid Rothwell.jpg","12eChris Chabot.jpg","12fDavid Campbell.jpg","12gTribes of the World.jpg","12iAndry Fridman.jpg",	"12jAuthor, film Black Book by Paul Verhoeven,2006.jpg","12kAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12lAuthor, film Dorogaja Elena Sergeevna by Eldar Rjazanov,1988.jpg","12mEx-InTransit.jpg","12nCassowary Colorizations.jpg","12oMike Ensor.jpg","12oMike Ensor.jpg","12qPaulo Alegria.jpg","","","","","",".jpg",".jpg",".jpg"];
 
 
@@ -124,11 +124,11 @@ allbackImgs[25]=["41bClassic Film, 1958 Beauty Ad, Dorothy Gray Satura Moisture 
 
 
 //ese-sai
-allbackImgs[30]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
+allbackImgs[30]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
 //dru-kn
-allbackImgs[31]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
+allbackImgs[31]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
 //vid-put
-allbackImgs[32]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
+allbackImgs[32]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",".jpg",".jpg",".jpg"];
 
 var indZadnika=maxAposhStaronkPeradPershZadnik+1;	
 	var strBack;
@@ -746,7 +746,7 @@ curW=screen.availWidth; while(curW<1000 && document.getElementById(('button'+iBu
 //ANOTHER POSSIBILITY 1vw = 1% of viewport width
 //ANOTHER POSSIBILITY rem values were invented in order to sidestep the compounding problem. rem values are relative to the root html element, not the parent AS em
 
-strBack = './backW/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
+strBack = './backW800/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';
 strOrig = './backOrig/'+allbackImgs[raspovLicnikNastupny][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
@@ -866,7 +866,7 @@ else if(indGrupyStaronakDzeljaZadnika===saredina) {indZadnika=maxAposhStaronkPer
 else if(indGrupyStaronakDzeljaZadnika<saredina) {indZadnika = (indGrupyStaronakDzeljaZadnika-1);}// % kolkascZadnikau;}
 else {indZadnika = (indGrupyStaronakDzeljaZadnika-2);};// % kolkascZadnikau;};
 if(indVgrupeStaronakDzeljaZadnika % 2 === 1){strBack = './backWF800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';} //-> backWhiteFLIP
-else {strBack = './backW/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};
+else {strBack = './backW800/'+allbackImgs[raspovLicnik][indZadnika];}//+'.jpg';};
 strOrig = './backOrig/'+allbackImgs[raspovLicnik][indZadnika];//+'.jpg';   backOrig
 var strurlW_="url('"+strBack+"')";//var strurlWprobel="url('"+strBack+"')";
 //var strurlW_ = strurlWprobel.replace(" ", "_");
@@ -914,10 +914,10 @@ var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) 
 
 var staronkuUperad = function() {//var function => function expression=>only defined when that line is reached
 	var wPrec = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
-	kadrGartannja--;
+	kadrGartannja--; 
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	ctx.drawImage(canv,0,0,wPrec,    parms.height,        0,0,w,parms.height);
-	ctx.drawImage(img, 0,79,dimdraw[0],dimdraw[1],w,0,parms.width-w,parms.height) 
+	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],w,0,parms.width-w,parms.height) 
 	//ctx.drawImage(img, 0,0,dimdraw[0],dimdraw[1],w,0,parms.width,parms.height) //ME novaja naletaet sminaet staruju
 	//drawImage(image,sx,sy,sw,sh,dx,dy,dw,dh)
 	if (kadrGartannja == 0) clearInterval(chasLichnik);
@@ -927,23 +927,23 @@ var staronkuUniz = function() {//staronkuUniz
 	kadrGartannja--;
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	ctx.drawImage(canv,0,0,parms.width,    wPrec,        0,0,parms.width,w);
-	ctx.drawImage(img, 0,79,dimdraw[0],dimdraw[1],0,w,parms.width,parms.height-w) 
+	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],0,w,parms.width,parms.height-w) 
 	if (kadrGartannja == 0) clearInterval(chasLichnik);
 }		
 var staronkuUzad = function() {
 	var wPrec = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	kadrGartannja--;
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
-	ctx.drawImage(imgOld,0,79,dimdraw[0],dimdraw[1],parms.width-w,0,w,parms.height);
-	ctx.drawImage(img, 0,79,dimdraw[0],dimdraw[1],		0,0,			parms.width-w,parms.height)
+	ctx.drawImage(imgOld,0,tilicCanv,dimdraw[0],dimdraw[1],parms.width-w,0,w,parms.height);
+	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],		0,0,			parms.width-w,parms.height)
 	if (kadrGartannja == 0) clearInterval(chasLichnik);
 }
 var staronkuUgoru = function() {//staronkuUgoru
 	//var wPrec = Math.floor(parms.height * kadrGartannja / chasDlaGartannja);
 	kadrGartannja--;
 	var w = Math.floor(parms.height * kadrGartannja / chasDlaGartannja);
-	ctx.drawImage(imgOld,0,79,dimdraw[0],dimdraw[1],0,parms.height-w,parms.width,w);
-	ctx.drawImage(img, 0,79,dimdraw[0],dimdraw[1],		0,0,			parms.width,parms.height-w)
+	ctx.drawImage(imgOld,0,tilicCanv,dimdraw[0],dimdraw[1],0,parms.height-w,parms.width,w);
+	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],		0,0,			parms.width,parms.height-w)
 	if (kadrGartannja == 0) clearInterval(chasLichnik);
 }
 	
@@ -1001,13 +1001,13 @@ var jakGartac = function() {
 	dimdraw = zmenaPamerau(img.width,img.height,parms.width,parms.height)		
 	if (pershyPakaz) {
 		pershyPakaz = false;
-		ctx.drawImage(img,0,79,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);
+		ctx.drawImage(img,0,tilicCanv,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);
 	} else {
 		//imgOld = img.cloneNode(true); //ctx.getImageData(0,0,parms.width,parms.height);//ME
 		if (typeof gartFunkcia[parms.effect] != "undefined") {chasLichnik = setInterval(gartFunkcia[parms.effect],1000/hutkascGartannja);}
 		else if (typeof wipeDirections[parms.effect] != "undefined") {chasLichnik = setInterval(function() {staronkuUgoru()},1000/hutkascGartannja);}
 		else {
-			ctx.drawImage(img,0,79,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);	// no effect
+			ctx.drawImage(img,0,tilicCanv,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);	// no effect
 		}
 	} 
 	if (yoscNazva) {
@@ -1130,7 +1130,7 @@ jaceikaHolst.oncontextmenu = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Mat
 	};		//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //					
 jaceikaHolst.onmouseout = function() {//PisovkaZadnikaNaRaspovSprozrac(0);	
 	ctx1.globalAlpha=1;
-	ctx1.drawImage(img,0,79,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);	
+	ctx1.drawImage(img,0,tilicCanv,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);	
 	//ctx1.clearRect(0, 0, ctx1.width, ctx1.height);	
 	//ctx1.globalAlpha=1;
 	};//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //		
