@@ -6,7 +6,7 @@ var imgNaRaspovMinRazmer;
 
 
 
-var tilicCanv=38;
+var tilicCanv=79;
 var adformShyrynjaHolst=337; //537
 var adformEffect="staronkaUperad";
 var adformVyshinjaHolst=337; //537
@@ -914,7 +914,7 @@ var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) 
 
 var staronkuUperad = function() {//var function => function expression=>only defined when that line is reached
 	var wPrec = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
-	kadrGartannja--; 
+	kadrGartannja--;
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	ctx.drawImage(canv,0,0,wPrec,    parms.height,        0,0,w,parms.height);
 	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],w,0,parms.width-w,parms.height) 
