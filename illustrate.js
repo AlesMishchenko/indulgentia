@@ -14,8 +14,10 @@ var adformChas=5000;
 var adformPerahod=2000;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	var maxAposhStaronkPeradPershZadnik=33; //const
-	var allbackImgs = [];
+	var allbackImgs = []; var toReader = [];
+var sizeKVARDstr = 5;
 
+	
 //netZ vNazvahFailov=12,15,19,29
 //de-pa
 allbackImgs[8]=["00aDianne Lacourciere.jpg","00bPhilip_Howard.jpg","00dTony_Iwane.jpg","00fPaul_Hughes.jpg","00hIan_Glover.jpg","00jDaisy_Harper.jpg","00lMed_PhotoBlog.jpg","00nRob_Chandanais.jpg","00pKate.jpg","00rOzgur_Mulazımoglu.jpg", "00spostbear eater of worlds.jpg","00tMevout.jpg","","","","","","","","","","","","","","","","","","","","","","",			"00xSofi_Suivre,_Illustration_by_Vladislav_Erko.jpg","00yAuthor_from_movie_Finist_Yasnyy_Sokol,1975.jpg","00zJim_crossley.jpg"];
@@ -96,7 +98,7 @@ allbackImgs[28]=["28bM_Cheng.jpg","28cBmazing.jpg","28dtommy.jpg","28eWayan_Vota
 
 //ko-raj
 //STARYbylo allbackImgs[0]=[  "03bMichael_Kreibohm.jpg","03dDoug_DuCap.jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","03xTed_McGrath.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
-allbackImgs[0]=["03aAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03bAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03dSean.jpg","03eDoug_DuCap.jpg","03fTed_McGrath.jpg","03hjobrowski35.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","",			"03xAuthor,The_Lion_King_by_Allers&Minkoff,Disney,1994","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
+allbackImgs[0]=["03aAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03bAuthor, The Lion King by Allers & Minkoff, Disney, 1994.jpg","03dSean.jpg","03eDoug_DuCap.jpg","03fTed_McGrath.jpg","03hjobrowski35.jpg",".jpg",".jpg",".jpg","","","","","","","","","","","","","","","","","","","","","","","","","",			"03xAuthor,The_Lion_King_by_Allers&Minkoff,Disney,1994.jpg","03yJonathan_Taglione.jpg","03zMichael_Cramer.jpg"];
 
 //ut-kuk
 allbackImgs[26]=[  "16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","","","","","","","","","","","","","",				"16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
@@ -131,7 +133,7 @@ allbackImgs[32]=[".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",".jpg",
 var indZadnika=maxAposhStaronkPeradPershZadnik+1;	
 	var strBack;
 	var strOrig ;	
-var parms
+var parms;
 //neIspolzOldVerOfCol var YellowLine
 //neIspolzOldVerOfCol var AquaLine
 //neIspolzOldVerOfCol var BurlyWoodLine
@@ -659,8 +661,9 @@ document.getElementById(parms.id+"_title").style.color = document.body.style.bac
 document.getElementById(parms.id+"_title").style.backgroundColor = 'white';
 document.getElementById(parms.id+"_title").style.opacity = 0.6980;
 
-document.getElementById('idh2zagolov').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('id2zagolov').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idh2zagolov1').style.color = dopolnitCol(document.body.style.backgroundColor);
+document.getElementById('idh2zagolov1bis').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idh2zagolov2').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idh2zagolov3').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGart').style.color = document.body.style.backgroundColor;
@@ -671,7 +674,7 @@ document.getElementById('idEmailh3').style.color = dopolnitCol(document.body.sty
 document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style.backgroundColor);
 
 //curW=screen.availWidth; while(curW<1000){curW+=300;document.body.style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
-curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idh2zagolov').style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
+curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('id2zagolov').style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idh2zagolov1').style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idh2zagolov2').style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idh2zagolov3').style.fontSize = "larger";};//STAY SAME:window.innerWidth>=document.documentElement.clientWidth>document.body.clientWidth
@@ -777,7 +780,7 @@ for (nenuznaja of allinputs) {
 if((nenuznaja.id != "idGuzikUbracseentexts") && (nenuznaja.id != "idGuzikCreateTable") && (nenuznaja.id != "idGalkaAdsejac"))
 nenuznaja.parentNode.removeChild(nenuznaja);
 }
-for(var i of allIndsByTemy) {
+for(var i of useIndakPaTem) {
 var husik = document.getElementById(idGuzikiPaTemam[i]);
 if(husik != null) husik.parentNode.removeChild(husik); 
 }
@@ -1143,74 +1146,77 @@ if (neAutoGartanne) {
 
 var zTable = document.getElementById('tableZmest');
 var lenTable = zTable.rows.length;
+var toReaderSize = document.getElementById('idh2zagolov1').innerHTML.charCodeAt(sizeKVARDstr);
+var toReaderLen = document.getElementById('idh2zagolov1').innerHTML.charCodeAt(useIndakPaTem.length+1);
+var toReaderStart = document.getElementById('idh2zagolov1').innerHTML.length;
+for(var i=toReaderLen-toReaderStart-toReaderSize;i<=toReaderSize;i++) {toReader.push(i);}
+document.getElementById(('button'+0).toString()).addEventListener("click", function(){gartacPachatak(toReader[0],"down");});
+document.getElementById(('button'+1).toString()).addEventListener("click", function(){gartacPachatak(toReader[1],"down");});
+document.getElementById(('button'+2).toString()).addEventListener("click", function(){gartacPachatak(toReader[2],"down");});
+document.getElementById(('button'+3).toString()).addEventListener("click", function(){gartacPachatak(toReader[3],"down");});
+document.getElementById(('button'+4).toString()).addEventListener("click", function(){gartacPachatak(toReader[4],"down");});
+document.getElementById(('button'+5).toString()).addEventListener("click", function(){gartacPachatak(toReader[5],"down");});
+document.getElementById(('button'+6).toString()).addEventListener("click", function(){gartacPachatak(toReader[6],"down");});
+document.getElementById(('button'+7).toString()).addEventListener("click", function(){gartacPachatak(toReader[7],"down");});
+document.getElementById(('button'+8).toString()).addEventListener("click", function(){gartacPachatak(toReader[8],"down");});
+document.getElementById(('button'+9).toString()).addEventListener("click", function(){gartacPachatak(toReader[9],"down");});
+document.getElementById(('button'+10).toString()).addEventListener("click", function(){gartacPachatak(toReader[10],"down");});
+document.getElementById(('button'+11).toString()).addEventListener("click", function(){gartacPachatak(toReader[11],"down");});
+document.getElementById(('button'+12).toString()).addEventListener("click", function(){gartacPachatak(toReader[12],"down");});
+document.getElementById(('button'+13).toString()).addEventListener("click", function(){gartacPachatak(toReader[13],"down");});
+document.getElementById(('button'+14).toString()).addEventListener("click", function(){gartacPachatak(toReader[14],"down");});
+document.getElementById(('button'+15).toString()).addEventListener("click", function(){gartacPachatak(toReader[15],"down");});
+document.getElementById(('button'+16).toString()).addEventListener("click", function(){gartacPachatak(toReader[16],"down");});
+document.getElementById(('button'+17).toString()).addEventListener("click", function(){gartacPachatak(toReader[17],"down");});
+document.getElementById(('button'+18).toString()).addEventListener("click", function(){gartacPachatak(toReader[18],"down");});
+document.getElementById(('button'+19).toString()).addEventListener("click", function(){gartacPachatak(toReader[19],"down");});
+document.getElementById(('button'+20).toString()).addEventListener("click", function(){gartacPachatak(toReader[20],"down");});
+document.getElementById(('button'+21).toString()).addEventListener("click", function(){gartacPachatak(toReader[21],"down");});
+document.getElementById(('button'+22).toString()).addEventListener("click", function(){gartacPachatak(toReader[22],"down");});
+document.getElementById(('button'+23).toString()).addEventListener("click", function(){gartacPachatak(toReader[23],"down");});
+document.getElementById(('button'+24).toString()).addEventListener("click", function(){gartacPachatak(toReader[24],"down");});
+document.getElementById(('button'+25).toString()).addEventListener("click", function(){gartacPachatak(toReader[25],"down");});
+document.getElementById(('button'+26).toString()).addEventListener("click", function(){gartacPachatak(toReader[26],"down");});
+document.getElementById(('button'+27).toString()).addEventListener("click", function(){gartacPachatak(toReader[27],"down");});
+document.getElementById(('button'+28).toString()).addEventListener("click", function(){gartacPachatak(toReader[28],"down");});
+document.getElementById(('button'+29).toString()).addEventListener("click", function(){gartacPachatak(toReader[29],"down");});
+document.getElementById(('button'+30).toString()).addEventListener("click", function(){gartacPachatak(toReader[30],"down");});
+document.getElementById(('button'+31).toString()).addEventListener("click", function(){gartacPachatak(toReader[31],"down");});
+document.getElementById(('button'+32).toString()).addEventListener("click", function(){gartacPachatak(toReader[32],"down");});
 
-document.getElementById(('button'+0).toString()).addEventListener("click", function(){gartacPachatak((0),"down");});
-document.getElementById(('button'+1).toString()).addEventListener("click", function(){gartacPachatak((1),"down");});
-document.getElementById(('button'+2).toString()).addEventListener("click", function(){gartacPachatak((2),"down");});
-document.getElementById(('button'+3).toString()).addEventListener("click", function(){gartacPachatak((3),"down");});
-document.getElementById(('button'+4).toString()).addEventListener("click", function(){gartacPachatak((4),"down");});
-document.getElementById(('button'+5).toString()).addEventListener("click", function(){gartacPachatak((5),"down");});
-document.getElementById(('button'+6).toString()).addEventListener("click", function(){gartacPachatak((6),"down");});
-document.getElementById(('button'+7).toString()).addEventListener("click", function(){gartacPachatak((7),"down");});
-document.getElementById(('button'+8).toString()).addEventListener("click", function(){gartacPachatak((8),"down");});
-document.getElementById(('button'+9).toString()).addEventListener("click", function(){gartacPachatak((9),"down");});
-document.getElementById(('button'+10).toString()).addEventListener("click", function(){gartacPachatak((10),"down");});
-document.getElementById(('button'+11).toString()).addEventListener("click", function(){gartacPachatak((11),"down");});
-document.getElementById(('button'+12).toString()).addEventListener("click", function(){gartacPachatak((12),"down");});
-document.getElementById(('button'+13).toString()).addEventListener("click", function(){gartacPachatak((13),"down");});
-document.getElementById(('button'+14).toString()).addEventListener("click", function(){gartacPachatak((14),"down");});
-document.getElementById(('button'+15).toString()).addEventListener("click", function(){gartacPachatak((15),"down");});
-document.getElementById(('button'+16).toString()).addEventListener("click", function(){gartacPachatak((16),"down");});
-document.getElementById(('button'+17).toString()).addEventListener("click", function(){gartacPachatak((17),"down");});
-document.getElementById(('button'+18).toString()).addEventListener("click", function(){gartacPachatak((18),"down");});
-document.getElementById(('button'+19).toString()).addEventListener("click", function(){gartacPachatak((19),"down");});
-document.getElementById(('button'+20).toString()).addEventListener("click", function(){gartacPachatak((20),"down");});
-document.getElementById(('button'+21).toString()).addEventListener("click", function(){gartacPachatak((21),"down");});
-document.getElementById(('button'+22).toString()).addEventListener("click", function(){gartacPachatak((22),"down");});
-document.getElementById(('button'+23).toString()).addEventListener("click", function(){gartacPachatak((23),"down");});
-document.getElementById(('button'+24).toString()).addEventListener("click", function(){gartacPachatak((24),"down");});
-document.getElementById(('button'+25).toString()).addEventListener("click", function(){gartacPachatak((25),"down");});
-document.getElementById(('button'+26).toString()).addEventListener("click", function(){gartacPachatak((26),"down");});
-document.getElementById(('button'+27).toString()).addEventListener("click", function(){gartacPachatak((27),"down");});
-document.getElementById(('button'+28).toString()).addEventListener("click", function(){gartacPachatak((28),"down");});
-document.getElementById(('button'+29).toString()).addEventListener("click", function(){gartacPachatak((29),"down");});
-document.getElementById(('button'+30).toString()).addEventListener("click", function(){gartacPachatak((30),"down");});
-document.getElementById(('button'+31).toString()).addEventListener("click", function(){gartacPachatak((31),"down");});
-document.getElementById(('button'+32).toString()).addEventListener("click", function(){gartacPachatak((32),"down");});
-
-document.getElementById('idMotsCles0').addEventListener("click", function(){gartacPachatak((0),"down");});
-document.getElementById('idMotsCles1').addEventListener("click", function(){gartacPachatak((1),"down");});
-document.getElementById('idMotsCles2').addEventListener("click", function(){gartacPachatak((2),"down");});
-document.getElementById('idMotsCles3').addEventListener("click", function(){gartacPachatak((3),"down");});
-document.getElementById('idMotsCles4').addEventListener("click", function(){gartacPachatak((4),"down");});
-document.getElementById('idMotsCles5').addEventListener("click", function(){gartacPachatak((5),"down");});
-document.getElementById('idMotsCles6').addEventListener("click", function(){gartacPachatak((6),"down");});
-document.getElementById('idMotsCles7').addEventListener("click", function(){gartacPachatak((7),"down");});
-document.getElementById('idMotsCles8').addEventListener("click", function(){gartacPachatak((8),"down");});
-document.getElementById('idMotsCles9').addEventListener("click", function(){gartacPachatak((9),"down");});
-document.getElementById('idMotsCles10').addEventListener("click", function(){gartacPachatak((10),"down");});
-document.getElementById('idMotsCles11').addEventListener("click", function(){gartacPachatak((11),"down");});
-document.getElementById('idMotsCles12').addEventListener("click", function(){gartacPachatak((12),"down");});
-document.getElementById('idMotsCles13').addEventListener("click", function(){gartacPachatak((13),"down");});
-document.getElementById('idMotsCles14').addEventListener("click", function(){gartacPachatak((14),"down");});
-document.getElementById('idMotsCles15').addEventListener("click", function(){gartacPachatak((15),"down");});
-document.getElementById('idMotsCles16').addEventListener("click", function(){gartacPachatak((16),"down");});
-document.getElementById('idMotsCles17').addEventListener("click", function(){gartacPachatak((17),"down");});
-document.getElementById('idMotsCles18').addEventListener("click", function(){gartacPachatak((18),"down");});
-document.getElementById('idMotsCles19').addEventListener("click", function(){gartacPachatak((19),"down");});
-document.getElementById('idMotsCles20').addEventListener("click", function(){gartacPachatak((20),"down");});
-document.getElementById('idMotsCles21').addEventListener("click", function(){gartacPachatak((21),"down");});
-document.getElementById('idMotsCles22').addEventListener("click", function(){gartacPachatak((22),"down");});
-document.getElementById('idMotsCles23').addEventListener("click", function(){gartacPachatak((23),"down");});
-document.getElementById('idMotsCles24').addEventListener("click", function(){gartacPachatak((24),"down");});
-document.getElementById('idMotsCles25').addEventListener("click", function(){gartacPachatak((25),"down");});
-document.getElementById('idMotsCles26').addEventListener("click", function(){gartacPachatak((26),"down");});
-document.getElementById('idMotsCles27').addEventListener("click", function(){gartacPachatak((27),"down");});
-document.getElementById('idMotsCles28').addEventListener("click", function(){gartacPachatak((28),"down");});
-document.getElementById('idMotsCles29').addEventListener("click", function(){gartacPachatak((29),"down");});
-document.getElementById('idMotsCles30').addEventListener("click", function(){gartacPachatak((30),"down");});
-document.getElementById('idMotsCles31').addEventListener("click", function(){gartacPachatak((31),"down");});
-document.getElementById('idMotsCles32').addEventListener("click", function(){gartacPachatak((32),"down");});
+document.getElementById('idMotsCles0').addEventListener("click", function(){gartacPachatak(toReader[0],"down");});
+document.getElementById('idMotsCles1').addEventListener("click", function(){gartacPachatak(toReader[1],"down");});
+document.getElementById('idMotsCles2').addEventListener("click", function(){gartacPachatak(toReader[2],"down");});
+document.getElementById('idMotsCles3').addEventListener("click", function(){gartacPachatak(toReader[3],"down");});
+document.getElementById('idMotsCles4').addEventListener("click", function(){gartacPachatak(toReader[4],"down");});
+document.getElementById('idMotsCles5').addEventListener("click", function(){gartacPachatak(toReader[5],"down");});
+document.getElementById('idMotsCles6').addEventListener("click", function(){gartacPachatak(toReader[6],"down");});
+document.getElementById('idMotsCles7').addEventListener("click", function(){gartacPachatak(toReader[7],"down");});
+document.getElementById('idMotsCles8').addEventListener("click", function(){gartacPachatak(toReader[8],"down");});
+document.getElementById('idMotsCles9').addEventListener("click", function(){gartacPachatak(toReader[9],"down");});
+document.getElementById('idMotsCles10').addEventListener("click", function(){gartacPachatak(toReader[10],"down");});
+document.getElementById('idMotsCles11').addEventListener("click", function(){gartacPachatak(toReader[11],"down");});
+document.getElementById('idMotsCles12').addEventListener("click", function(){gartacPachatak(toReader[12],"down");});
+document.getElementById('idMotsCles13').addEventListener("click", function(){gartacPachatak(toReader[13],"down");});
+document.getElementById('idMotsCles14').addEventListener("click", function(){gartacPachatak(toReader[14],"down");});
+document.getElementById('idMotsCles15').addEventListener("click", function(){gartacPachatak(toReader[15],"down");});
+document.getElementById('idMotsCles16').addEventListener("click", function(){gartacPachatak(toReader[16],"down");});
+document.getElementById('idMotsCles17').addEventListener("click", function(){gartacPachatak(toReader[17],"down");});
+document.getElementById('idMotsCles18').addEventListener("click", function(){gartacPachatak(toReader[18],"down");});
+document.getElementById('idMotsCles19').addEventListener("click", function(){gartacPachatak(toReader[19],"down");});
+document.getElementById('idMotsCles20').addEventListener("click", function(){gartacPachatak(toReader[20],"down");});
+document.getElementById('idMotsCles21').addEventListener("click", function(){gartacPachatak(toReader[21],"down");});
+document.getElementById('idMotsCles22').addEventListener("click", function(){gartacPachatak(toReader[22],"down");});
+document.getElementById('idMotsCles23').addEventListener("click", function(){gartacPachatak(toReader[23],"down");});
+document.getElementById('idMotsCles24').addEventListener("click", function(){gartacPachatak(toReader[24],"down");});
+document.getElementById('idMotsCles25').addEventListener("click", function(){gartacPachatak(toReader[25],"down");});
+document.getElementById('idMotsCles26').addEventListener("click", function(){gartacPachatak(toReader[26],"down");});
+document.getElementById('idMotsCles27').addEventListener("click", function(){gartacPachatak(toReader[27],"down");});
+document.getElementById('idMotsCles28').addEventListener("click", function(){gartacPachatak(toReader[28],"down");});
+document.getElementById('idMotsCles29').addEventListener("click", function(){gartacPachatak(toReader[29],"down");});
+document.getElementById('idMotsCles30').addEventListener("click", function(){gartacPachatak(toReader[30],"down");});
+document.getElementById('idMotsCles31').addEventListener("click", function(){gartacPachatak(toReader[31],"down");});
+document.getElementById('idMotsCles32').addEventListener("click", function(){gartacPachatak(toReader[32],"down");});
 }		
 	jaceikaHolst  = tryJaceiki.insertCell();
 	 
@@ -1271,8 +1277,8 @@ document.getElementById("divStarajaGall_canvas").style.height=			vyshinjaKVARD.t
 document.getElementById("jaceikaHolstID").style.width=			shyrynjaKVARD.toString()+'px';
 document.getElementById("jaceikaHolstID").style.height=			vyshinjaKVARD.toString()+'px';
 
-malrazmerSTRELOK=Math.floor(shyrynjaKVARD/5);
-bolrazmerSTRELOK=Math.floor(7*vyshinjaKVARD/5);
+malrazmerSTRELOK=Math.floor(shyrynjaKVARD/sizeKVARDstr);
+bolrazmerSTRELOK=Math.floor(7*vyshinjaKVARD/sizeKVARDstr);
 
 //document.getElementById("jaceikaZpravaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
 //document.getElementById("jaceikaZpravaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');

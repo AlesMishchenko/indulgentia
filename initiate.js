@@ -13,17 +13,17 @@ var rgb = blue | (green << 8) | (red << 16);
 return '#' + (0x1000000 + rgb).toString(16).slice(1)
 }
 raspoCveta[0]=rgb2hex(255,255,0); //yellow2 Kor
-raspoCveta[1]=rgb2hex(204,153,0); //yellow3 Bir
+raspoCveta[1]=rgb2hex(204,153,0); //yellow3 Bi
 raspoCveta[2]=rgb2hex(255,255,153); //yellow chel
 raspoCveta[3]=rgb2hex(0,153,153);//3Cyan4 Kogo
-raspoCveta[4]=rgb2hex(153,153,153);//4Gray5 Vrach
+raspoCveta[4]=rgb2hex(153,153,153);//4Gray5 Vrac
 raspoCveta[5]=rgb2hex(153,0,255);//5Purple Mne
 raspoCveta[6]=rgb2hex(255,102,0);//6Orange dogo
 raspoCveta[7]=rgb2hex(255,0,0); //7 red3 chast
-raspoCveta[8]=rgb2hex(221,221,221);//8 gray2 skazk
+raspoCveta[8]=rgb2hex(221,221,221);//8 gray2 skaz
 raspoCveta[9]=rgb2hex(204,0,102);//9 rose4 moi nauc
 raspoCveta[10]=rgb2hex(255,0,102);//10 pink3 zensc
-raspoCveta[11]=rgb2hex(255,153,153);//11 red1 RolGeroa
+raspoCveta[11]=rgb2hex(255,153,153);//11 red1 RolGer
 raspoCveta[12]=rgb2hex(255,153,255);//12 magenta1 my-av
 raspoCveta[13]=rgb2hex(204,0,204);//13 magenta4 bashib
 raspoCveta[14]=rgb2hex(255,153,0);//14 orange2 Dogo
@@ -31,11 +31,11 @@ raspoCveta[15]=rgb2hex(153,153,255); //15 blue1 ProSob   WAS17
 raspoCveta[16]=rgb2hex(102,255,255);//16w20Cyan Dik   WAS20
 raspoCveta[17]=rgb2hex(255,0,204);//17w21Pink Mat   WAS21
 raspoCveta[18]=rgb2hex(0,255,102);//18w22Turquoise2 detNa   WAS22
-raspoCveta[19]=rgb2hex(0,0,255);//19w18Blue3 Dno   WAS18
-raspoCveta[20]=rgb2hex(0,204,255);//20 skyblue  nes   WAS19
+raspoCveta[19]=rgb2hex(0,0,255);//19w18Blue3 Dn   WAS18
+raspoCveta[20]=rgb2hex(0,204,255);//20 skyblue  ne   WAS19
 raspoCveta[21]=rgb2hex(0,204,51);//21 tourquose3 nit   WAS23
-raspoCveta[22]=rgb2hex(153,255,153);//22w24Green1 neuc   WAS24
-raspoCveta[23]=rgb2hex(0,153,0);//23w25Green4 Lud   WAS25
+raspoCveta[22]=rgb2hex(153,255,153);//22w24Green1 neu   WAS24
+raspoCveta[23]=rgb2hex(0,153,0);//23w25Green4 Lu   WAS25
 raspoCveta[24]=rgb2hex(204,255,0);//24w26YellowGreen smys   WAS26
 raspoCveta[25]=rgb2hex(204,102,255);//25w15Purple1 moi-rek   WAS15
 raspoCveta[26]=rgb2hex(102,102,255);//26w16Blue UtVku   WAS16
@@ -53,14 +53,14 @@ raspoCveta[37]=rgb2hex(0,153,51); //37Turquoise4
 
 	var vseIndsRaspov=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32] //const
 	var bujneishINvseIndsRaspov = vseIndsRaspov[vseIndsRaspov.length-1]; //const
-var allIndsByTemy=[0,       1,       2,     3,      4,   5,         6,            7,         8,     9,       10,        11] //const
+var useIndakPaTem=[0,       1,       2,     3,      4,   5,         6,            7,         8,     9,       10,        11] //const
 var ValuesByTemy=["ЛЮБОВЬ","СМЕРТЬ","ЭРОС","НАУКА","ТВ","ФАНТАЗИИ","НЕПОНИМАНИЕ","ОБЩЕСТВО","МИРЫ","ИСТОРИЯ","ПРИРОДА","ДУША"]; //const
 var pach3=["КОРОЛИ ВОДОВОРОТОВ","БИРЖА СМЫСЛОВ ЖИЗНИ","ВЗГЛЯД С ФОТОГРАФИИ"]; //const
 var idGuzikiPaTemam=['idGuzikUbracLU','idGuzikUbracSM','idGuzikUbracER','idGuzikUbracNA','idGuzikUbracTV','idGuzikUbractFA','idGuzikUbracNE','idGuzikUbracOB','idGuzikUbracMI','idGuzikUbracIS','idGuzikUbracPR','idGuzikUbracDU']; //const
 var kan3=["Издания (нелинейные книги)","Издания(линейные книги)","Издания(нелитературные)"]; //const
-var maxIndINtemy = allIndsByTemy[allIndsByTemy.length-1]; //const
+var maxIndINtemy = useIndakPaTem[useIndakPaTem.length-1]; //const
 	var temyBezEtogoTexta  = [[2,3,4,5],[1,2,3,4,5],[0,3,4,5],[1,2,3,4,5],[0,2,3,4,5],[0,1,4,5]];	 //ne karystaetsa t.k. delete //const
-	//for(var i of allIndsByTemy) for(var j of textyKazhdoiTemy[i]) {essBezEtojTemy[i].splice(textyKazhdoiTemy[i].indexOf(j), 1);};
+	//for(var i of useIndakPaTem) for(var j of textyKazhdoiTemy[i]) {essBezEtojTemy[i].splice(textyKazhdoiTemy[i].indexOf(j), 1);};
 	//	vseIndsRaspov.filter(function(x) { return textyKazhdoiTemy.indexOf(x) < 0 })}	
 	
 var textyKazhdoiTemy =[[0,1,3,5],[0,2,4],[2,5],[5]]; //ne karystaetsa t.k. delete //const
@@ -121,7 +121,7 @@ var vseIndsNUMofRadkiZmest=[];
 var vseIndsIDofRadkiZmest=[];
 //document.onload = function () {
 //essBezEtojTemy =[vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov,vseIndsRaspov];
-//	for(var i of allIndsByTemy) for(var j of textyKazhdoiTemy[i]) {
+//	for(var i of useIndakPaTem) for(var j of textyKazhdoiTemy[i]) {
 //	essBezEtojTemy[i].splice(textyKazhdoiTemy[i].indexOf(j), 1);
 //	};
 //	zrabicAllRadkiForTZmestIDfrom0();zrabicTZmest();
@@ -294,35 +294,35 @@ function illustrate(div) {
 	document.getElementById("divStarajaGall").innerHTML = "";
 	args = {"width":adformShyrynjaHolst,"Height":adformVyshinjaHolst,"duration":adformChas,"transition":adformPerahod,"effect":adformEffect,"id":"divStarajaGall",
 "malunki":[ 	//ot 0 do 32 - stolko dolzno byt strok !!!!!!!!!!!!!!!!!!!!!!!!
-["./zagluskaa0.log","kor-raj",17,4.0,3.4 ,4.7], //POTYM PERERABIC
-["./zagluskab0.log","bir-smy",25,3.5,4.7 ,4.0], //
+["./zagluskaa0.log","ko-raj",17,4.0,3.4 ,4.7], //POTYM PERERABIC
+["./zagluskab0.log","bi-sm",25,3.5,4.7 ,4.0], //
 ["./zagluskab0.log","sta-fot",42,3.5,4.2 ,3.0],
 ["./zagluskac0.log","sme-kaz",34,3.0,4.5 ,2.0],
 ["./zagluskad0.log","vra-pac",10,5.0,3.7 ,4.8],
-["./zagluskae0.log","pri-lub",19,4.0,4.0 ,4.5],			
+["./zagluskae0.log","pr-lu",19,4.0,4.0 ,4.5],			
 ["./zagluskaf0.log","dog-sme",27,4.6,3.8 ,3.0],
-["./zagluskag0.log","kva-cas",35,4.0,4.5 ,4.0],
-["./zagluskag0.log","det-pau",29,5.0,3.2 ,4.7],
+["./zagluskag0.log","kv-ca",35,4.0,4.5 ,4.0],
+["./zagluskag0.log","de-pa",29,5.0,3.2 ,4.7],
 ["./zagluskag0.log","moi-rec",26,4.0,4.1 ,4.6],			
 ["./zagluskag0.log","zen-rol",25,3.0,3.9 ,3.0],
 ["./zagluskag0.log","ger-lub",20,4.8,3.7 ,4.5],			
-["./zagluskag0.log","avt-sud",16,3.0,3.3 ,2.9],
-["./zagluskag0.log","bas-rod",25,4.5,4.9 ,3.8],
-["./zagluskag0.log","dog-dja",18,3.5,3.7 ,2.9],
-["./zagluskag0.log","sob-aki",19,5.0,2.5 ,5.0],
-["./zagluskag0.log","isp-dik",13,4.0,3.5 ,3.8],
-["./zagluskag0.log","mat-raj",17,5.0,3.6 ,4.7],
-["./zagluskag0.log","det-nar",22,3.0,4.5 ,2.8],
-["./zagluskag0.log","dno-mor",21,5.0,3.2 ,4.8],
-["./zagluskag0.log","nes-byv",26,5.0,3.1 ,5.0],
+["./zagluskag0.log","av-su",16,3.0,3.3 ,2.9],
+["./zagluskag0.log","bas-ro",25,4.5,4.9 ,3.8],
+["./zagluskag0.log","do-dj",18,3.5,3.7 ,2.9],
+["./zagluskag0.log","sob-ak",19,5.0,2.5 ,5.0],
+["./zagluskag0.log","is-di",13,4.0,3.5 ,3.8],
+["./zagluskag0.log","ma-ra",17,5.0,3.6 ,4.7],
+["./zagluskag0.log","de-na",22,3.0,4.5 ,2.8],
+["./zagluskag0.log","dn-mo",21,5.0,3.2 ,4.8],
+["./zagluskag0.log","ne-by",26,5.0,3.1 ,5.0],
 ["./zagluskag0.log","nit-kov",16,5.0,2.1 ,5.0],
-["./zagluskag0.log","neu-pri",30,4.0,4.3 ,3.9],
-["./zagluskag0.log","lud-poe",16,4.7,2.7 ,5.0],
-["./zagluskag0.log","smy-raz",25,3.0,3.9 ,3.3],
+["./zagluskag0.log","ne-pri",30,4.0,4.3 ,3.9],
+["./zagluskag0.log","lu-po",16,4.7,2.7 ,5.0],
+["./zagluskag0.log","smy-ra",25,3.0,3.9 ,3.3],
 ["./zagluskag0.log","moi-rek",40,4.0,3.6 ,2.6],
-["./zagluskag0.log","utr-kuk",36,4.5,4.2 ,4.5],
-["./zagluskag0.log","zam-bud",21,4.5,3.7 ,3.1],
-["./zagluskag0.log","kol-kno",28,4.0,3.9 ,3.6],
+["./zagluskag0.log","ut-kuk",36,4.5,4.2 ,4.5],
+["./zagluskag0.log","za-bu",21,4.5,3.7 ,3.1],
+["./zagluskag0.log","kol-kn",28,4.0,3.9 ,3.6],
 ["./zagluskag0.log","bub-niz",55,4.0,4.5 ,2.8],
 ["./zagluskag0.log","ese-sai",10,3.5,3.5 ,3.0],
 ["./zagluskag0.log","dru-kni",10,3.5,3.5 ,3.0],
