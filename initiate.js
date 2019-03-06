@@ -107,7 +107,8 @@ vseIndsRaspov.slice(),vseIndsRaspov.slice(),vseIndsRaspov.slice(),vseIndsRaspov.
 ];
 for (var item = maxIndINtemy; item>=0; item--){
 for (var iEss = bujneishINvseIndsRaspov; iEss>=0; iEss--){
-if(kavalackisedevrikiSetojTemoi[item].includes(iEss)) 
+//if(kavalackisedevrikiSetojTemoi[item].includes(iEss)) //IE not supported
+if(kavalackisedevrikiSetojTemoi[item].indexOf(iEss)>=0) 
 {essBezEtojTemy[item].splice(iEss,1);};
 }
 };

@@ -6,7 +6,7 @@ var imgNaRaspovMinRazmer;
 
 
 
-var tilicCanv=79;
+var tilicCanv=38;
 var adformShyrynjaHolst=337; //537
 var adformEffect="staronkaUperad";
 var adformVyshinjaHolst=337; //537
@@ -776,15 +776,15 @@ document.getElementById("idGalkaAdsejac").checked=false;
 var content = document.getElementById("idTemyKontur");
 var allinputs = content.getElementsByTagName("input");
 // no stranno cto raspovLicnikNastupny=6 vsegda 
-for (nenuznaja of allinputs) {
+for(var i=0; i<allinputs.length; i++) {nenuznaja=allinputs[i];  //IEnotSupported:  for (nenuznaja of allinputs) {
 if((nenuznaja.id != "idGuzikUbracseentexts") && (nenuznaja.id != "idGuzikCreateTable") && (nenuznaja.id != "idGalkaAdsejac"))
 nenuznaja.parentNode.removeChild(nenuznaja);
 }
-for(var i of useIndakPaTem) {
+for(var j=0; j<useIndakPaTem.length; j++) {i=useIndakPaTem[j];  //IEnotSupported:  for(var i of useIndakPaTem) {
 var husik = document.getElementById(idGuzikiPaTemam[i]);
 if(husik != null) husik.parentNode.removeChild(husik); 
 }
-for(var itemy of temyKazhdogoEss[raspovLicnikNastupny]) {
+for(var i=0; i<temyKazhdogoEss[raspovLicnikNastupny].length; i++) {itemy=temyKazhdogoEss[raspovLicnikNastupny][i];  //IEnotSupported:  for(var itemy of temyKazhdogoEss[raspovLicnikNastupny]) {
 var husik = document.getElementById(idGuzikiPaTemam[itemy]);
 if(husik===null) {maljavac1temaHusikBYnumber(itemy); husik = document.getElementById(idGuzikiPaTemam[itemy]);};
 titleAndValueByElementAdseu(husik);//idGuzikiPaTemam[temyByTexts[raspovLicnik][itemy]]
@@ -914,7 +914,7 @@ var zmenaPamerau = function (shyrSpacatku,vysotSpacatku,shyrMiesca,vysotMiesca) 
 
 var staronkuUperad = function() {//var function => function expression=>only defined when that line is reached
 	var wPrec = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
-	kadrGartannja--;
+	kadrGartannja--; 
 	var w = Math.floor(parms.width * kadrGartannja / chasDlaGartannja);
 	ctx.drawImage(canv,0,0,wPrec,    parms.height,        0,0,w,parms.height);
 	ctx.drawImage(img, 0,tilicCanv,dimdraw[0],dimdraw[1],w,0,parms.width-w,parms.height) 
@@ -983,7 +983,7 @@ var illustrate = function(param) {
 	//img.addEventListener("load",imgOld = img;jakGartac;);//ME
 	//gartacPracjag(1)	//BEFORE_ME first image
 	//raspovLicnik=Math.floor(Math.random() * Math.max(vseIndsRaspov[vseIndsRaspov.length-1])) + 0;
-	gartacPachatak(raspovLicnik,"down") //ME first image
+	gartacPachatak(raspovLicnik,"down") //ME 
 }
 	
 	
@@ -1252,7 +1252,7 @@ return {
 	},
 	restart:function() {
 		if (parms.duration.toLowerCase() != "neAutoGartanne" && parms.duration > 0) {
-			//chasLichnikGart = setInterval(function() {gartacPracjag(1);},parms.duration);	//BEFORE ME
+			//chasLichnikGart = setInterval(function() {gartacPracjag(1);},parms.duration);	//BEFORE
 			chasLichnikGart = setInterval(function() {
 				//raspovLicnik=Math.floor(Math.random() * Math.max(vseIndsRaspov[vseIndsRaspov.length-1])) + 0;
 				gartacPachatak(raspovLicnik,"down");},parms.duration);//ME				
