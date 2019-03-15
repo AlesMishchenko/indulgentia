@@ -115,7 +115,7 @@ if(kavalackisedevrikiSetojTemoi[item].indexOf(iEss)>=0)
 	
 var nacalnyRaspovVarianty=[0,21,19,     4,8,15,17,20,23,4,8,15,17,20,23]; //const
 var raspovLicnik = nacalnyRaspovVarianty[Math.floor(Math.random()*nacalnyRaspovVarianty.length) + 0];
-var args;
+var args = {};//BEFOREtrySTART var args; = {} kab mahchyma praver args.width==undefined
 var varZmest;
 var vseIndsTXTofRadkiZmest=[];
 var vseIndsNUMofRadkiZmest=[];
