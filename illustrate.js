@@ -149,6 +149,96 @@ var parms;
 //neIspolzOldVerOfCol var AquamarineLine
 //neIspolzOldVerOfCol var GoldenRodLine
 //if (typeof(window.$) != "function") var $ = function (id) {return document.getElementById(id);}  // wrap getElementById
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+function changeText(delta) {//posle nazatia etoi knopki omouseover->miganie
+adformShyrynjaHolst=Math.floor(adformShyrynjaHolst*delta);adformVyshinjaHolst=Math.floor(adformVyshinjaHolst*delta);
+var shyrynjaKVARD=adformShyrynjaHolst;
+var vyshinjaKVARD=adformVyshinjaHolst;
+if(!shyrynjaKVARD>0){shyrynjaKVARD=vyshinjaKVARD};if(!vyshinjaKVARD>0){vyshinjaKVARD=shyrynjaKVARD};
+//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'width:'+shyrynjaKVARD+'px');//setAttribute ERASES all other attributes
+//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("divStarajaGall_canvas").style.width=			shyrynjaKVARD.toString()+'px';
+document.getElementById("divStarajaGall_canvas").style.height=			vyshinjaKVARD.toString()+'px';
+
+//document.getElementById("jaceikaHolstID").setAttribute('style',	'width:'+shyrynjaKVARD+'px');
+//document.getElementById("jaceikaHolstID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaHolstID").style.width=			shyrynjaKVARD.toString()+'px';
+document.getElementById("jaceikaHolstID").style.height=			vyshinjaKVARD.toString()+'px';
+
+malrazmerSTRELOK=Math.floor(shyrynjaKVARD/sizeKVARDstr);
+bolrazmerSTRELOK=Math.floor(7*vyshinjaKVARD/sizeKVARDstr);
+
+//document.getElementById("jaceikaZpravaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
+//document.getElementById("jaceikaZpravaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaZpravaID").style.width=			malrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceikaZpravaID").style.height=			vyshinjaKVARD.toString()+'px';
+document.getElementById('jaceikaZpravaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZpravaID').style.opacity = 0.5981;
+
+//document.getElementById("jaceikaZlevaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
+//document.getElementById("jaceikaZlevaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
+document.getElementById("jaceikaZlevaID").style.width=			malrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceikaZlevaID").style.height=			vyshinjaKVARD.toString()+'px';
+document.getElementById('jaceikaZlevaID').style.backgroundColor = 'white';
+document.getElementById('jaceikaZlevaID').style.opacity = 0.5981;
+
+//document.getElementById("jaceika1uverhuID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
+//document.getElementById("jaceika1uverhuID").setAttribute('style',	'height:'+malrazmerSTRELOK+'px');
+document.getElementById("jaceika1uverhuID").style.width=			bolrazmerSTRELOK.toString()+'px';
+document.getElementById("jaceika1uverhuID").style.height=			malrazmerSTRELOK.toString()+'px';
+document.getElementById('jaceika1uverhuID').style.backgroundColor = 'white';
+document.getElementById('jaceika1uverhuID').style.opacity = 0.5981;
+
+//document.getElementById("tablePageID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');//setAttribute ERASES all other attributes
+//document.getElementById("tablePageID").setAttribute('style',	'height:'+bolrazmerSTRELOK+'px');
+document.getElementById("tablePageID").style.width=			bolrazmerSTRELOK.toString()+'px';
+document.getElementById("tablePageID").style.height=			bolrazmerSTRELOK.toString()+'px';
+
+/*
+var tds = document.getElementById("idDivTZmest").getElementsByTagName("td");
+////ctx1 = document.getElementById("divStarajaGall_canvas").getContext('2d');
+////ctx1.drawImage(document.getElementsByTagName('img')[1], poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, adformShyrynjaHolst, adformVyshinjaHolst);
+for (var i = 0; i < tds.length; i++) {
+if(document.getElementById(tds[i].id)!=null)
+{
+s=document.getElementById(tds[i].id).style.width;
+//if(s[s.length-1]=='x'){s = s.substring(0, s.length - 1);};
+//if(s[s.length-1]=='p'){s = s.substring(0, s.length - 1);};
+//shyrynjaKVARD=Math.floor(Number(s)*delta);
+//neww=Math.floor(document.getElementById(tds[i].id).style.width*delta);
+//document.getElementById(tds[i].id).style.width=neww;
+//document.getElementById(tds[i].id).setAttribute('style','width:'+neww+'px');
+
+document.getElementById(tds[i].id).setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
+document.getElementById(tds[i].id).style.width=			bolrazmerSTRELOK.toString()+'px';
+}
+else {neww=Math.floor(tds[i].width*delta);
+tds[i].width=neww;
+};
+};
+*/
+document.getElementById("idDivUSEkartynkaStaronkaTableJacejkiGart").style.height=			bolrazmerSTRELOK.toString()+'px';
+allign2ids(bolrazmerSTRELOK,"idDivUSEkartynkaStaronkaTableJacejkiGart","idDivOglavANDsortOglav");
+}
+
+function allign2ids(razmLeft,idLeft,idRight) {
+document.getElementById(idLeft).style.width=			razmLeft.toString()+'px';
+document.getElementById(idLeft).style.height=			razmLeft.toString()+'px';
+//document.getElementById(idLeft).setAttribute('style',	'float:left');
+document.getElementById(idLeft).style.cssFloat =			'left';
+if(razmLeft<window.innerWidth/2){
+document.getElementById(idRight).style.width=Math.floor((window.innerWidth-razmLeft)*0.9-10).toString()+"px";
+document.getElementById(idRight).style.cssFloat =			'right';
+}else{
+document.getElementById(idRight).style.width=Math.floor(window.innerWidth*0.9-10).toString()+"px";
+document.getElementById(idRight).style.cssFloat =			'right';
+}
+}
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 slideGallery = function () {
 //					[00,01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32];
 //neIspolzOldVerOfCol YellowLine=			[[0,1,2,3,4,5],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]];
@@ -696,8 +786,8 @@ curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idGu
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idGuzikSortZmestSpor').style.fontSize = "larger";};
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idGuzikSortZmestPoezia').style.fontSize = "larger";};
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idGalkaParadak').style.fontSize = "larger";};
-curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idLegendShareKontur').style.fontSize = "larger";};
-curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idLegendShare').style.fontSize = "larger";};
+//MARCHnoContour curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idLegendShareKontur').style.fontSize = "larger";};
+//MARCHnoContour curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idLegendShare').style.fontSize = "larger";};
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idDivKeywords').style.fontSize = "larger";};
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idMotsCles0').style.fontSize = "larger";};
 curW=screen.availWidth; while(curW<1000){curW+=300;document.getElementById('idMotsCles1').style.fontSize = "larger";};
@@ -1093,7 +1183,6 @@ jaceika1uverhu.onmouseout = function() {this.style.backgroundColor = 'white'; th
 jaceikaZleva.onmouseover = 	function() {this.style.backgroundColor = 'white'; this.style.opacity = 1.0;};
 jaceikaZleva.onclick = 		function() {this.style.backgroundColor = 'white';};
 jaceikaZleva.onmouseout = function() {this.style.backgroundColor = 'white'; this.style.opacity = 0.7;};	
-//jaceikaHolst.onmouseover = function() {tfOld=gartFunkcia;gartFunkcia=fader;img.src = "./allims/murzilka.jpg";ctx.globalAlpha=0.3;gartFunkcia=tfOld;globalAlpha=1;};//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //
 
 function PisovkaZadnikaNaRaspovSprozrac(prozrac) {
 var imgNaRaspov = document.createElement('img');
@@ -1127,14 +1216,14 @@ jaceikaHolst.ontouchup = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.ra
 jaceikaHolst.oncontextmenu = function() {PisovkaZadnikaNaRaspovSprozrac(0.42+Math.random()*0.3);			
 	//ctx1 = canv.getContext('2d'); ctx1.globalAlpha=Math.random() * 0.44;
 	//ctx1.drawImage(imgNaRaspov, poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, canv.width, canv.height);
-	};		//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //					
+	};		//ctx.globalAlpha=0.3; ctx.globalCompositeOperation = "lighter";				
 jaceikaHolst.onmouseout = function() {//PisovkaZadnikaNaRaspovSprozrac(0);	
 	ctx1.globalAlpha=1;
 	ctx1.drawImage(img,0,tilicCanv,dimdraw[0],dimdraw[1],0,0,parms.width,parms.height);	
 	//ctx1.clearRect(0, 0, ctx1.width, ctx1.height);	
 	//ctx1.globalAlpha=1;
-	};//{ctx.globalAlpha=0.3;}; //{ctx.globalCompositeOperation = "lighter";}; //		
-//jaceikaHolst.onmouseout = function() {};//{document.getElementById("ctxID").globalAlpha=0.3;}; //	{document.getElementById("ctxID")globalCompositeOperation = "lighter";}; 
+	};//ctx.globalAlpha=0.3; //ctx.globalCompositeOperation = "lighter";		
+
 jaceikaZprava.onmouseover = function() {this.style.backgroundColor = 'white'; this.style.opacity = 1.0;};
 jaceikaZprava.onmouseout = function() {this.style.backgroundColor = 'white'; this.style.opacity = 0.7;};			
 	
@@ -1260,90 +1349,4 @@ return {
 	}
 }
 }();
-//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-function changeText(delta) {//posle nazatia etoi knopki omouseover->miganie
-adformShyrynjaHolst=Math.floor(adformShyrynjaHolst*delta);adformVyshinjaHolst=Math.floor(adformVyshinjaHolst*delta);
-var shyrynjaKVARD=adformShyrynjaHolst;
-var vyshinjaKVARD=adformVyshinjaHolst;
-if(!shyrynjaKVARD>0){shyrynjaKVARD=vyshinjaKVARD};if(!vyshinjaKVARD>0){vyshinjaKVARD=shyrynjaKVARD};
-//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'width:'+shyrynjaKVARD+'px');//setAttribute ERASES all other attributes
-//document.getElementById("divStarajaGall_canvas").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
-document.getElementById("divStarajaGall_canvas").style.width=			shyrynjaKVARD.toString()+'px';
-document.getElementById("divStarajaGall_canvas").style.height=			vyshinjaKVARD.toString()+'px';
-
-//document.getElementById("jaceikaHolstID").setAttribute('style',	'width:'+shyrynjaKVARD+'px');
-//document.getElementById("jaceikaHolstID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
-document.getElementById("jaceikaHolstID").style.width=			shyrynjaKVARD.toString()+'px';
-document.getElementById("jaceikaHolstID").style.height=			vyshinjaKVARD.toString()+'px';
-
-malrazmerSTRELOK=Math.floor(shyrynjaKVARD/sizeKVARDstr);
-bolrazmerSTRELOK=Math.floor(7*vyshinjaKVARD/sizeKVARDstr);
-
-//document.getElementById("jaceikaZpravaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
-//document.getElementById("jaceikaZpravaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
-document.getElementById("jaceikaZpravaID").style.width=			malrazmerSTRELOK.toString()+'px';
-document.getElementById("jaceikaZpravaID").style.height=			vyshinjaKVARD.toString()+'px';
-document.getElementById('jaceikaZpravaID').style.backgroundColor = 'white';
-document.getElementById('jaceikaZpravaID').style.opacity = 0.5981;
-
-//document.getElementById("jaceikaZlevaID").setAttribute('style',	'width:'+malrazmerSTRELOK+'px');
-//document.getElementById("jaceikaZlevaID").setAttribute('style',	'height:'+vyshinjaKVARD+'px');
-document.getElementById("jaceikaZlevaID").style.width=			malrazmerSTRELOK.toString()+'px';
-document.getElementById("jaceikaZlevaID").style.height=			vyshinjaKVARD.toString()+'px';
-document.getElementById('jaceikaZlevaID').style.backgroundColor = 'white';
-document.getElementById('jaceikaZlevaID').style.opacity = 0.5981;
-
-//document.getElementById("jaceika1uverhuID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
-//document.getElementById("jaceika1uverhuID").setAttribute('style',	'height:'+malrazmerSTRELOK+'px');
-document.getElementById("jaceika1uverhuID").style.width=			bolrazmerSTRELOK.toString()+'px';
-document.getElementById("jaceika1uverhuID").style.height=			malrazmerSTRELOK.toString()+'px';
-document.getElementById('jaceika1uverhuID').style.backgroundColor = 'white';
-document.getElementById('jaceika1uverhuID').style.opacity = 0.5981;
-
-//document.getElementById("tablePageID").setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');//setAttribute ERASES all other attributes
-//document.getElementById("tablePageID").setAttribute('style',	'height:'+bolrazmerSTRELOK+'px');
-document.getElementById("tablePageID").style.width=			bolrazmerSTRELOK.toString()+'px';
-document.getElementById("tablePageID").style.height=			bolrazmerSTRELOK.toString()+'px';
-
-/*
-var tds = document.getElementById("idDivTZmest").getElementsByTagName("td");
-////ctx1 = document.getElementById("divStarajaGall_canvas").getContext('2d');
-////ctx1.drawImage(document.getElementsByTagName('img')[1], poluWidth-poluMinRazmer, poluHeight-poluMinRazmer, imgNaRaspovMinRazmer, imgNaRaspovMinRazmer, 0, 0, adformShyrynjaHolst, adformVyshinjaHolst);
-for (var i = 0; i < tds.length; i++) {
-if(document.getElementById(tds[i].id)!=null)
-{
-s=document.getElementById(tds[i].id).style.width;
-//if(s[s.length-1]=='x'){s = s.substring(0, s.length - 1);};
-//if(s[s.length-1]=='p'){s = s.substring(0, s.length - 1);};
-//shyrynjaKVARD=Math.floor(Number(s)*delta);
-//neww=Math.floor(document.getElementById(tds[i].id).style.width*delta);
-//document.getElementById(tds[i].id).style.width=neww;
-//document.getElementById(tds[i].id).setAttribute('style','width:'+neww+'px');
-
-document.getElementById(tds[i].id).setAttribute('style',	'width:'+bolrazmerSTRELOK+'px');
-document.getElementById(tds[i].id).style.width=			bolrazmerSTRELOK.toString()+'px';
-}
-else {neww=Math.floor(tds[i].width*delta);
-tds[i].width=neww;
-};
-};
-*/
-document.getElementById("idDivUSEkartynkaStaronkaTableJacejkiGart").style.height=			bolrazmerSTRELOK.toString()+'px';
-allign2ids(bolrazmerSTRELOK,"idDivUSEkartynkaStaronkaTableJacejkiGart","idDivOglavANDsortOglav");
-}
-
-function allign2ids(razmLeft,idLeft,idRight) {
-document.getElementById(idLeft).style.width=			razmLeft.toString()+'px';
-document.getElementById(idLeft).style.height=			razmLeft.toString()+'px';
-//document.getElementById(idLeft).setAttribute('style',	'float:left');
-document.getElementById(idLeft).style.cssFloat =			'left';
-if(razmLeft<window.innerWidth/2){
-document.getElementById(idRight).style.width=Math.floor((window.innerWidth-razmLeft)*0.9-10).toString()+"px";
-document.getElementById(idRight).style.cssFloat =			'right';
-}else{
-document.getElementById(idRight).style.width=Math.floor(window.innerWidth*0.9-10).toString()+"px";
-document.getElementById(idRight).style.cssFloat =			'right';
-}
-}
 
