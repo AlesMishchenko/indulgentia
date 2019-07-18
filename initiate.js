@@ -139,8 +139,8 @@ insideMap.set(true,'Без темы "'+ValuesByTemy[i]+'"');//
 mapIDtoValues.set(idGuzikiPaTemam[i],insideMap);
 }
 var insideMap = new Map();
-insideMap.set(true,'Прочитанное');
-insideMap.set(false,'Непрочитанное');
+insideMap.set(true,'только ПРОЧИТАННЫЕ в оглавлении');
+insideMap.set(false,'только НЕПРОЧИТАННЫЕ в оглавлении');
 mapIDtoValues.set('idGuzikUbracseentexts',insideMap);
 
 var MapSuvaz = new Map(); MapSuvaz.set(true,'Сначала НЕСВЯЗАННЫЕ'); MapSuvaz.set(false,'Сначала СВЯЗАННЫЕ'); mapIDtoValues.set('idGuzikSortZmestSvjaz',MapSuvaz);
@@ -235,7 +235,7 @@ for (var itr = 0; itr <= bujneishINvseIndsRaspov; itr++){
 }	
 }
 function zrabicTZmest() {
-//document.getElementById("idLegendZmest").innerHTML="Оглавление(тексты,связанные с этим,выделены их цветом):   ";
+//document.getElementById("idLegendZmest").innerHTML="ОГЛАВЛЕНИЕ(тексты,связанные с этим,выделены их цветом):   ";
 var varTZmestOLD = document.getElementById("tableZmest")
 if (!varTZmestOLD) {
 varZmest = document.createElement('table');

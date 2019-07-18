@@ -105,7 +105,7 @@ allbackImgs[26]=[  "16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.
 //allbackImgs[26]=["16byour_neighborhood_librarian,_Black_Cherry_Puppet_Theater.jpg","16dOltre_l_Occidente,_Marionette_in_liberta.jpg","16fThomas_Hawk.jpg","16hMatt_Werner,_Mandalay_Marionettes.jpg","16jDuncan_Rawlinson,_Burning_Man_2017.jpg","16lGiorgia_Pallaro,_intersections.jpg","16nFranck_Minez.jpg","16phipponotized.jpg","16rcachecache,_chisinau_puppet_theatre.jpg","16tAndrea_Maria_Cannata.jpg","","","","","","","","","","","","16xAli_Eminov,_Czech_and_Slovak_Museum.jpg","16ybyronv2,_Fringe_2010.jpg","16zskinnybrager.jpg"];
 
 //ne-by	20"ne-by"vNazvahFailov=19 ????????????????????????????????????????   "40xTee Vincent.jpg",
-allbackImgs[20]=["40bJenny Mealing.jpg","40cMike Mozart.jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40hAbu Hasan Mehedi.jpg","40gMarco Verch.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40yBen Robinson.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","40xTee Vincent.jpg","","","","","","","","","","","","",			"40iPrayitno.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40zLauri Sten.jpg"];
+allbackImgs[20]=["40bJenny Mealing.jpg","40cMike Mozart.jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40hAbu Hasan Mehedi.jpg","40gMarco Verch.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40yBen Robinson.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","40xTee Vincent.jpg","","","","","","","","","","","","",,"","","","","","","","","","","",			"40iPrayitno.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40zLauri Sten.jpg"];
 //allbackImgs[20]=["40aPrayitno.jpg","40bJenny Mealing.jpg","40cMike Mozart.jpg",".jpg","40dAlvin Smith.jpg","40eAlvin Smith.jpg","40fCLAUDIA DEA.jpg","40gMarco Verch.jpg","40hAbu Hasan Mehedi.jpg","40iPrayitno.jpg","40jMike Mozart.jpg","40kMike Lewinski.jpg","40lMike Lewinski.jpg","40mCLAUDIA DEA.jpg","40nRenaud Camus,Le Jour ni l’Heure, by Hubert Robert, Vue de Montagne avec glacie.jpg","40oEdward Zulawski.jpg","40purbanartcore.eu.jpg","40qNASA Goddard Space Flight Center.jpg","40rHenry Hemming.jpg","40sMike Willard.jpg","40tGiles Turnbull.jpg","40ufdecomite.jpg","40vHenry Hemming.jpg","40wSeb.jpg","40xTee Vincent.jpg","40yBen Robinson.jpg","40zLauri Sten.jpg"];
 //UBRANO  1e 
 
@@ -119,7 +119,7 @@ allbackImgs[12]=[														   "12bAuthor, film Black Book by Paul Verhoeven,
 
 //netZadnikov v=25,	30,31,32
 //moi-rek
-allbackImgs[25]=["41bClassic Film, 1958 Beauty Ad, Dorothy Gray Satura Moisture Cream, with Elegant 1950's Super-Model Anne St. Marie.jpg","41bClassic Film, 1966 Cosmetics Ad, Helena Rubinstein Tulips Colors for Lips & Nails.jpg","41cIan D. Keating.jpg","41dBob Peters.jpg","41dStephen Downes.jpg","41eJohnLocke.jpg","41eR. Crap Mariner.jpg","41fliborius.jpg","41gJames Vaughan.jpg","41gKumar's Edit.jpg","41gRonan Shenhav.jpg","41gWonder Woman,Angelicka.jpg","41gWonder Woman,Olesya.jpg","41hoBev Sykes.jpg","41hThomas Euler.jpg","41iHernan Pinera, Anna Bolena.jpg","41jEddie Lawrance.jpg","41kAndor Kish, Warwick Castle.jpg","41kjoan vila.jpg","41lBart.jpg","41lWonder Woman, Irina.jpg","41mEwen Roberts.jpg","41nEl Sabroso.jpg","41oDavid de Lara, model Samantha Valeria, hair & make up Tami Milicia.jpg","41pJose Gallego.jpg","41rYangTS,galaxy-wallpaper-6.jpg","41smriggen.jpg","41tGreg Walters.jpg","41uPhilip McMaster.jpg","41uTorsten Mangner.jpg","41wSuneel Madhekar.jpg","41xmoonjazz.jpg","41yXudong Zhai, Church next to Lake Tekapo.jpg","",		"41xAuthor,Futurama by Matt Groening,Fox BC,1999-2003.jpg","41yconorwithonen, Buckman Flair Promo.jpg","41zGiuseppe Milo.jpg"];
+allbackImgs[25]=["41bClassic Film, 1958 Beauty Ad, Dorothy Gray Satura Moisture Cream, with Elegant 1950's Super-Model Anne St. Marie.jpg","41bClassic Film, 1966 Cosmetics Ad, Helena Rubinstein Tulips Colors for Lips & Nails.jpg","41cIan D. Keating.jpg","41dBob Peters.jpg","41dStephen Downes.jpg","41eJohnLocke.jpg","41eR. Crap Mariner.jpg","41fliborius.jpg","41gJames Vaughan.jpg","41gKumar's Edit.jpg","41gRonan Shenhav.jpg","41gWonder Woman,Angelicka.jpg","41gWonder Woman,Olesya.jpg","41hoBev Sykes.jpg","41hThomas Euler.jpg","41iHernan Pinera, Anna Bolena.jpg","41jEddie Lawrance.jpg","41kAndor Kish, Warwick Castle.jpg","41kjoan vila.jpg","41lBart.jpg","41lWonder Woman, Irina.jpg","41mEwen Roberts.jpg","41nEl Sabroso.jpg","41oDavid de Lara, model Samantha Valeria, hair & make up Tami Milicia.jpg","41pJose Gallego.jpg","41rYangTS,galaxy-wallpaper-6.jpg","41smriggen.jpg","41tGreg Walters.jpg","41uPhilip McMaster.jpg","41uTorsten Mangner.jpg","41wSuneel Madhekar.jpg","41xmoonjazz.jpg","41yXudong Zhai, Church next to Lake Tekapo.jpg","",,"","","","","","","","","","","",		"41xAuthor,Futurama by Matt Groening,Fox BC,1999-2003.jpg","41yconorwithonen, Buckman Flair Promo.jpg","41zGiuseppe Milo.jpg"];
 
 
 
@@ -228,12 +228,14 @@ document.getElementById(idLeft).style.width=			razmLeft.toString()+'px';
 document.getElementById(idLeft).style.height=			razmLeft.toString()+'px';
 //document.getElementById(idLeft).setAttribute('style',	'float:left');
 document.getElementById(idLeft).style.cssFloat =			'left';
+if(idRight!=undefined){
 if(razmLeft<window.innerWidth/2){
 document.getElementById(idRight).style.width=Math.floor((window.innerWidth-razmLeft)*0.9-10).toString()+"px";
 document.getElementById(idRight).style.cssFloat =			'right';
 }else{
 document.getElementById(idRight).style.width=Math.floor(window.innerWidth*0.9-10).toString()+"px";
 document.getElementById(idRight).style.cssFloat =			'right';
+}
 }
 }
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -861,7 +863,7 @@ document.body.style.backgroundSize = "cover";
 var dimBack = zmenaPamerau(imBack.width,imBack.height,window.innerWidth,window.innerHeight);
 document.body.style.backgroundSize = dimBack[0].toString()+"px "+dimBack[1].toString()+"px"; */
 
-document.getElementById("idLegendZmest").innerHTML="Оглавление(тексты,связанные с этим,выделены их цветом):   ";
+document.getElementById("idLegendZmest").innerHTML="ОГЛАВЛЕНИЕ(тексты,связанные с этим,выделены их цветом):   ";
 document.getElementById("idGalkaAdsejac").checked=false;
 var content = document.getElementById("idTemyKontur");
 var allinputs = content.getElementsByTagName("input");
@@ -918,7 +920,7 @@ img.src =ustanLitarNaMiasce(img.src,img.src.length-4,uzacStaronk); //gartanneVyk
 }
 	
 //if (yoscNazva)
-document.getElementById('idLegendTemy').innerHTML='ТЕМЫ текста "'+parms.malunki[raspovLicnik][1]+'"';		
+document.getElementById('idLegendTemy').innerHTML='ТЕМЫ текста "'+parms.malunki[raspovLicnik][1]+'" и ОГЛАВЛЕНИЕ(тексты связанные с этим)';		
 document.getElementById(parms.id+"_title").innerHTML = parms.malunki[raspovLicnik][1]+"  (оценка:"+parms.malunki[raspovLicnik][3]+", спорность:"+parms.malunki[raspovLicnik][4]+", поэтичность:"+parms.malunki[raspovLicnik][5]+")";
 
 document.getElementById('idDivSortZmest').title=' Здесь можно сортировать оглавление по алфавиту, размеру, оценке, сложности и связанности с текстом "'+parms.malunki[raspovLicnik][1]+'"';

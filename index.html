@@ -1,14 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <!-- (С) Алесь Мищенко -->
-<html>
 <head> 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title  id="idtit">Алесь Мищенко. Нелинейная книга "Индульгенция людей". Ales Mishchenko. Non-linear book. </title> 
 <meta name="keywords" content="Индульгенция людей,Нелинейная интерактивная книга,Книга будущего,Алесь Мищенко,ЭРА МИЛОСЕРДИЯ,ХИРУРГ И ПСИХ,ПРИСНИЛАСЬ ЛЮБОВЬ,КОД САМОУНИЧТОЖЕНИЯ,КВАНТОВЫЕ ЛЮДИ,ДЕТИ И ПАУКИ,УЧЁНЫЙ И ПРИРОДА,СУДЫ И СУДЬБЫ,ЭРОТИЧЕСКИЙ ОСКАР,АВТОРЫ СВОИХ СУДЕБ,ЯНЫЧАРЫ НЕВЕДОМОЙ РОДИНЫ,ДОГОВОР С ДЬЯВОЛОМ,ПЛАТА ЗА ВСЁ,ИСПОВЕДЬ ДИКАРЯ,МАТРИЦА МНОГОЭТАЖЕК,ДЕТСТВО НАРОДА,ДНО МОРЯ ЛЮБВИ,НЕСБЫВШЕЕСЯ,НЕОТПРАВЛЕННОЕ ПИСЬМО,НЕУЧ ПРИРОДЫ,ЛЮДИ ЕХАЛИ В ПОЕЗДЕ,ЦЕЛЬ ВСЕХ РАЗГОВОРОВ,РЕКЛАМА РАЯ,УТРО МАРИОНЕТКИ,ЗАМЕНИТЕЛЬ БУДУЩЕГО,ГДЕ У ЛЮДЕЙ КНОПКА,СОН БУДУЩЕГО,КОРОЛИ ВОДОВОРОТОВ,БИРЖА СМЫСЛОВ ЖИЗНИ,ВЗГЛЯД С ФОТОГРАФИИ,ЛЮБОВЬ,СМЕРТЬ,ЭРОС,НАУКА,ТВ,ФАНТАЗИИ,НЕПОНИМАНИЕ,ОБЩЕСТВО,МИРЫ,ИСТОРИЯ,ПРИРОДА,ДУША" />
 <meta name="description" content="Интерактивную книгу будущего ИНДУЛЬГЕНЦИЯ ЛЮДЕЙ можно читать, выбирая порядок текстов, а также фильтруя и сортируя тексты по темам и настроению." />
 <meta property="og:image" content="http://alesmishchenko.github.io/indulgentia/logo.png" />
-<script type='text/javascript' src='illustrate.js'></script>
-<script type='text/javascript' src='initiate.js'></script>
 <style>
 html {transform: translateZ(0);}
 body {background-color: white;
@@ -112,12 +109,25 @@ document.getElementById('idFormh3').style.color = dopolnitCol(document.body.styl
 document.getElementById('idLegendForm').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idEmailh3').style.color = dopolnitCol(document.body.style.backgroundColor);
 document.getElementById('idMsgh3').style.color = dopolnitCol(document.body.style.backgroundColor);
-if(window.innerWidth>window.innerHeight){
-allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
-}else{
-allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');
 
-};changeText(1.1); changeText(0.9); 
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) ){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+testExp = new RegExp('Android|webOS|iPhone|iPad|' +	'BlackBerry|Windows Phone|'  +   'Opera Mini|IEMobile|Mobile' ,  'i');
+if (testExp.test(navigator.userAgent)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(screen.width>screen.height){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(window.innerWidth>window.innerHeight){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+changeText(1.1); changeText(0.9); 
+
+
+
 allign2ids(Math.floor(window.innerWidth*0.9),'idForm');
 allign2ids(Math.floor(window.innerWidth*0.9),'idDivKeywords');
 console.log('idDivUSEkartynkaStaronkaTableJacejkiGart width = '+document.getElementById('idDivUSEkartynkaStaronkaTableJacejkiGart').style.width);
@@ -142,15 +152,14 @@ console.log('window.innerHeight = '+window.innerHeight);
 <div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook,gplus,moimir,whatsapp,skype" data-counter="" data-image="http://alesmishchenko.github.io/indulgentia/logo.png" data-image:facebook="http://alesmishchenko.github.io/indulgentia/logo.png" data-url:facebook="http://alesmishchenko.github.io/indulgentia"  data-description="Алесь Мищенко. Нелинейная интерактивная книга 'Индульгенция людей'."></div> 
 <button id="idUmenTxt">УМЕНЬШИТЬ ТЕКСТ</button>
 <button id="idUvelTxt">УВЕЛИЧИТЬ ТЕКСТ</button>
-<!--&nbsp; &nbsp; При медленном листании можно загрузить <a href='https://alesmishchenko.github.io/indulgencia/'>быструю версию</a>.-->
+<!--&nbsp; &nbsp; При медленном листании можно загрузить <a href='https://alesmishchenko.github.io/indulgenсia/'>быструю версию</a>.-->
 &nbsp; &nbsp; Листание кнопками &#9167 , &#x23ea , &#x23e9. При медленном листании можно загрузить <a href='https://alesmishchenko.github.io/indulgencia/'>быструю версию</a>.
 </h3> 
-
 <!--<button onclick="alert('Ознакомьтесь с тем как пользоваться сайтом.')">Как читать?</button>-->
-
 <!--<div id="idDivUSEkartynkaStaronkaTableJacejkiGartOuter" style='width:adformShyrynjaHolst+110;float:left;padding-right:10px;'> -->
 
-
+<script type='text/javascript' src='illustrate.js'></script>
+<script type='text/javascript' src='initiate.js'></script>
 
 <div id="idDivUSEkartynkaStaronkaTableJacejkiGart" style="width:adformShyrynjaHolst;border:none;display: table-cell;">
 <div id="idDivUSEkartynkaStaronkaTableJacejkiGartNazva" style="border:none" onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;">
@@ -160,10 +169,10 @@ console.log('window.innerHeight = '+window.innerHeight);
 <div id="idDivOglavANDsortOglav" style='width:632px;display: table-cell;padding-right:10px;' onmouseover="this.style.backgroundColor = 'white'; this.style.opacity = 1.0;" onmouseout="this.style.backgroundColor = 'white'; this.style.opacity = 0.6982;"> 
 <fieldset id="idTemyKontur" title="Здесь можно выбрать из оглавления тексты по тем же темам / другим темам (нажатие на кнопку ТЕМЫ оставляет в оглавлении только тексты с выбранной темой / убирает тему из оглавления)">
 <legend id='idLegendTemy'>Фильтры оглавления и Темы текста </legend> 
-  <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="Непрочитанные" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
-  <input type="button" id="idGuzikCreateTable" title="Показать ВСЕ тексты в оглавлении" value="Восстановить всё" onclick="zrabicTZmest();KaliarovyaRadkiPeradBelymi(false); document.getElementById('idLegendZmest').innerHTML='Оглавление и связи с текущим текстом:   ';" /><br/><br/>
+  <input type="button" id="idGuzikUbracseentexts" title="Убрать из оглавления ПРОЧИТАННЫЕ тексты" value="только НЕПРОЧИТАННЫЕ в оглавлении" onclick="fabravacCIubracRadkiPaID(imLicnikiStaryeUse,[],'znishchyc',''); document.getElementById('idLegendZmest').innerHTML+=' & '+this.value;" />
+  <input type="button" id="idGuzikCreateTable" title="Показать ВСЕ тексты в оглавлении" value="ВСЕ в оглавлении" onclick="zrabicTZmest();KaliarovyaRadkiPeradBelymi(false); document.getElementById('idLegendZmest').innerHTML='Оглавление и связи с текущим текстом:   ';" /><br/><br/>
 <input type="checkbox" id="idGalkaAdsejac"  title="Инвертировать фильтры">
-<label for="idGalkaAdsejac" title="Инвертировать фильтры">Наоборот. &nbsp;&nbsp;&nbsp;&nbsp; выбор ТЕМЫ:</label>
+<label for="idGalkaAdsejac" title="Инвертировать фильтры">Наоборот. &nbsp;&nbsp;&nbsp;&nbsp; показать только тексты тех же ТЕМ(или наоборот):</label>
 </fieldset>
 
 <fieldset> 
@@ -197,6 +206,25 @@ console.log('window.innerHeight = '+window.innerHeight);
 
 
 <script> 
+
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent) ){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+testExp = new RegExp('Android|webOS|iPhone|iPad|' +	'BlackBerry|Windows Phone|'  +   'Opera Mini|IEMobile|Mobile' ,  'i');
+if (testExp.test(navigator.userAgent)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry)/)){
+allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(screen.width>screen.height){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+if(window.innerWidth>window.innerHeight){
+allign2ids(Math.floor(window.innerWidth*0.4),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');}
+else{allign2ids(Math.floor(window.innerWidth*0.9),'idDivUSEkartynkaStaronkaTableJacejkiGart','idDivOglavANDsortOglav');};
+
+
+
+
 //onclick="fabravacCIubracRadkiPaID(
 function nazatCtobCvet() {
 var strOrig1 = './backOrig/'+allbackImgs[raspovLicnik][maxAposhStaronkPeradPershZadnik+1];//+'.jpg';   backOrig
@@ -260,7 +288,7 @@ if(temyKazhdogoEss[raspovLicnik].indexOf(11)>=0) {curW=screen.availWidth; while(
 <legend id="idLegendShare" title="Поделиться ссылкой на книгу">Высказать мнение,Обсудить,Поделиться:   </legend> 
 <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
 <script src="//yastatic.net/share2/share.js" async="async"></script>
-<div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook,gplus,moimir,whatsapp,skype" data-counter="" data-image="http://alesmishchenko.github.io/indulgencia/logo.png" data-image:facebook="http://alesmishchenko.github.io/indulgencia/logo.png" data-url:facebook="http://alesmishchenko.github.io/indulgencia"  data-description="Алесь Мищенко. Нелинейная интерактивная книга 'Индульгенция людей'."></div> 
+<div class="ya-share2" data-services="vkontakte,odnoklassniki,twitter,facebook,gplus,moimir,whatsapp,skype" data-counter="" data-image="http://alesmishchenko.github.io/indulgentia/logo.png" data-image:facebook="http://alesmishchenko.github.io/indulgentia/logo.png" data-url:facebook="http://alesmishchenko.github.io/indulgentia"  data-description="Алесь Мищенко. Нелинейная интерактивная книга 'Индульгенция людей'."></div> 
 </fieldset>
 -->
 
